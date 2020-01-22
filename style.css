@@ -5,6 +5,9 @@ html,body{
   font-family: 'Poppins',sans-serif;
   color:#222;
 }
+#particles-js{
+  background-color: #000;
+}
 .navbar{
   padding: 0.1rem;
 }
