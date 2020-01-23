@@ -5,7 +5,17 @@ html,body{
   font-family: 'Poppins',sans-serif;
   color:#222;
   font-size: 2vh;
+  background-color: rgb(204, 224, 240);
 }
+.team-section.text-center.my-5 {
+  background-color: rgb(204, 224, 240)
+}
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+}
+
 #particles-js{
   background-color: #000;
 }
@@ -199,7 +209,7 @@ html,body{
 .fa-instagram:hover,
 .fa-linkedin:hover,
 .fa-github:hover{
-  color:#d5d5d5;
+  color:#6e6d6d;
 }
 
 /* FOOTER */
