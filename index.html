@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ACM</title>
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	
@@ -28,28 +29,27 @@
 <body>
 
 <!-- Navigation -->
-<div class="container-fluid padding">
-	<header class="header">
+<div class="container-fluid padding" id="header">
 		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid"><a href="#" class="navbar-brand"><img src="img/logo.png" alt="logo" height="70"></a>
 				<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
 				
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Events</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
+						<li class="nav-item active"><a href="#home" class="nav-link text-uppercase font-weight-bold">Home</a></li>
+						<li class="nav-item"><a href="#about" class="nav-link text-uppercase font-weight-bold">About Us</a></li>
+						<li class="nav-item"><a href="#events" class="nav-link text-uppercase font-weight-bold">Events</a></li>
+						<li class="nav-item"><a href="#team" class="nav-link text-uppercase font-weight-bold">Team</a></li>
+						<li class="nav-item"><a href="#footer" class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-	</header>
 
 </div>
 
 <!-- Landing particles -->
+<div id="home"></div>
 
 	<div class="row">
 		<div class="col">
@@ -87,17 +87,39 @@
 
 
 <!--- Jumbotron -->
-<div class="container-fluid"></div>
-	<div class="row jumbotron py-3">
+<!-- <div class="container-fluid"></div>
+	<div class="row jumbotron py-3 ">
 		<div class="col-xs-12 "">
 			<blockquote class="blockquote">
-				<p class="mb-0 lead"><strong>Coming together is a beginning, staying together is progress, and working together is success</strong></p>
+				<p class="mb-1 lead "><strong>Coming together is a beginning, staying together is progress, and working together is success</strong></p>
 				<footer class="blockquote-footer">Henry Ford </footer>
 			</blockquote>
 		</div>
 
 	</div>
-</div>
+</div> -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+
+                <!-- CUSTOM BLOCKQUOTE -->
+                <blockquote class="blockquote blockquote-custom py-5 px-3 shadow rounded">
+                    <div class="blockquote-custom-icon bg-primary shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                    <p class=" mt-2 font-italic">"Coming together is a beginning, staying together is progress, and working together is success ."</p>
+                    <footer class="blockquote-footer">
+                        <cite title="Source Title">Henry Ford</cite>
+                    </footer>
+                </blockquote><!-- END -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<p id="about"></p>
+<br>
+<br>
+<br>
 
 
 <!--- Welcome Section -->
@@ -107,23 +129,27 @@
 
 
 <!--- Two Column Section -->
-<div id="about" class="container fluid py-2">
-	<div class="row padding">
-		<div class="col lg-6">
-				<h2>ABOUT US...</h2>
+<div  class="container fluid py-2 ">
+	<div class="row padding ">
+		<div class="col lg-6 ">
+				<h2>ABOUT US</h2>
 				
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolore cumque eius in atque! Commodi, deserunt! Tenetur eveniet aut iure.
+				<p class="about">
+					The ACM Student Chapter here at PES University Electronic City Campus brings you a world of opportunities,
+					events and contains a wide range of activities to keep ACM moving including organizing conferences, improving
+					 Technical skills, Networking, and we strive to provide a professional experience to our members.
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, facere.
-				</p>
+	
 				<br>
 				<a href="#" class="btn btn-primary">Learn more</a>
 				
 		</div>
-		<div class="col-lg-6">
-			<img src="img/desk.png" alt="about" class="img-fluid">
+		<div class="col-lg-6 thumbnail">
+			<div class="about-img">
+				<img src="img/about.jpg" alt="about" class="img-fluid">
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
@@ -134,7 +160,7 @@
 
 
 <!--- Office beareres-->
-<div class="container-fluid">
+<div class="container-fluid" id="team">
 	<section class="team-section text-center my-5">
 
 		<!-- Section heading -->
@@ -145,9 +171,11 @@
 		<div class="row">
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 team">
 			
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class=" img-fluid rounded-circle shadow"
+			  <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class=" img-fluid rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/chair.png" class=" rounded-circle shadow"
 				alt="Sample avatar">
 		
 			<h5 class="font-weight-bold mt-4 mb-3">Ankit Raj</h5>
@@ -168,9 +196,9 @@
 		  <!-- Grid column -->
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 team">
 			
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle shadow"
+			  <img src="img/Vice-chair.jpeg" class="rounded-circle shadow"
 				alt="Sample avatar">
 			<h5 class="font-weight-bold mt-4 mb-3">Dhruv Bindra</h5>
 			<p class="text-uppercase text-primary"><strong>Vice Chair</strong></p>
@@ -192,7 +220,9 @@
 		  <!-- Grid column -->
 		  <div class="col-lg-3 col-md-6 mb-md-0 mb-5 team">
 			  <div class="container team">
-				<img src="img/team1.png" class="rounded-circle shadow"
+				<!-- <img src="img/team1.png" class="rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/secretary.png" class="rounded-circle shadow"
 				alt="Sample avatar">
 
 			  </div>
@@ -216,9 +246,11 @@
 		  <!-- Grid column -->
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6">
+		  <div class="col-lg-3 col-md-6 team">
 			<div class="avatar mx-auto">
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle shadow"
+			  <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/treasurer.png" class=" img-fluid rounded-circle shadow"
 				alt="Sample avatar">
 			</div>
 			<h5 class="font-weight-bold mt-4 mb-3">Venkatavardan R</h5>
@@ -271,11 +303,12 @@
 
 
 <!--- Footer -->
-<footer class="footer-distributed">
+<footer class="footer-distributed" id="footer">
 
 	<div class="footer-left">
 
 		<img src="img/logo.png" alt="logo" height="100 ">
+		<img src="img/pes.PNG" alt="logo"height="80">
 <br>
 
 		<p class="footer-company-name">Company Name © 2015</p>
