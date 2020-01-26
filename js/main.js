@@ -28,7 +28,7 @@ $(document).ready(function(){
   
         $('html, body').animate({
             'scrollTop': $target.offset().top-80
-        }, 350, 'swing', function () {
+        }, 400, 'swing', function () {
            
         });
     });
