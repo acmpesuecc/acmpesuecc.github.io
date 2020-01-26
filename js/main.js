@@ -8,16 +8,8 @@ $(function () {
     });
 });
 
-//for smooth scrolling
-// $(document).ready(function(){
-//    $("a[href^='#'").on("click",function(e) {
-//        e.preventDefault();
-//        var offset=100;
-//        return $("html","body").animate({
-//            scrollTop: $(this.hash).offset().top-offset
-//        },300);
-//        });
-// });
+
+// for smooth scrolling
 
 $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {
