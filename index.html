@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ACM</title>
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	
@@ -28,28 +29,27 @@
 <body>
 
 <!-- Navigation -->
-<div class="container-fluid padding">
-	<header class="header">
+<div class="container-fluid padding" id="header">
 		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid"><a href="#" class="navbar-brand"><img src="img/logo.png" alt="logo" height="70"></a>
 				<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
 				
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Events</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
-						<li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
+						<li class="nav-item active"><a href="#home" class="nav-link text-uppercase font-weight-bold">Home</a></li>
+						<li class="nav-item"><a href="#about" class="nav-link text-uppercase font-weight-bold">About Us</a></li>
+						<li class="nav-item"><a href="#events" class="nav-link text-uppercase font-weight-bold">Events</a></li>
+						<li class="nav-item"><a href="#team" class="nav-link text-uppercase font-weight-bold">Team</a></li>
+						<li class="nav-item"><a href="#footer" class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-	</header>
 
 </div>
 
 <!-- Landing particles -->
+<div id="home"></div>
 
 	<div class="row">
 		<div class="col">
@@ -58,9 +58,10 @@
 				<div class="carousel-caption " id="typed-strings">
 				
 					<h1 class="display-2" id="typed">ACM PES UNIVERSITY</h1>
-					<h3 id="typed-2" style="display:inline"></h3>
-				
-				<!-- <h3>Electronic City Campus</h3> -->
+					<!-- typed.js is used here -->
+					<h3 id="typed-2" style="display:inline"></h3> 
+
+			
 				</div>
 				
 			</div>
@@ -87,18 +88,39 @@
 
 
 <!--- Jumbotron -->
-<div class="container-fluid"></div>
-	<div class="row jumbotron py-3">
+<!-- <div class="container-fluid"></div>
+	<div class="row jumbotron py-3 ">
 		<div class="col-xs-12 "">
 			<blockquote class="blockquote">
-				<p class="mb-0 lead"><strong>Coming together is a beginning, staying together is progress, and working together is success</strong></p>
+				<p class="mb-1 lead "><strong>Coming together is a beginning, staying together is progress, and working together is success</strong></p>
 				<footer class="blockquote-footer">Henry Ford </footer>
 			</blockquote>
 		</div>
 
 	</div>
-</div>
+</div> -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
 
+                <!-- CUSTOM BLOCKQUOTE -->
+                <blockquote class="blockquote blockquote-custom py-5 px-3 shadow rounded">
+                    <div class="blockquote-custom-icon bg-primary shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                    <p class=" mt-2 font-italic">"Coming together is a beginning, staying together is progress, and working together is success ."</p>
+                    <footer class="blockquote-footer">
+                        <cite title="Source Title">Henry Ford</cite>
+                    </footer>
+                </blockquote><!-- END -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<hr>
+<br>
+<br>
 
 <!--- Welcome Section -->
 
@@ -107,34 +129,103 @@
 
 
 <!--- Two Column Section -->
-<div id="about" class="container fluid py-2">
-	<div class="row padding">
-		<div class="col lg-6">
-				<h2>ABOUT US...</h2>
+<div  class="container fluid py-2 " id="about">
+	<div class="row padding ">
+		<div class="col lg-6 ">
+				<h2>ABOUT US</h2>
 				
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolore cumque eius in atque! Commodi, deserunt! Tenetur eveniet aut iure.
+				<p class="about">
+					The ACM Student Chapter here at PES University Electronic City Campus brings you a world of opportunities,
+					events and contains a wide range of activities to keep ACM moving including organizing conferences, improving
+					 Technical skills, Networking, and we strive to provide a professional experience to our members.
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, facere.
-				</p>
+	
 				<br>
 				<a href="#" class="btn btn-primary">Learn more</a>
 				
 		</div>
-		<div class="col-lg-6">
-			<img src="img/desk.png" alt="about" class="img-fluid">
+		<div class="col-lg-6 thumbnail">
+			<div class="about-img">
+				<img src="img/about.jpg" alt="about" class="img-fluid">
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
-<hr>
+
+<!-- EVENTS -->
+
+<div class=" jumbotron jumbotron-fluid" id="events">
+    <div class="container shawdow my-5 border-0 p-2">
+      <h2 class="display-4 text-center">OUR EVENTS</h2>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+
+      <div class="col-md-3 col-12">
+        <div class="card bg-white text-black shadow my-5 p-1 border-0">
+          <div class="img-animtion">
+            <img src="img/headpic.jpg" alt="HoC" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Hour of Code</h5>
+            <p class="card-text text-justify">A 2 day event conducted in The Amaatra Academy to bring interest...</p>
+            <a href="hourofcode.html" class="btn btn-success bg-primary">Read More...</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card bg-white text-black shadow my-5 p-1 border-0">
+          <div class="img-animtion">
+            <img src="img/Hacktoberfest.png" alt="HacktoberFest" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">HacktoberFest 2019</h5>
+            <p class="card-text text-justify">A 12-hour &apos;Open Source Hack Night&apos; in association with Hacktoberfest...</p>
+            <a href="hacktober_fest.html" class="btn btn-success bg-primary">Read More...</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card bg-white text-black shadow my-5 p-0.8 border-0">
+          <div class="img-animtion">
+            <img src="img/oss_ses.jpg" alt="OSS" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Open Source Workshop</h5>
+            <p class="card-text text-justify">A workshop to teach the students about OSS, Git...</p>
+            <a href="os_workshop.html" class="btn btn-success bg-primary">Read More...</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card bg-white text-black shadow my-5 p-1 border-0">
+          <div class="img-animtion">
+            <img src="img/inaug_cover.jpg" alt="Inauguration" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Inauguration</h5>
+            <p class="card-text text-justify">The college student chapter was inaugurated by the former ACM President...</p>
+            <a href="inauguration.html" class="btn btn-success bg-primary">Read More...</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<br>
 
 
 
 
 
-<!--- Office beareres-->
-<div class="container-fluid">
+<!--- Office bearers-->
+<div class="container-fluid" id="team">
 	<section class="team-section text-center my-5">
 
 		<!-- Section heading -->
@@ -145,9 +236,11 @@
 		<div class="row">
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 team">
 			
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class=" img-fluid rounded-circle shadow"
+			  <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class=" img-fluid rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/chair.png" class=" rounded-circle shadow"
 				alt="Sample avatar">
 		
 			<h5 class="font-weight-bold mt-4 mb-3">Ankit Raj</h5>
@@ -168,9 +261,9 @@
 		  <!-- Grid column -->
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+		  <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 team">
 			
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle shadow"
+			  <img src="img/Vice-chair.jpeg" class="rounded-circle shadow"
 				alt="Sample avatar">
 			<h5 class="font-weight-bold mt-4 mb-3">Dhruv Bindra</h5>
 			<p class="text-uppercase text-primary"><strong>Vice Chair</strong></p>
@@ -192,7 +285,9 @@
 		  <!-- Grid column -->
 		  <div class="col-lg-3 col-md-6 mb-md-0 mb-5 team">
 			  <div class="container team">
-				<img src="img/team1.png" class="rounded-circle shadow"
+				<!-- <img src="img/team1.png" class="rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/secretary.png" class="rounded-circle shadow"
 				alt="Sample avatar">
 
 			  </div>
@@ -216,9 +311,11 @@
 		  <!-- Grid column -->
 	  
 		  <!-- Grid column -->
-		  <div class="col-lg-3 col-md-6">
+		  <div class="col-lg-3 col-md-6 team">
 			<div class="avatar mx-auto">
-			  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle shadow"
+			  <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle shadow"
+				alt="Sample avatar"> -->
+				<img src="img/treasurer.png" class=" img-fluid rounded-circle shadow"
 				alt="Sample avatar">
 			</div>
 			<h5 class="font-weight-bold mt-4 mb-3">Venkatavardan R</h5>
@@ -238,6 +335,23 @@
 		  </div>
 		  <!-- Grid column -->
 	  
+		</div>
+		<!-- Grid row -->
+		<div class="row">
+			<div class="col-lg-12 col-md-12 team">
+				<div class="avatar mx-auto">
+				  <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle shadow"
+					alt="Sample avatar"> -->
+					<img src="img/sandesh jayanth .jpeg" class=" img-fluid rounded-circle shadow"
+					alt="Sample avatar">
+				</div>
+				<h5 class="font-weight-bold mt-4 mb-3">Mr.Sandesh Jayanth</h5>
+				<p class="text-uppercase text-primary"><strong>Faculty Sponsor</strong></p>
+				<p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur
+				  totam officia voluptates perferendis voluptatibus aut.</p>
+			  </div>
+
+
 		</div>
 		<!-- Grid row -->
 	  
@@ -271,66 +385,66 @@
 
 
 <!--- Footer -->
-<footer class="footer-distributed">
+<!--- Footer -->
+<footer class="footer-distributed" id="footer">
 
 	<div class="footer-left">
-
-		<img src="img/logo.png" alt="logo" height="100 ">
-<br>
-
-		<p class="footer-company-name">Company Name © 2015</p>
-	</div>
-
-	<div class="footer-center">
-		<!-- <div class="card" style="width:300px";>
-			<div class="card-body">
-				<h4 class="card-title">Contact Us</h4> -->
-				<div class="location">
-					<i class="fas fa-map-marker-alt fa-lg"></i>
-					<p><a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">PES University</a></p>
-				</div>
-				<br>	
-				<div>
-					<i class="far fa-envelope fa-lg"></i>
-					<p><a href="mailto:support@company.com" class="mail">support@company.com</a></p>
-				</div>
-		
-			   
-
-			<!-- </div>
-		  </div> -->
-
-		
-
-	</div>
-
-	<div class="footer-right">
-		<!-- <div class="card" style="width:300px";>
-			<div class="card-body"> -->
-			  <!-- <h4 class="card-title">About the company</h4> -->
-			  <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p> -->
-			   <div class="col-12 social padding">
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-github"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-linkedin"></i></a>
 	
-			<!-- </div>
-
-			</div> -->
-		  </div>
-		<!-- <p class="footer-company-about">
-			<span>About the company</span>
-			Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-		</p> -->
-
-		
-
+	<img src="img/logo.png" alt="logo" height="100 ">
+	<img src="img/pes.PNG" alt="logo"height="80">
+	<br>
+	
+	<p class="footer-company-name text-white">ACM PESU-ECC © 2020</p>
 	</div>
-
-</footer>
-
+	
+	<div class="footer-center">
+	<!-- <div class="card" style="width:300px";>
+	<div class="card-body">
+	<h4 class="card-title">Contact Us</h4> -->
+	<div class="location">
+	<i class="fas fa-map-marker-alt fa-lg"></i>
+	<p><a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">PES University Electronic City</a></p>
+	</div>
+	<br>
+	<div>
+	<i class="far fa-envelope fa-lg"></i>
+	<p><a href="mailto:acmpesucc@gmail.com" class="mail">acmpesuecc@gmail.com</a></p>
+	</div>
+	
+	 
+	
+	<!-- </div>
+	 </div> -->
+	
+	
+	
+	</div>
+	
+	<div class="footer-right">
+	<!-- <div class="card" style="width:300px";>
+	<div class="card-body"> -->
+	 <!-- <h4 class="card-title">About the company</h4> -->
+	 <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p> -->
+	  <div class="col-12 social padding">
+	<a href="https://www.facebook.com/acmpesuec"><i class="fab fa-facebook"></i></a>
+	<a href="https://www.instagram.com/acmpesuecc/"><i class="fab fa-instagram"></i></a>
+	<a href="https://github.com/acmpesuecc"><i class="fab fa-github"></i></a>
+	<a href="https://twitter.com/acmpesu?lang=en"><i class="fab fa-twitter"></i></a>
+	<a href="https://zw.linkedin.com/company/acm-pesu-ecc"><i class="fab fa-linkedin"></i></a>
+	
+	<!-- </div>
+	</div> -->
+	 </div>
+	<!-- <p class="footer-company-about">
+	<span>About the company</span>
+	Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+	</p> -->
+	
+	
+	
+	</div>
+	
+	</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -340,6 +454,7 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/app.js"></script>
 
 </body>

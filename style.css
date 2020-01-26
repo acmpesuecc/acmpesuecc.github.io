@@ -3,16 +3,15 @@ html,body{
   height: 100%;
   width:100%;
   font-family: 'Poppins',sans-serif;
-  color:#222;
+  color:rgb(31, 30, 30);
   font-size: 2vh;
-  background-color: rgb(204, 224, 240);
 }
 .team-section.text-center.my-5 {
-  background-color: rgb(204, 224, 240)
+  background-color: rgb(203, 217, 231);
 }
 hr {
   border: none;
-  height: 1px;
+  height: 2px;
   background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
 }
 
@@ -421,8 +420,27 @@ width: 250px;
 height: 250px;
 }
 
+.about{
+  font-size:2.5vh;
+}
+.blockquote-custom{
+  background-color: #bee7f8;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
 
 
-
-
+.font-italic{
+  font-size: 1.5rem;
+}
 
