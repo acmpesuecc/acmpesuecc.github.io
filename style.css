@@ -6,6 +6,9 @@ html,body{
   color:rgb(31, 30, 30);
   font-size: 2vh;
 }
+#header{
+  overflow: hidden;
+}
 .team-section.text-center.my-5 {
   background-color: rgb(203, 217, 231);
 }
@@ -221,7 +224,8 @@ hr {
 	text-align: left;
   font: bold 18px sans-serif;
   color:rgb(175, 174, 174);
-	padding: 25px 25px;
+  padding: 25px 25px;
+  /* asjd */
 }
 
 .footer-distributed .footer-left,
