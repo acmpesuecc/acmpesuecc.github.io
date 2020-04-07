@@ -2,10 +2,12 @@
 html,body{
   height: 100%;
   width:100%;
-  overflow-x: hidden;
   font-family: 'Poppins',sans-serif;
   color:rgb(31, 30, 30);
   font-size: 2vh;
+}
+html{
+  overflow-x: hidden;
 }
 #header{
   overflow: hidden;
