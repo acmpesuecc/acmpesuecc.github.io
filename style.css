@@ -194,21 +194,34 @@ hr {
 }
 .fa-facebook{
   color:#3b5998;
+  font-size:40px;
 }
 .fa-twitter{
   color:#00aced;
+  font-size:40px;
+   margin-left: 40px;
+   margin-top: 10px;
+
 }
 .fa-github{
+	margin-left: 20px;
   color:white;
+  font-size:40px;
 }
 .black{
   color:black;
 }
 .fa-instagram{
+	margin-left: 20px;
   color: #f07d7d;
+  font-size:40px;
 }
 .fa-linkedin{
   color:#2867B2;
+  font-size:40px;
+  margin-left: 20px;
+   margin-top: 10px;
+  
 }
 .fa-facebook:hover,
 .fa-twitter:hover,
