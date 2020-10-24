@@ -4,7 +4,7 @@ html,body{
   width:100%;
   font-family: 'Poppins',sans-serif;
   color:rgb(31, 30, 30);
-  font-size: 2vh;
+  font-size: 3vh;
 }
 html{
   overflow-x: hidden;
@@ -42,7 +42,7 @@ hr {
   transform:translateY(-50%);
 }
 .carousel-caption h3{
-  font-size:200%;
+  font-size:220%;
   font-weight: 300;
   text-shadow:1px 1px 10px #000;
 }
@@ -157,12 +157,12 @@ hr {
 
 
 .nav-link{
-  font-size:15px;
+  font-size:10px;
   padding: 20px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .nav-link:hover{
   opacity: 1;
@@ -433,6 +433,8 @@ height: 300px;
   font-style: italic;
   line-height: 2em;
   	color: blue;
+	background-color:white;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 
 	
 }
