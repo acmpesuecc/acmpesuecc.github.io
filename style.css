@@ -157,12 +157,12 @@ hr {
 
 
 .nav-link{
-  font-size:18px;
+  font-size:15px;
   padding: 20px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .nav-link:hover{
   opacity: 1;
@@ -424,12 +424,17 @@ Extra (xl) large devices (large desktops, 1200px and up)
 /* Meet the team */
 .team img{
   object-fit: cover;
-width: 250px;
-height: 250px;
+width: 300px;
+height: 300px;
 }
 
 .about{
-  font-size:2.5vh;
+  font-size:2.6vh;
+  font-style: italic;
+  line-height: 2em;
+  	color: blue;
+
+	
 }
 .blockquote-custom{
   background-color: #bee7f8;
@@ -444,7 +449,7 @@ height: 250px;
   justify-content: center;
   position: absolute;
   top: -25px;
-  left: 50px;
+  left: 30px;
 }
 
 
