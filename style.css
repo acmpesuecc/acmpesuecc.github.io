@@ -172,6 +172,7 @@ hr {
   transition: 250ms;
   height: 3px;
   content: "";
+  left:-0.1px;
   position: absolute;
   background-color: rgb(59, 83, 219)
 }
@@ -429,7 +430,7 @@ height: 250px;
 }
 
 .about{
-  font-size:2.5vh;
+  font-size:2.7vh;
 }
 .blockquote-custom{
   background-color: #bee7f8;
@@ -452,3 +453,16 @@ height: 250px;
   font-size: 1.5rem;
 }
 
+.img-animtion img{
+  width:100%;
+  height:250px;
+}
+
+.card{
+  height:437px;
+}
+
+.card-text{
+  /* justify-content: center; */
+  font-size:4mm;
+}
