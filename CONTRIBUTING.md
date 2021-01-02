@@ -1,8 +1,7 @@
-This is the repositary for the acm website. The files for the main website is index.html and the css file is style.css. Here are some of the guidelines that is to be followed :
+# This the official website for the ACM PESUECC Student Chapter.
 
-
-1)Plagarism will not be accepted.if so the pull request WILL NOT be accepted.
-
-2)It is up to you how to resolve the issue. 
-
-3)If any issues please feel free to ask .
+## Contributing Rules
+1. Create an issue/work on an existing issue
+2. DM a maintaner if you need help
+3. Submit a Pull Request, 1 per Issue
+4. Do not push to master.
