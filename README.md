@@ -10,5 +10,10 @@
 
 Official website of ACM Student Chapter, PES University Electronic City Campus.
 
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+
 ## Contributing
 Contributions are welcome! You don't have to be a chapter member to contribute. Checkout the [contributing guidelines](CONTRIBUTING.md) for more information.
