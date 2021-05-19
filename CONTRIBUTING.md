@@ -3,5 +3,6 @@
 ## Contributing Rules
 1. Create an issue/work on an existing issue
 2. DM a maintaner if you need help
-3. Submit a Pull Request, 1 per Issue
-4. Do not push to master.
+3. Submit a Pull Request, only 1 Issue per Pull Request
+4. Submit the PR to master
+5. Upon approval and merging to master, changes will automatically get deployed to https://pesuecc.acm.org
