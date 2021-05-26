@@ -9,24 +9,35 @@ body {
 }
 
 .arrows {
-    padding-left: 35rem;
+    text-align: center;
 }
 
-@media (max-width: 1000px) {
-    .arrows {
-        padding-left: 20rem;
+#foundingMember {
+    font-size: 18px;
+}
+
+@media (min-width:750px) and (max-width:1000px) {
+    #foundingMember {
+        font-size: 13px;
     }
 }
 
-@media (max-width: 768px) {
-    .arrows {
-        padding-left: 15rem;
+#foundingMember1 {
+    font-size: 18px;
+    padding-bottom: 23px;
+}
+
+@media (min-width:1001px) {
+    #foundingMember1 {
+        font-size: 18px;
+        padding-bottom: 20px;
     }
 }
 
-@media (max-width: 420px) {
-    .arrows {
-        padding-left: 12rem;
+@media (min-width:750px) and (max-width:1000px) {
+    #foundingMember1 {
+        font-size: 15px;
+        padding-bottom: 18px;
     }
 }
 
@@ -504,7 +515,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
 }
 
 .card {
-    height: 437px;
+    height: 450px;
 }
 
 .card-text {
@@ -612,7 +623,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
 
 .frontside .card,
 .backside .card {
-    height: 250px;
+    height: 300px;
 }
 
 .backside .card a {
