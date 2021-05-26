@@ -3,13 +3,6 @@ html {
     height: 300%;
 }
 
-.body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: black;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -19,15 +12,9 @@ body {
 
 .navbar-container {
     position: fixed;
-    background-color: black;
+    background-color: #0d324d;
     width: 100%;
-    z-index: 1;
-    box-shadow: 0 0 40px #DE7918;
-    border-bottom: 1px solid #9D7B0A;
-}
-
-.tensorimage {
-    height: 500px;
+    z-index: 999;
 }
 
 #navbarNav {
@@ -40,10 +27,10 @@ body {
     position: relative;
     vertical-align: center;
     padding: 10px 20px;
-    color: #160000;
+    color: #03e9f4;
     font-size: 16px;
     background: #141e30;
-    border-color: #160000;
+    border-color: #03e9f4;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 25px;
@@ -59,63 +46,18 @@ body {
     box-shadow: 0 50vh 0 50vh #0d324d;
 }
 
-.footer {
-    color: white;
-    background-color: #202020;
-    box-shadow: 0 50vh 0 50vh #202020;
-}
-
 #options button:hover {
     background: #7f5a83;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #160000, 0 0 25px #160000, 0 0 50px #160000, 0 0 100px #160000;
-}
-
-.Heading1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 56px;
-    color: yellow;
-    text-align: center;
-}
-
-.Heading2 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 34px;
-    color: yellow;
-    text-align: center;
-}
-
-#Heading1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 56px;
-    color: yellow;
-    text-align: center;
-}
-
-.card-img {
-    height: 200px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.paragraph {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    color: yellow;
-}
-
-.tensorHeading {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 56px;
-    color: yellow;
+    box-shadow: 0 0 5px #7ed6df, 0 0 25px #7ed6df, 0 0 50px #7ed6df, 0 0 100px #7ed6df;
 }
 
 #options a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: white;
+    color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -131,15 +73,11 @@ hr {
     border: none;
 }
 
-.horizontal-border {
-    background-color: #DE7918;
-}
-
 #options a:hover {
-    background: #9D7B0A;
+    background: #008080;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #DE7918, 0 0 25px #DE7918, 0 0 50px #DE7918, 0 0 100px #DE7918;
+    box-shadow: 0 0 5px #0cbfe9, 0 0 25px #0cbfe9, 0 0 50px #0cbfe9, 0 0 100px #0cbfe9;
 }
 
 #options a span {
@@ -149,42 +87,14 @@ hr {
 
 .img-container {
     text-align: center;
-    padding-top: 100px;
-}
-
-.info-container {
-    color: white;
-    text-align: center;
-    padding-left: 275px;
-    padding-right: 275px;
-}
-
-@media screen and (max-width: 992px) {
-    .info-container {
-        color: white;
-        text-align: center;
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-}
-
-
-/* On screens that are 600px wide or less, the background color is olive */
-
-@media screen and (max-width: 600px) {
-    .info-container {
-        color: white;
-        text-align: center;
-        padding-left: 80px;
-        padding-right: 100px;
-    }
+    padding-top: 150px;
 }
 
 .info {
     color: white;
     text-align: center;
-    padding-left: 275px;
-    padding-right: 275px;
+    padding-left: 325px;
+    padding-right: 325px;
 }
 
 .info p {
@@ -309,7 +219,7 @@ hr {
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
-    color: white;
+    color: #white;
     text-decoration: none !important;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
