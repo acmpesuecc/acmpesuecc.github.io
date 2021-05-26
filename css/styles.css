@@ -6,7 +6,10 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #1f1e1e;
     font-size: 2vh;
+    overflow-x: hidden;
+    width: 100%;
 }
+
 
 .arrows {
     text-align: center;
