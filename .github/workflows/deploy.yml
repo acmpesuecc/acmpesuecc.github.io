@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       # Deleting the team submodule. This will get transfered from it's own repository's action
-    - run: run -rf team 
+    - run: rm -rf team 
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
