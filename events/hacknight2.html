@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hack night</title>
+        <style>
+            body {
+                background-color: orange;
+            }
+
+            svg {
+                height: 50px;
+                width: 50px;
+            }
+
+            .st0,
+            .st1,
+            .st2,
+            .st3 {
+                fill: none;
+                stroke: black;
+                stroke-width: 42;
+                stroke-miterlimit: 10;
+            }
+
+            .st0 {
+                stroke-dasharray: 12.1947, 12.1947, 12.1947, 12.1947, 12.1947,
+                    12.1947;
+            }
+
+            .st1 {
+                stroke-dasharray: 50, 90, 200, 30, 40, 0;
+            }
+
+            .st2 {
+                stroke-linecap: square;
+                stroke-dasharray: 120, 20, 110, 20, 140;
+            }
+
+            .st3 {
+                stroke-width: 16;
+                stroke-linecap: square;
+            }
+
+            .my-timeline-circle {
+                width: 22px;
+                height: 22px;
+                padding: 0.5rem;
+                border-radius: 50%;
+                border: 0.25rem solid #ccc;
+                background: #000;
+                color: #fff;
+                font-family: arial;
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .my-timeline-container {
+                margin: 0 20px 0 10%;
+            }
+
+            .my-timeline-line {
+                width: 6px;
+                height: 700px;
+                background-color: red;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .my-timeline-event-container {
+                position: relative;
+                right: 22px;
+            }
+
+            .my-timeline-text-container {
+                position: absolute;
+                top: -28px;
+                left: 60px;
+                height: 100px;
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-timeline-container">
+            <div class="my-timeline-line">
+                <div class="my-timeline-event-container">
+                    <div class="my-timeline-point-container">
+                        <div class="my-timeline-circle">1</div>
+                    </div>
+                    <div class="my-timeline-text-container">hiiiii</div>
+                </div>
+
+                <div class="my-timeline-event-container">
+                    <div class="my-timeline-point-container">
+                        <div class="my-timeline-circle">2</div>
+                    </div>
+                    <div class="my-timeline-text-container">hiiiii</div>
+                </div>
+
+                <div class="my-timeline-event-container">
+                    <div class="my-timeline-point-container">
+                        <div class="my-timeline-circle">3</div>
+                    </div>
+                    <div class="my-timeline-text-container">hiiiii</div>
+                </div>
+
+                <div class="my-timeline-event-container">
+                    <div class="my-timeline-point-container">
+                        <div class="my-timeline-circle">4</div>
+                    </div>
+                    <div class="my-timeline-text-container">hiiiii</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
