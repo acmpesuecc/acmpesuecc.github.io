@@ -4,10 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Hack night</title>
     <style>
       body {
-        background-color: orange;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+
+      /* ################ Homepage stuff ##################*/
+
+      .home-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f2edde;
+        padding: 7% 0 10% 0;
+      }
+
+      .hacknight-logo {
+      }
+
+      .hacknight-home-left-right-img {
+        width: 10%;
+      }
+
+      .hacknight-logo-button-container {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .hacknight-logo-button-container button {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        width: 170px;
+        background-color: #e74c2b;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        outline: none;
+        border: none;
+        border-radius: 25px;
+        margin: 0 auto;
+      }
+      .hacknight-logo-button-container button:hover {
+        cursor: pointer;
+      }
+
+      /* ################ Timeline stuff ##################*/
+
+      .timeline-main-container {
+        padding: 10% 0;
+        background-color: #29332f;
+      }
+
+      .timeline-heading {
+        margin: 0 0 5% 0;
+        text-align: center;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 2.5rem;
+        color: white;
       }
 
       .my-timeline-circle {
@@ -15,23 +77,23 @@
         height: 22px;
         padding: 0.5rem;
         border-radius: 50%;
-        border: 0.25rem solid #ccc;
-        background: #000;
-        color: #fff;
-        font-family: arial;
+        border: 0.25rem solid #b53a25;
+        background: #e96529;
+        color: white;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: bold;
         text-align: center;
       }
 
       .my-timeline-container {
-        margin: 0 20px 0 10%;
+        margin: 0 50% 0 50%;
       }
 
       .my-timeline-line {
         width: 6px;
         height: 700px;
-        background-color: red;
+        background-color: #f2edde;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -51,41 +113,87 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        color: white;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      .my-timeline-left-text-container {
+        position: absolute;
+        text-align: right;
+        top: -28px;
+        left: -420px;
+        height: 100px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
       }
     </style>
   </head>
   <body>
-    <h1 style="text-align: center">HackNight 3.0</h1>
-    <!-- <div class="my-timeline-container">
-      <div class="my-timeline-line">
-        <div class="my-timeline-event-container">
-          <div class="my-timeline-point-container">
-            <div class="my-timeline-circle">1</div>
-          </div>
-          <div class="my-timeline-text-container">hiiiii</div>
-        </div>
+    <div class="home-container">
+      <img
+        class="hacknight-home-left-right-img"
+        src="./img/hacknight3/leftDesign.svg"
+        alt="HackNight design left"
+      />
+      <div class="hacknight-logo-button-container">
+        <img
+          class="hacknight-logo"
+          src="./img/hacknight3/hacknightLogo.svg"
+          alt="HackNight logo"
+        />
 
-        <div class="my-timeline-event-container">
-          <div class="my-timeline-point-container">
-            <div class="my-timeline-circle">2</div>
-          </div>
-          <div class="my-timeline-text-container">hiiiii</div>
-        </div>
+        <button
+          onclick="window.open('https://acmpesuecc.typeform.com/hacknight', '_blank'); return false;"
+        >
+          Register here
+        </button>
+      </div>
+      <img
+        class="hacknight-home-left-right-img"
+        src="./img/hacknight3/rightDesign.svg"
+        alt="HackNight design left"
+      />
+    </div>
 
-        <div class="my-timeline-event-container">
-          <div class="my-timeline-point-container">
-            <div class="my-timeline-circle">3</div>
+    <div class="timeline-main-container">
+      <h1 class="timeline-heading">Timeline</h1>
+      <div class="my-timeline-container">
+        <div class="my-timeline-line">
+          <div class="my-timeline-event-container">
+            <div class="my-timeline-point-container">
+              <div class="my-timeline-circle">1</div>
+            </div>
+            <div class="my-timeline-text-container">Event 1</div>
           </div>
-          <div class="my-timeline-text-container">hiiiii</div>
-        </div>
 
-        <div class="my-timeline-event-container">
-          <div class="my-timeline-point-container">
-            <div class="my-timeline-circle">4</div>
+          <div class="my-timeline-event-container">
+            <div class="my-timeline-point-container">
+              <div class="my-timeline-circle">2</div>
+            </div>
+            <div class="my-timeline-left-text-container">Event 2</div>
           </div>
-          <div class="my-timeline-text-container">hiiiii</div>
+
+          <div class="my-timeline-event-container">
+            <div class="my-timeline-point-container">
+              <div class="my-timeline-circle">3</div>
+            </div>
+            <div class="my-timeline-text-container">Event 3</div>
+          </div>
+
+          <div class="my-timeline-event-container">
+            <div class="my-timeline-point-container">
+              <div class="my-timeline-circle">4</div>
+            </div>
+            <div class="my-timeline-left-text-container">Event 4</div>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>
