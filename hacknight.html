@@ -143,17 +143,18 @@
       }
 
       .my-timeline-circle {
-        width: 22px;
-        height: 22px;
+        width: 5px;
+        height: 5px;
         padding: 0.5rem;
         border-radius: 50%;
-        border: 0.25rem solid #b53a25;
+        border: 0.3rem solid #b53a25;
         background: #e96529;
         color: white;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: bold;
         text-align: center;
+        margin: auto;
       }
 
       .my-timeline-container {
@@ -171,12 +172,12 @@
 
       .my-timeline-event-container {
         position: relative;
-        right: 22px;
+        right: 12px;
       }
 
       .my-timeline-text-container {
         position: absolute;
-        top: -28px;
+        top: -11px;
         left: 60px;
         height: 100px;
         width: 400px;
@@ -186,6 +187,11 @@
         color: white;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
+      }
+
+      .my-timeline-text{
+        margin-block-start: 0px;
+        margin-block-end: 0.5em;
       }
 
       .my-timeline-left-text-container {
@@ -418,23 +424,38 @@
         <div class="my-timeline-line">
           <div class="my-timeline-event-container">
             <div class="my-timeline-point-container">
-              <div class="my-timeline-circle">1</div>
+              <div class="my-timeline-circle"></div>
             </div>
-            <div class="my-timeline-text-container">Event 1</div>
+            <div class="my-timeline-text-container">
+              <p class="my-timeline-text" style="font-weight: bold;">13th October</p>
+              <p class="my-timeline-text">Workshop Oflline</p>
+            </div>
           </div>
 
           <div class="my-timeline-event-container">
             <div class="my-timeline-point-container">
-              <div class="my-timeline-circle">2</div>
+              <div class="my-timeline-circle"></div>
             </div>
-            <div class="my-timeline-left-text-container">Event 2</div>
+            <div class="my-timeline-left-text-container">Workshop Online</div>
           </div>
 
           <div class="my-timeline-event-container">
             <div class="my-timeline-point-container">
-              <div class="my-timeline-circle">3</div>
+              <div class="my-timeline-circle">15</div>
             </div>
-            <div class="my-timeline-text-container">Event 3</div>
+            <div class="my-timeline-text-container"></div>
+          </div>
+          <div class="my-timeline-event-container">
+            <div class="my-timeline-point-container">
+              <div class="my-timeline-circle"></div>
+            </div>
+            <div class="my-timeline-text-container">
+              12PM Opening Ceremony
+              <!-- <p>12PM Opening Ceremony</p>
+              <p>5PM Speaker</p>
+              <p>10PM GSoC Pannel</p>
+              <p>12AM Game Night</p> -->
+            </div>
           </div>
 
           <div class="my-timeline-event-container">
@@ -456,15 +477,15 @@
       <div class="footer-address-container">
         <p class="footer-headings">ADDRESS</p>
 
-        <div style="color: white; display: flex; line-height: 0.9rem">
+        <div style="color: white; display: flex; line-height: 0.9rem;">
           <i class="fas fa-home"></i>&ThickSpace;
-          <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
+          <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89" style="color: white;">
             PES University Electronic City
           </a>
         </div>
-        <div style="color: white; display: flex; line-height: 0.9rem">
+        <div style="color: white; display: flex; line-height: 0.9rem;" >
           <i class="far fa-envelope"></i>&ThickSpace;
-          <a href="mailto:acmpesucc@gmail.com"> acmpesuecc@gmail.com </a>
+          <a href="mailto:acmpesucc@pes.edu" style="color: white;"> acmpesuecc@gmail.com </a>
         </div>
         <div style="color: white; display: flex; line-height: 0.9rem">
           <i class="fas fa-phone"></i>&ThickSpace; +91 78988 47988
