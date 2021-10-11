@@ -239,6 +239,16 @@
         height: 200px;
       }
 
+      .footer{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-img{
+        width: 12vw;
+        height: 5vw;
+      }
+
       /* ################ media queries##################*/
 
       @media only screen and (max-width: 850px) {
@@ -438,99 +448,48 @@
     </div>
 
     <div id="contact" class="footer-container">
-      <div class="footer" id="Footer">
-        <!-- Footer -->
-        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-          <!-- Footer Links -->
-          <div class="container text-center text-md-left">
-            <!-- Grid row -->
-            <div class="row">
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                <!-- Content -->
-                <br />
-                <img class="acm" src="./img/acm-logo.png" alt="acmlogo" />
-              </div>
+      <img
+        class="footer-img"
+        src="./img/acm-logo.png"
+        alt="ACM PESU logo"
+      />
+      <div class="footer-address-container">
+        <p class="footer-headings">ADDRESS</p>
 
-              <!-- Grid column -->
-
-              <hr class="clearfix w-100 d-md-none" />
-
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-                <!-- Contact details -->
-                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-
-                <ul class="list-unstyled">
-                  <li>
-                    <p>
-                      <i class="fas fa-home mr-3"></i>
-                      <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
-                        PES University Electronic City
-                      </a>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <i class="fas fa-envelope mr-3"></i>
-                      <a href="mailto:acmpesucc@gmail.com" class="mail">
-                        acmpesuecc@gmail.com
-                      </a>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p><i class="fas fa-phone mr-3"></i>+91 89716 17538</p>
-                  </li>
-                </ul>
-              </div>
-              <!-- Grid column -->
-
-              <hr class="clearfix w-100 d-md-none" />
-
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-                <!-- Social buttons -->
-                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-                <!-- Facebook -->
-                <a
-                  type="button"
-                  class="btn-floating btn-fb"
-                  href="https://www.facebook.com/acmpesuec"
-                >
-                  <i class="fab fa-facebook fa-2x"></i>
-                </a>
-                <br />
-                <br />
-                <!-- Twitter -->
-                <a
-                  type="button"
-                  class="btn-floating btn-tw"
-                  href="https://twitter.com/acmpesu?lang=en"
-                >
-                  <i class="fab fa-twitter fa-2x"></i>
-                </a>
-                <br />
-                <br />
-                <!-- Google +-->
-                <a
-                  type="button"
-                  class="btn-floating btn-insta"
-                  href="https://www.instagram.com/acmpesuecc/"
-                >
-                  <i class="fab fa-instagram fa-2x"></i>
-                </a>
-              </div>
-              <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-          </div>
-          <!-- Footer Links -->
-        </footer>
-        <!-- Footer -->
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="fas fa-home"></i>&ThickSpace;
+          <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
+            PES University Electronic City
+          </a>
+        </div>
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="far fa-envelope"></i>&ThickSpace;
+          <a href="mailto:acmpesucc@gmail.com"> acmpesuecc@gmail.com </a>
+        </div>
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="fas fa-phone"></i>&ThickSpace; +91 78988 47988
+        </div>
       </div>
+      <div class="footer-follow-container">
+        <p class="footer-headings">FOLLOW US</p>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://www.facebook.com/acmpesuec"
+        >
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://twitter.com/acmpesu?lang=en"
+        >
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://www.instagram.com/acmpesuecc/"
+        >
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
     </div>
   </body>
 </html>
