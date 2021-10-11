@@ -11,22 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
     ></script>
-    <link rel="stylesheet" href="../css/styles2.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
 
     <title>Hack night</title>
     <style>
@@ -212,7 +201,37 @@
       /* ################ Footer stuff ##################*/
 
       .footer-container {
-        background-color: #f2edde;
+        background-color: #15324d;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 3% 0;
+      }
+
+      .footer-img {
+        height: 100px;
+      }
+
+      .footer-headings {
+        color: White;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .footer-address-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 200px;
+      }
+
+      .footer-follow-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        height: 200px;
       }
 
       /* ################ media queries##################*/
@@ -272,6 +291,11 @@
           left: -150px;
           height: 300px;
           width: 130px;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          height: 500px;
         }
       }
     </style>
@@ -346,8 +370,8 @@
         If you are looking to access and contribute some code to any repository,
         you can use Github to look for these repositories. Git is a useful tool
         for this that allows you to carry out Github instructions using a CLI.
-        To learn more about Git and Github, check out these resources. (link to
-        Git workshop and other resources)
+        To learn more about Git and Github, make sure you attend our workshops
+        to get you prepared for the event! Details below.
         <br />
         <br />
         <strong> So why get into open source? </strong>
@@ -398,98 +422,48 @@
     </div>
 
     <div id="contact" class="footer-container">
-      <div class="footer" id="Footer">
-        <!-- Footer -->
-        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-          <!-- Footer Links -->
-          <div class="container text-center text-md-left">
-            <!-- Grid row -->
-            <div class="row">
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                <!-- Content -->
-                <br />
-                <img id="acm" src="../img/acmpesuecc2.png" alt="acmlogo" />
-              </div>
+      <img
+        class="footer-img"
+        src="../img/acmpesuecc2.png"
+        alt="ACM PESU logo"
+      />
+      <div class="footer-address-container">
+        <p class="footer-headings">ADDRESS</p>
 
-              <!-- Grid column -->
-
-              <hr class="clearfix w-100 d-md-none" />
-
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-                <!-- Contact details -->
-                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-
-                <ul class="list-unstyled">
-                  <li>
-                    <p>
-                      <i class="fas fa-home mr-3"></i>
-                      <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
-                        PES University Electronic City
-                      </a>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <i class="fas fa-envelope mr-3"></i>
-                      <a href="mailto:acmpesucc@gmail.com" class="mail">
-                        acmpesuecc@gmail.com
-                      </a>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p><i class="fas fa-phone mr-3"></i>+91 89716 17538</p>
-                  </li>
-                </ul>
-              </div>
-              <!-- Grid column -->
-
-              <hr class="clearfix w-100 d-md-none" />
-
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-                <!-- Social buttons -->
-                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-                <!-- Facebook -->
-                <a
-                  type="button"
-                  class="btn-floating btn-fb"
-                  href="https://www.facebook.com/acmpesuec"
-                >
-                  <i class="fab fa-facebook fa-2x"></i>
-                </a>
-                <br />
-                <br />
-                <!-- Twitter -->
-                <a
-                  type="button"
-                  class="btn-floating btn-tw"
-                  href="https://twitter.com/acmpesu?lang=en"
-                >
-                  <i class="fab fa-twitter fa-2x"></i>
-                </a>
-                <br />
-                <br />
-                <!-- Google +-->
-                <a
-                  type="button"
-                  class="btn-floating btn-insta"
-                  href="https://www.instagram.com/acmpesuecc/"
-                >
-                  <i class="fab fa-instagram fa-2x"></i>
-                </a>
-              </div>
-              <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-          </div>
-          <!-- Footer Links -->
-        </footer>
-        <!-- Footer -->
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="fas fa-home"></i>&ThickSpace;
+          <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
+            PES University Electronic City
+          </a>
+        </div>
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="far fa-envelope"></i>&ThickSpace;
+          <a href="mailto:acmpesucc@gmail.com"> acmpesuecc@gmail.com </a>
+        </div>
+        <div style="color: white; display: flex; line-height: 0.9rem">
+          <i class="fas fa-phone"></i>&ThickSpace; +91 78988 47988
+        </div>
+      </div>
+      <div class="footer-follow-container">
+        <p class="footer-headings">FOLLOW US</p>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://www.facebook.com/acmpesuec"
+        >
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://twitter.com/acmpesu?lang=en"
+        >
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://www.instagram.com/acmpesuecc/"
+        >
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
       </div>
     </div>
   </body>
