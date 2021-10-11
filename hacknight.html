@@ -4,18 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="../css/styles2.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
     <title>Hack night</title>
     <style>
       body {
         margin: 0;
         padding: 0;
         background-color: black;
+      }
+
+      /* ################ Navbar stuff ##################*/
+
+      .hacknight-navbar-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto 50px auto;
+        width: 60%;
+      }
+
+      .hacknight-navbar-container a {
+        text-decoration: none;
+        color: black;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
       }
 
       /* ################ Homepage stuff ##################*/
@@ -35,18 +70,19 @@
       }
 
       .hacknight-logo-button-container {
-        width: 40%;
+        width: 60%;
+        min-height: 500px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
       }
 
       .hacknight-logo-button-container button {
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        width: 170px;
+        width: 220px;
         background-color: #e74c2b;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         padding: 10px 0;
         outline: none;
         border: none;
@@ -55,6 +91,46 @@
       }
       .hacknight-logo-button-container button:hover {
         cursor: pointer;
+      }
+
+      /* ################ text section stuff ##################*/
+
+      .text-section-1-container {
+        padding: 6% 7%;
+        background-color: #29332f;
+      }
+
+      .text-section-1-heading {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }
+
+      .text-section-1-text {
+        text-align: center;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: white;
+      }
+
+      /* Section 2 */
+
+      .text-section-2-container {
+        padding: 4% 7%;
+        background-color: #f2edde;
+      }
+
+      .text-section-2-heading {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .text-section-2-text {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
       }
 
       /* ################ Timeline stuff ##################*/
@@ -132,6 +208,72 @@
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
       }
+
+      /* ################ Footer stuff ##################*/
+
+      .footer-container {
+        background-color: #f2edde;
+      }
+
+      /* ################ media queries##################*/
+
+      @media only screen and (max-width: 850px) {
+        .hacknight-navbar-container {
+          margin: 0 auto 0 auto;
+        }
+
+        .hacknight-navbar-container a {
+          font-size: 1rem;
+        }
+
+        .home-container {
+          position: relative;
+          background-color: #f2edde;
+          padding: 10% 0 10% 0;
+        }
+
+        .hacknight-logo-button-container {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+
+        .hacknight-home-left-right-img {
+          display: none;
+        }
+
+        .text-section-1-heading {
+          font-size: 2rem;
+        }
+
+        .timeline-heading {
+          margin: 0 0 5% 0;
+          text-align: center;
+          font-family: "Montserrat", Arial, Helvetica, sans-serif;
+          font-size: 1.6rem;
+          color: white;
+        }
+
+        .my-timeline-line {
+          margin: 140px 0 140px 0;
+          height: 800px;
+        }
+
+        .my-timeline-text-container {
+          top: -130px;
+          height: 300px;
+          width: 130px;
+          font-size: 1.2rem;
+        }
+        .my-timeline-left-text-container {
+          top: -126px;
+          left: -150px;
+          height: 300px;
+          width: 130px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -142,9 +284,15 @@
         alt="HackNight design left"
       />
       <div class="hacknight-logo-button-container">
+        <div class="hacknight-navbar-container">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#timeline">Timeline</a>
+        </div>
+
         <img
           class="hacknight-logo"
-          src="./img/hacknight3/hacknightLogo.svg"
+          src="./img/hacknight3/hacknightLogo.png"
           alt="HackNight logo"
         />
 
@@ -161,7 +309,60 @@
       />
     </div>
 
-    <div class="timeline-main-container">
+    <div id="about" class="text-section-1-container">
+      <p class="text-section-1-heading">What is HackNight?</p>
+      <p class="text-section-1-text">
+        Hacktoberfest is a yearly virtual event that primarily focuses on
+        open-source development of applications, code libraries, tools etc. for
+        a variety of operating systems and platforms. ACM PESU-ECC presents to
+        you <strong>Hacknight</strong> , our own rendition of the Hacktoberfest!
+        This is an initiative to provide a platform to all coders of all skill
+        levels. Join us and take your first dive into the vast world of open
+        source!
+      </p>
+    </div>
+
+    <div class="text-section-2-container">
+      <p class="text-section-2-heading">What, how and why open source?</p>
+      <p class="text-section-2-text">
+        Open source is a tag given to organisations that avail their source code
+        for free to access, utilize and even edit! This promotes the
+        transparency and security of the source code.
+        <br />
+        <br />
+        <strong>
+          But how do these organisations filter out edits to their code?
+        </strong>
+        That’s where Github comes to play! Github is a service that allows these
+        organisations to host their code repositories on their website and allow
+        contributors to send their version of the code to the code maintainers
+        who then verify the changes and approve them to be added to the source
+        code. The best part is, if you ever come across a paid software product,
+        there will always be a free, open-source counterpart to it which is
+        close to or even better than the paid product!
+        <br />
+        <br />
+        <strong> So how does Github work? </strong>
+        If you are looking to access and contribute some code to any repository,
+        you can use Github to look for these repositories. Git is a useful tool
+        for this that allows you to carry out Github instructions using a CLI.
+        To learn more about Git and Github, check out these resources. (link to
+        Git workshop and other resources)
+        <br />
+        <br />
+        <strong> So why get into open source? </strong>
+        This community is built upon experimenting and learning to code. It is
+        welcoming and exciting to work on and can grant you a ton of experience
+        and fun! In fact, most core organisations utilize the Git version
+        control or something similar for their proprietary software development
+        workflow. So this can definitely help you get a head-start on
+        familiarizing yourself with the workflow and work distribution of
+        software development.
+      </p>
+    </div>
+
+    <div id="timeline" class="timeline-main-container">
+      <h1 class="timeline-heading">&lt; Will be released soon &gt;</h1>
       <h1 class="timeline-heading">Timeline</h1>
       <div class="my-timeline-container">
         <div class="my-timeline-line">
@@ -193,6 +394,102 @@
             <div class="my-timeline-left-text-container">Event 4</div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="contact" class="footer-container">
+      <div class="footer" id="Footer">
+        <!-- Footer -->
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+          <!-- Footer Links -->
+          <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+                <!-- Content -->
+                <br />
+                <img id="acm" src="../img/acmpesuecc2.png" alt="acmlogo" />
+              </div>
+
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+                <!-- Contact details -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <p>
+                      <i class="fas fa-home mr-3"></i>
+                      <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89">
+                        PES University Electronic City
+                      </a>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <i class="fas fa-envelope mr-3"></i>
+                      <a href="mailto:acmpesucc@gmail.com" class="mail">
+                        acmpesuecc@gmail.com
+                      </a>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p><i class="fas fa-phone mr-3"></i>+91 89716 17538</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+                <!-- Social buttons -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+                <!-- Facebook -->
+                <a
+                  type="button"
+                  class="btn-floating btn-fb"
+                  href="https://www.facebook.com/acmpesuec"
+                >
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <br />
+                <br />
+                <!-- Twitter -->
+                <a
+                  type="button"
+                  class="btn-floating btn-tw"
+                  href="https://twitter.com/acmpesu?lang=en"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <br />
+                <br />
+                <!-- Google +-->
+                <a
+                  type="button"
+                  class="btn-floating btn-insta"
+                  href="https://www.instagram.com/acmpesuecc/"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+          <!-- Footer Links -->
+        </footer>
+        <!-- Footer -->
       </div>
     </div>
   </body>
