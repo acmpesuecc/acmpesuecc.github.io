@@ -228,6 +228,12 @@
         padding: 3% 0;
       }
 
+      .row{
+        display: flex;
+        width: 150px;
+        justify-content: space-between;
+      }
+
       .footer-headings {
         color: #5E6A59;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -248,7 +254,7 @@
         justify-content: space-between;
         flex-direction: column;
         text-align: center;
-        height: 200px;
+        height: 80px;
       }
 
       .footer{
@@ -334,6 +340,10 @@
 
         .hacknight-logo-button-container button{
           width: 50vw;
+        }
+
+        .footer-container{
+          flex-direction: column;
         }
       }
     </style>
@@ -499,24 +509,26 @@
       </div>
       <div class="footer-follow-container">
         <p class="footer-headings">FOLLOW US</p>
-        <a
-          style="text-decoration: none; color: #007bff"
-          href="https://www.facebook.com/acmpesuec"
-        >
-          <i class="fab fa-facebook-square fa-2x"></i>
-        </a>
-        <a
-          style="text-decoration: none; color: #00aced"
-          href="https://twitter.com/acmpesu?lang=en"
-        >
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a
-          style="text-decoration: none; color: #f07d7d"
-          href="https://www.instagram.com/acmpesuecc/"
-        >
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
+        <div class="row">
+          <a
+            style="text-decoration: none; color: #007bff"
+            href="https://www.facebook.com/acmpesuec"
+          >
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+          <a
+            style="text-decoration: none; color: #00aced"
+            href="https://twitter.com/acmpesu?lang=en"
+          >
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a
+            style="text-decoration: none; color: #f07d7d"
+            href="https://www.instagram.com/acmpesuecc/"
+          >
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
     </div>
   </body>
 </html>
