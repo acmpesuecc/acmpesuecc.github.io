@@ -83,6 +83,19 @@
         cursor: pointer;
       }
 
+      .center-text{
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        color: #e74c2b;
+        text-align: center;
+        font-size: calc(15px + 0.1vw);
+      }
+
+      .center-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
       /* ################ text section stuff ##################*/
 
       .text-section-1-container {
@@ -370,11 +383,15 @@
           alt="HackNight logo"
         />
 
-        <button
-          onclick="window.open('https://acmpesuecc.typeform.com/hacknight', '_blank'); return false;"
-        >
-          REGISTER HERE
-        </button>
+        <div class="center-container">
+            <button
+            onclick="window.open('https://acmpesuecc.typeform.com/hacknight', '_blank'); return false;"
+          >
+            REGISTER HERE
+          </button>
+          <p class="center-text">Registrations close on 14th October at 11:50 PM</p>
+        </div>
+      
       </div>
       <img
         class="hacknight-home-left-right-img"
