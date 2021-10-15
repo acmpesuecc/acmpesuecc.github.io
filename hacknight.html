@@ -83,14 +83,14 @@
         cursor: pointer;
       }
 
-      .center-text{
+      .center-text {
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         color: #e74c2b;
         text-align: center;
         font-size: calc(15px + 0.1vw);
       }
 
-      .center-container{
+      .center-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,7 +139,6 @@
         margin-top: 2vw;
       }
 
-
       /* ################ Timeline stuff ##################*/
 
       .timeline-main-container {
@@ -170,11 +169,10 @@
         margin: auto;
       }
 
-      .timeline-container{
+      .timeline-container {
         width: 89vw;
         padding: 5vw;
       }
-
 
       .my-timeline-container {
         margin: 0 50% 0 50%;
@@ -208,7 +206,7 @@
         font-size: 1.2rem;
       }
 
-      .my-timeline-text{
+      .my-timeline-text {
         margin-block-start: 0px;
         margin-block-end: 0.5em;
       }
@@ -228,27 +226,27 @@
         font-size: 1.2rem;
       }
 
-      .acm{
+      .acm {
         width: 15vw;
       }
 
       /* ################ Footer stuff ##################*/
 
       .footer-container {
-        background-color: #F2EDDE;
+        background-color: #f2edde;
         display: flex;
         justify-content: space-evenly;
         padding: 3% 0;
       }
 
-      .row{
+      .row {
         display: flex;
         width: 150px;
         justify-content: space-between;
       }
 
       .footer-headings {
-        color: #5E6A59;
+        color: #5e6a59;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: bold;
@@ -270,12 +268,12 @@
         height: 80px;
       }
 
-      .footer{
+      .footer {
         display: flex;
         flex-direction: column;
       }
 
-      .footer-img{
+      .footer-img {
         width: 16vw;
         height: 6vw;
         margin-top: auto;
@@ -289,11 +287,11 @@
           margin: 0 auto 0 auto;
         }
 
-        .text-section-1-container{
+        .text-section-1-container {
           padding: 20vw 5vw;
         }
 
-        .hacknight-navbar-container{
+        .hacknight-navbar-container {
           width: 80vw;
         }
 
@@ -303,12 +301,12 @@
           padding: 10% 0 10% 0;
         }
 
-        .hacknight-logo{
+        .hacknight-logo {
           width: 100vw;
           overflow: hidden;
         }
 
-        .home-container{
+        .home-container {
           height: 100vh;
         }
 
@@ -353,11 +351,11 @@
           width: 130px;
         }
 
-        .hacknight-logo-button-container button{
+        .hacknight-logo-button-container button {
           width: 50vw;
         }
 
-        .footer-container{
+        .footer-container {
           flex-direction: column;
         }
       }
@@ -384,14 +382,15 @@
         />
 
         <div class="center-container">
-            <button
-            onclick="window.open('https://acmpesuecc.typeform.com/hacknight', '_blank'); return false;"
+          <button
+            onclick="window.open('https://hacknight3-leaderboard.netlify.app/', '_blank'); return false;"
           >
-            REGISTER HERE
+            LEADERBOARD
           </button>
-          <p class="center-text">Registrations close on 14th October at 11:50 PM</p>
+          <p class="center-text">
+            Registrations close on 14th October at 11:50 PM
+          </p>
         </div>
-      
       </div>
       <img
         class="hacknight-home-left-right-img"
@@ -498,29 +497,47 @@
         </div>
       </div> -->
       <h1 class="timeline-heading">Timeline</h1>
-      <img 
-      class="timeline-container"
-      src="./img/timeline.png">
+      <img class="timeline-container" src="./img/timeline.png" />
     </div>
-
+    <!-- <iframe
+      src="http://www.w3schools.com"
+      name="iframe_a"
+      style="width: 100%; height: 300px"
+      title="Leaderboard"
+    ></iframe> -->
     <div id="contact" class="footer-container">
-      <img
-        class="footer-img"
-        src="./img/acm-logo.png"
-        alt="ACM PESU logo"
-      />
+      <img class="footer-img" src="./img/acm-logo.png" alt="ACM PESU logo" />
       <div class="footer-address-container">
         <p class="footer-headings">ADDRESS</p>
 
-        <div style="color: #5E6A59; display: flex; line-height: 0.9rem; font-family: 'Montserrat', Arial, Helvetica, sans-serif;">
+        <div
+          style="
+            color: #5e6a59;
+            display: flex;
+            line-height: 0.9rem;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          "
+        >
           <i class="fas fa-home"></i>&ThickSpace;
-          <a href="https://goo.gl/maps/y77ZCWSxWFko2uj89" style="color: #5E6A59;">
+          <a
+            href="https://goo.gl/maps/y77ZCWSxWFko2uj89"
+            style="color: #5e6a59"
+          >
             PES University Electronic City
           </a>
         </div>
-        <div style="color: #5E6A59; display: flex; line-height: 0.9rem; font-family: 'Montserrat', Arial, Helvetica, sans-serif;" >
+        <div
+          style="
+            color: #5e6a59;
+            display: flex;
+            line-height: 0.9rem;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          "
+        >
           <i class="far fa-envelope"></i>&ThickSpace;
-          <a href="mailto:acmpesucc@pes.edu" style="color: #5E6A59;"> acmpesuecc@pes.edu</a>
+          <a href="mailto:acmpesucc@pes.edu" style="color: #5e6a59">
+            acmpesuecc@pes.edu</a
+          >
         </div>
       </div>
       <div class="footer-follow-container">
@@ -545,6 +562,7 @@
             <i class="fab fa-instagram fa-2x"></i>
           </a>
         </div>
+      </div>
     </div>
   </body>
 </html>
