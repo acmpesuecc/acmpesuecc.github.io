@@ -16,10 +16,9 @@ $(document).ready(function(){
         e.preventDefault();
   
         var target = this.hash,
-        var $target = $(target);
         if($(target).length){
             $('html, body').animate({
-                'scrollTop': $target.offset().top-80
+                'scrollTop': $(target).offset().top - 80
             }, 400, 'swing');
         }
     });
