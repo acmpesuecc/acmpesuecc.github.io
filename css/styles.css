@@ -14,35 +14,50 @@ body {
 .arrows {
     text-align: center;
 }
+.text-primary{
+   padding-top: 10px;
+}
 
 #foundingMember {
+   padding-top: 10px;
     font-size: 18px;
+    text-align: center;
+
 }
 
 @media (min-width:750px) and (max-width:1000px) {
     #foundingMember {
         font-size: 13px;
     }
+
 }
 
 #foundingMember1 {
+    padding-top: 10px;
     font-size: 18px;
     padding-bottom: 23px;
+   
 }
 
 @media (min-width:1001px) {
     #foundingMember1 {
+       
         font-size: 18px;
         padding-bottom: 20px;
     }
+
 }
 
 @media (min-width:750px) and (max-width:1000px) {
     #foundingMember1 {
+        padding-top: 0;
         font-size: 15px;
-        padding-bottom: 18px;
+        padding-bottom: 10px;
+        
     }
+    
 }
+
 
 html {
     overflow-x: hidden;
@@ -524,6 +539,18 @@ Extra (xl) large devices (large desktops, 1200px and up)
 .card-text {
     /* justify-content: center; */
     font-size: 4mm;
+}
+.card-text1{
+
+    font-size: 4mm;
+}
+@media (max-width:690px)
+{
+    .card-text1{
+
+        font-size: 3mm;
+    }
+
 }
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
