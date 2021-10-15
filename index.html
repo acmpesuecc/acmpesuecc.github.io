@@ -25,62 +25,7 @@
 
   <body>
     <!-- Navbar -->
-    <div class="container-fluid padding" id="header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a href="#home" class="navbar-brand"
-            ><img src="img/acmlogo.png" alt="logo" height="70"
-          /></a>
-          <button
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler navbar-toggler-right"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
 
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a href="#home" class="nav-link text-uppercase font-weight-bold"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#about"
-                  class="nav-link text-uppercase font-weight-bold"
-                  >About Us</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#events"
-                  class="nav-link text-uppercase font-weight-bold"
-                  >Events</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#team" class="nav-link text-uppercase font-weight-bold"
-                  >Team</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#footer"
-                  class="nav-link text-uppercase font-weight-bold"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
 
     <!-- Landing particles -->
     <div id="home"></div>
@@ -88,6 +33,65 @@
     <div class="row">
       <div class="col">
         <div id="particles-js">
+          <!-- Navbar moved here so that background is the same as particle-js -->
+          <!-- Changed name of the class to prevent duplicate elements with same classname from changing -->
+          <div class="somecontainer" id="header">
+            <!-- Removed fixedtotop in class name. So that it is not fixed to the top of the screen while scrolling -->
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <a href="#home" class="navbar-brand"
+                  ><img src="img/acmlogo.png" alt="logo" height="70"
+                /></a>
+                <button
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  class="navbar-toggler navbar-toggler-right"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+      
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a href="#home" class="nav-link text-uppercase font-weight-bold"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="#about"
+                        class="nav-link text-uppercase font-weight-bold"
+                        >About Us</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="#events"
+                        class="nav-link text-uppercase font-weight-bold"
+                        >Events</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#team" class="nav-link text-uppercase font-weight-bold"
+                        >Team</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="#footer"
+                        class="nav-link text-uppercase font-weight-bold"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
           <div class="carousel-caption" id="typed-strings">
             <h1 class="display-2" id="typed">ACM PES UNIVERSITY</h1>
             <!-- typed.js is used here -->

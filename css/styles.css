@@ -88,7 +88,8 @@ hr {
 .carousel-caption h3 {
     font-size: 200%;
     font-weight: 300;
-    text-shadow: 1px 1px 10px #000;
+   /* Commented text-shadow. Since the text was visible when opening the nav menu*/ 
+  /*  text-shadow: 1px 1px 10px #000;*/
 }
 
 
@@ -197,9 +198,12 @@ hr {
         color: rgb(10, 10, 10);
         text-decoration: none;
     }
+    .somecontainer{background-color: white;}
 }
-
-
+/* When screen width is less than 991 background-color of somecontainer is white else it is transparent*/
+.somecontainer{
+    background-color: transparent;
+}
 /* END OF TRANSPARENT NAV */
 
 .nav-link {
