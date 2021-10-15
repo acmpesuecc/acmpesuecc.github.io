@@ -679,3 +679,25 @@ Extra (xl) large devices (large desktops, 1200px and up)
 .fa-github:hover {
   color: #6e6d6d;
 }
+
+/* GRID for members  */
+
+.grid {
+  display: grid;
+  place-items: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media screen and (max-width: 475px) {
+  .grid {
+    gap: 1rem;
+  }
+}
+
+.grid div {
+  /* max-width: 40ch; */
+  width: 100%;
+  min-height: 400px;
+}
