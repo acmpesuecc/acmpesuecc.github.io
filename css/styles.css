@@ -540,6 +540,18 @@ Extra (xl) large devices (large desktops, 1200px and up)
     /* justify-content: center; */
     font-size: 4mm;
 }
+.card-text1{
+
+    font-size: 4mm;
+}
+@media (max-width:690px)
+{
+    .card-text1{
+
+        font-size: 3mm;
+    }
+
+}
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
