@@ -9,10 +9,10 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap"
       rel="stylesheet"
@@ -133,7 +133,12 @@
           <h1 style="padding-left: 100px" class="font-weight-bold">ABOUT US</h1>
 
           <p
-            style="padding-left: 50px; padding-right: 50px;font-family: 'Titillium Web', sans-serif; font-size:22px;"
+            style="
+              padding-left: 50px;
+              padding-right: 50px;
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 22px;
+            "
             class="about py-4"
           >
             The ACM Student Chapter here at PES University Electronic City
@@ -191,361 +196,256 @@
     <!-- EVENTS -->
 
     <div class="jumbotron jumbotron-fluid" id="events">
-      <div class="container shawdow my-5 border-0 p-2">
+      <div class="container my-5 border-0 p-2">
         <h2 class="display-4 text-center">OUR EVENTS</h2>
-        <section class="pt-0 pb-0">
-          <div class="container">
-            <div class="row">
-              <div class="col-6"></div>
-              <div class="col-12">
-                <div
-                  id="carouselExampleIndicators2"
-                  class="carousel slide"
-                  data-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="row">
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="./img/gif/Blank.gif"
-                                data-src="img/event_announcement6.png"
-                                alt="HacktoberFest "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Tensor 2.0</h5>
-                              <p class="card-text text-justify">
-                                The second iteration of our 17-hour datathon.
-                              </p>
-                              <a
-                                href="events/tensor2.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="./img/gif/Blank.gif"
-                                data-src="img/Hacktoberfest2020.jpeg "
-                                alt="hacktoberfest2020 "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">HacktoberFest 2020</h5>
-                              <p class="card-text text-justify">
-                                The second iteration of our Open-Source
-                                hacknight...
-                              </p>
-                              <a
-                                href="events/hacktoberfest_2020.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="./img/gif/Blank.gif"
-                                data-src="img/tensor_card.jpg "
-                                alt="HoC "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Tensor 1.0</h5>
-                              <p class="card-text text-justify">
-                                The first iteration of our 17-hour datathon.
-                              </p>
-                              <a
-                                href="events/tensor.html"
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+        <section class="">
+          <div id="eventsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner py-5">
+              <div class="carousel-item active">
+                <div class="card-deck">
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="./img/gif/Blank.gif"
+                        data-src="img/event_announcement6.png"
+                        alt="HacktoberFest "
+                        class="lazy card-img-top"
+                      />
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="img/gif/Blank.gif"
-                                data-src="img/res_card.png "
-                                alt="Research Talk "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Research Talk</h5>
-                              <p class="card-text text-justify">
-                                The event provided insights on how to approach
-                                the field of research...
-                              </p>
-                              <a
-                                href="events/research_talk.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="./img/gif/Blank.gif"
-                                data-src="img/headpic.jpg "
-                                alt="HoC "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Hour of Code</h5>
-                              <p class="card-text text-justify">
-                                A 2-day learning event conducted in The Amaatra
-                                Academy to bring interest in the students...
-                              </p>
-                              <a
-                                href="events/hourofcode.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="./img/gif/Blank.gif"
-                                data-src="img/Hacktoberfest1.png "
-                                alt="HacktoberFest "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">HacktoberFest 2019</h5>
-                              <p class="card-text text-justify">
-                                A 12-hour &apos;Open Source Hack Night&apos; in
-                                association with Hacktoberfest was held in our
-                                campus...
-                              </p>
-                              <a
-                                href="events/hacktober_fest.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Tensor 2.0</h5>
+                      <p class="card-text text-justify">
+                        The second iteration of our 17-hour datathon.
+                      </p>
                     </div>
-                    <div class="carousel-item">
-                      <div class="row">
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-0.8
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="img/gif/Blank.gif"
-                                data-src="img/oss_ses.jpg "
-                                alt="OSS "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Open Source Workshop</h5>
-                              <p class="card-text text-justify">
-                                A workshop to teach the students about Git, Open
-                                Source Software...
-                              </p>
-                              <a
-                                href="events/os_workshop.html "
-                                class="mt-4 btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="img/gif/Blank.gif"
-                                data-src="img/inaug_cover.JPG"
-                                alt="Inauguration "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Inauguration</h5>
-                              <p class="card-text text-justify">
-                                The inauguration of our college student chapter
-                                was done by the former...
-                              </p>
-                              <a
-                                href="events/inauguration.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div
-                            class="
-                              card
-                              bg-white
-                              text-black
-                              shadow
-                              my-5
-                              p-1
-                              border-0
-                            "
-                          >
-                            <div class="img-animtion">
-                              <img
-                                src="img/gif/Blank.gif"
-                                data-src="img/inaug_cover.JPG"
-                                alt="Inauguration "
-                                class="lazy card-img-top"
-                              />
-                            </div>
-                            <div class="card-body text-center m-1">
-                              <h5 class="card-title">Hack Night 2.0</h5>
-                              <p class="card-text text-justify">
-                                Page under construction
-                              </p>
-                              <a
-                                href="events/hacknight2.html "
-                                class="btn btn-success bg-primary"
-                                >Read More...</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/tensor2.html "
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="./img/gif/Blank.gif"
+                        data-src="img/Hacktoberfest2020.jpeg "
+                        alt="hacktoberfest2020 "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">HacktoberFest 2020</h5>
+                      <p class="card-text text-justify">
+                        The second iteration of our Open-Source hacknight...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/hacktoberfest_2020.html "
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="./img/gif/Blank.gif"
+                        data-src="img/tensor_card.jpg "
+                        alt="HoC "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Tensor 1.0</h5>
+                      <p class="card-text text-justify">
+                        The first iteration of our 17-hour datathon.
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/tensor.html "
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card-deck">
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="img/gif/Blank.gif"
+                        data-src="img/res_card.png"
+                        alt="Research Talk "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Research Talk</h5>
+                      <p class="card-text text-justify">
+                        The event provided insights on how to approach the field
+                        of research...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/research_talk.html"
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="./img/gif/Blank.gif"
+                        data-src="img/headpic.jpg "
+                        alt="HoC "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Hour of Code</h5>
+                      <p class="card-text text-justify">
+                        A 2-day learning event conducted in The Amaatra Academy
+                        to bring interest in the students...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/hourofcode.html"
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="./img/gif/Blank.gif"
+                        data-src="img/Hacktoberfest1.png"
+                        alt="HacktoberFest "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">HacktoberFest 2019</h5>
+                      <p class="card-text text-justify">
+                        A 12-hour &apos;Open Source Hack Night&apos; in
+                        association with Hacktoberfest was held in our campus...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/hacktober_fest.html"
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card-deck">
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="img/gif/Blank.gif"
+                        data-src="img/oss_ses.jpg "
+                        alt="OSS "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Open Source Workshop</h5>
+                      <p class="card-text text-justify">
+                        A workshop to teach the students about Git, Open Source
+                        Software...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/os_workshop.html "
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="img/gif/Blank.gif"
+                        data-src="img/inaug_cover.JPG"
+                        alt="Inauguration "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Inauguration</h5>
+                      <p class="card-text text-justify">
+                        The inauguration of our college student chapter was done
+                        by the former...
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/inauguration.html"
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card bg-white text-black shadow h-auto">
+                    <div class="img-animtion">
+                      <img
+                        src="img/gif/Blank.gif"
+                        data-src="img/inaug_cover.JPG"
+                        alt="Inauguration "
+                        class="lazy card-img-top"
+                      />
+                    </div>
+                    <div class="card-body text-center m-1">
+                      <h5 class="card-title">Hack Night 2.0</h5>
+                      <p class="card-text text-justify">
+                        Page under construction
+                      </p>
+                    </div>
+                    <div class="card-footer border-0 text-center">
+                      <a
+                        href="events/hacknight2.html"
+                        class="btn btn-success bg-primary"
+                        >Read More...</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="arrows">
-            <a
-              class="btn btn-primary mb-3 mr-1"
-              href="#carouselExampleIndicators2"
-              role="button"
-              data-slide="prev"
-            >
-              <i class="fa fa-arrow-left"></i>
-            </a>
-            <a
-              class="btn btn-primary mb-3"
-              href="#carouselExampleIndicators2"
-              role="button"
-              data-slide="next"
-            >
-              <i class="fa fa-arrow-right"></i>
-            </a>
+            <div class="arrows">
+              <a
+                class="btn btn-primary mb-3 mr-1"
+                data-target="#eventsCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <i class="fa fa-arrow-left"></i>
+              </a>
+              <a
+                class="btn btn-primary mb-3"
+                data-target="#eventsCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </section>
       </div>
