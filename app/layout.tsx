@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Roboto_Mono } from 'next/font/google';
+const roboto = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400'
+});
 
 export const metadata: Metadata = {
   title: 'ACM | PESUECC',
@@ -24,13 +30,13 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/acmshortlogo.png" />
       </head>
-      <body className=" mx-auto max-w-[90%]">
+      <body className=" mx-auto flex min-h-[100vh] w-full flex-col overflow-x-hidden">
         {/* Trimming body and placing in the center */}
-        <nav className="mx-auto mt-6  flex h-[30%] w-[100%] flex-col lg:flex-row lg:items-center lg:justify-between">
+        <nav className="mx-auto mt-4  flex h-[30%] w-[95%] flex-col lg:flex-row lg:items-center lg:justify-between">
           {/* Nav switches between row and column display for phone and mobile*/}
           <a
             href="/"
-            className="mx-auto w-[30%] hover:cursor-pointer lg:mx-0 lg:w-[8%]"
+            className="mx-auto w-1/4 hover:cursor-pointer lg:mx-0 lg:w-[6%]"
           >
             {/* Smol ACM logo as home button */}
             <img
@@ -40,34 +46,84 @@ export default function RootLayout({
             />
           </a>
           {/* Nav routes spaced out */}
-          <div className="options mx-auto mt-4 flex max-w-[30%] flex-row justify-center space-x-6 lg:mx-0 lg:mt-0 lg:items-center lg:justify-normal lg:space-x-10">
+          <div className="options mx-auto mt-4 flex max-w-[30%] flex-row justify-center space-x-6 lg:mx-0 lg:mt-0 lg:justify-normal lg:space-x-8">
             <a
               href="/about"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-3xl"
+              className=" text-center  text-2xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8"
             >
               About
             </a>
             <a
               href="/events"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-3xl"
+              className=" text-center text-2xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8"
             >
               Events
             </a>
             <a
               href="/blog"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-3xl"
+              className=" text-center  text-2xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8"
             >
               Blog
             </a>
             <a
               href="/team"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-3xl"
+              className=" text-center  text-2xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8"
             >
               Team
             </a>
           </div>
         </nav>
-        {children}
+        <div className="flex-grow">{children}</div>
+
+        <footer className=" bottom-0 left-0 w-full">
+          <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-8 py-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="mx-auto flex w-full flex-row items-center justify-center space-x-6 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
+              <a href="/" className=" lg:3/5 w-2/5">
+                <img src="/acmpesuecc2.png" alt="ACMfooterlogo" />
+              </a>
+              <a
+                href="https://maps.app.goo.gl/xrign5RWHsNNurfb9"
+                className=" lg:2/5 w-1/3"
+              >
+                <img src="https://i.ibb.co/TMjBtvG/image.png" alt="Pesulogo" />
+              </a>
+            </div>
+            <div className="mx-auto mt-6 flex w-3/4 flex-row items-end space-x-8 lg:mt-0 lg:w-1/3 lg:justify-normal lg:space-x-12">
+              <a
+                href="https://github.com/acmpesuecc"
+                className="w-1/2 lg:w-[8%]"
+              >
+                <img src="/github.png" alt="github" className="h-auto" />
+              </a>
+              <a
+                href="https://www.instagram.com/acmpesuecc"
+                className="w-1/2 lg:w-[8%]"
+              >
+                <img src="/instagram.svg" alt="insta" className="h-auto" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/acm-pesu-ecc/"
+                className="w-1/2 lg:w-[8%]"
+              >
+                <img src="/linkedin.png" alt="linkedin" className="h-auto" />
+              </a>
+              <a href="https://twitter.com/AcmPesu" className="w-1/2 lg:w-[8%]">
+                <img src="/twitter.png" alt="twitter" className="h-auto" />
+              </a>
+              <a
+                href="mailto:acmpesuecc@pes.edu"
+                className="flex w-1/2 items-end lg:w-[8%]"
+              >
+                <img src="/mail-64.png" alt="email" className="w-full" />
+              </a>
+            </div>
+            <p
+              className={`mt-6  text-center text-lg text-white ${roboto.className} lg:mt-0`}
+            >
+              ACM PESUECC &#169; 2024
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
