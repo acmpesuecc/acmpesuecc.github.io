@@ -33,7 +33,10 @@ export default function Home() {
       <div className="posts mx-auto mb-16 mt-8 w-[90%] lg:w-2/3">
         {/* Show top 5 recent posts */}
         {recentPosts.map((post, index: number) => (
-          <div key={index} className="mx-auto border-b-2 border-b-sky-200 py-4">
+          <div
+            key={index}
+            className="mx-auto border-b-2 border-b-sky-200 py-4 lg:pb-4 lg:pt-8"
+          >
             <h1 className="text-lg font-medium text-white underline decoration-sky-200 lg:text-2xl">
               <a href={`/posts/${post.slug}`}>{post.frontMatter.title}</a>
             </h1>
