@@ -2,13 +2,13 @@
 title: 'GIT,SET,GO!'
 description: 'Get started with Git'
 authors: Anurag Rao & Sriprad Potukuchi
-tags: ['git', 'open-source']
+tags: ['git', github, 'open-source']
 date: '2023-10-12'
 ---
 
-## Introduction
+# Introduction
 
-You might have heard people around you talk about Git. You might have even used it personally for your projects. But what is Git?
+You might have heard people around you talk about `Git`. You might have even used it personally for your projects. But what is Git?
 
 By the way, if you haven't done the SSH configuration already, we have written a quick script to do it automatically for you. Run this command:
 

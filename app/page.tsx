@@ -27,7 +27,7 @@ export default function Home() {
           isn't just a profession, but a gateway to endless possibilities.
         </p>
       </div>
-      <h1 className="mt-16 text-center text-xl text-white underline decoration-sky-200 underline-offset-8 lg:mb-16 lg:mt-40 lg:text-4xl">
+      <h1 className="mt-16 text-center text-xl text-white underline decoration-sky-200 underline-offset-8  lg:mt-40 lg:text-4xl">
         RECENT POSTS
       </h1>
       <div className="posts mx-auto mb-16 mt-8 w-[90%] lg:w-2/3">

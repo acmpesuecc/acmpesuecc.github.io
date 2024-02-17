@@ -7,3 +7,7 @@ date: '2024-02-03'
 ---
 
 ## Welcome to CUDA
+
+This workshop will teach you about:
+
+- How GPUs work

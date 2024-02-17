@@ -1,9 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { renderToString } from 'react-dom/server';
-import { Post } from './types';
+import { Post, PostFrontMatter } from './types';
 
 export const getAllPosts = (): Post[] => {
   const files = fs.readdirSync('posts');
@@ -24,12 +22,24 @@ export const getAllPosts = (): Post[] => {
   }, []);
 };
 
-export const getPostBySlug = (slug: string) => {
+export const getPostBySlug = (slug: string): Post => {
   const file = fs.readFileSync(`posts/${slug}.md`);
   const { data, content } = matter(file);
+
+  const postData: PostFrontMatter = {
+    title: data.title,
+    description: data.description,
+    image: data?.image,
+    tags: data?.tags,
+    authors: data?.authors,
+    author_link: data?.author_link,
+    date: data.date
+  };
+
   return {
-    matter: data,
-    body: content
+    frontMatter: postData,
+    body: content,
+    slug: slug
   };
 };
 
@@ -71,7 +81,7 @@ export const postPreview = (markdownContent: string) => {
     )
     .replace(/\n{2,}/g, '\n')
     .trim();
-  const maxLength = 100;
+  const maxLength = 200;
   const previewText =
     plainText.length > maxLength
       ? `${plainText.substring(0, maxLength)}...`

@@ -76,7 +76,7 @@ export default function RootLayout({
         <footer className=" bottom-0 left-0 w-full">
           {/* Footer at bottom of wherever content ends*/}
           <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
-            {/*Footer swithces between row and column for laptop and mobile respectively */}
+            {/*Footer switches between row and column for laptop and mobile respectively */}
             <div className="mx-auto flex w-full flex-row items-center justify-center space-x-6 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
               <a href="/" className=" lg:3/5 w-2/5">
                 <img src="/acmpesuecc2.png" alt="ACMfooterlogo" />
@@ -88,7 +88,7 @@ export default function RootLayout({
                 <img src="https://i.ibb.co/TMjBtvG/image.png" alt="Pesulogo" />
               </a>
             </div>
-            <div className="mx-auto mt-6 flex w-3/4 flex-row items-end space-x-8 lg:mt-0 lg:w-1/3 lg:justify-normal lg:space-x-12">
+            <div className="mx-auto mt-6 flex w-3/4 flex-row items-end space-x-8 lg:mx-0 lg:mt-0 lg:w-1/3 lg:justify-start lg:space-x-12">
               <a
                 href="https://github.com/acmpesuecc"
                 className="w-1/2 lg:w-[6%]"
