@@ -11,11 +11,11 @@ export default function Posts() {
   return (
     <>
       <div className="flex-justify-center mx-auto w-[90%] lg:w-2/3">
-        <h1 className="mt-4 text-center text-2xl text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
+        <h1 className="mt-8 text-center text-2xl text-white underline decoration-sky-200 underline-offset-8 lg:mt-4 lg:text-5xl">
           ALL POSTS
         </h1>
       </div>
-      <div className="posts mx-auto mb-16 mt-8 w-[90%] lg:w-2/3">
+      <div className="posts mx-auto mb-16 mt-4 w-[90%] lg:w-2/3">
         {/* Show posts */}
         {recentPosts.map((post, index: number) => (
           <div

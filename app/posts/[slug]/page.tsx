@@ -10,7 +10,6 @@ import remarkGfm from 'remark-gfm';
 const blogPost = ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
   const post: Post = getPostBySlug(slug);
-  console.log(post);
   return (
     <>
       <div className="mx-auto mt-8 w-[90%] lg:w-full">
@@ -50,7 +49,7 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
                   ) : (
                     <span className="flex justify-center whitespace-pre-wrap">
                       <code
-                        className={`${className} inline-block bg-[rgb(255,255,255,0.1)] py-2 text-sm text-sky-200 lg:pl-2 lg:pr-16 lg:text-base`}
+                        className={`${className} inline-block bg-[rgb(255,255,255,0.1)] py-2 text-xs text-sky-200 lg:pl-2 lg:pr-16 lg:text-base`}
                         {...props}
                       >
                         {children}

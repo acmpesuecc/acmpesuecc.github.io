@@ -25,18 +25,14 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
-h3 {
+h2 {
   font-size: 1.75rem;
 }
 
-h4 {
+h3 {
   font-size: 1.5rem;
 }
 
@@ -44,7 +40,11 @@ h4 {
   font-size: 1.25rem;
 }
 
-p {
+h4 {
+  font-size: 1.1rem;
+}
+
+body > p {
   font-size: 1rem;
 }
 
@@ -95,7 +95,7 @@ pre[class*='language-'] {
 iframe,
 audio,
 video,
-img {
+body > img {
   width: 100%;
   max-width: 100%;
   margin-top: 1rem;
@@ -126,7 +126,7 @@ ul {
   list-style-position: inside;
 }
 
-img,
+body > img,
 video,
 canvas,
 audio,
@@ -136,13 +136,13 @@ object {
   display: block;
 }
 
-img,
+body > img,
 video {
   max-width: 100%;
   height: auto;
 }
 
-img {
+body > img {
   display: block;
   max-width: 100%;
 }
@@ -189,6 +189,25 @@ td:only-child {
 }
 
 @media only screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
   p {
     font-size: 1.1rem;
   }

@@ -17,7 +17,7 @@ export default function Home() {
         className="mx-auto mt-32 w-[90%] lg:w-2/3 "
       />
       <div className="intro flex-justify-center mx-auto mt-32 w-[90%] lg:mt-44 lg:w-2/3">
-        <h1 className="mx-auto w-full text-center text-xl text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
+        <h1 className="mx-auto w-full text-center text-xl font-semibold text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
           Welcome, fellow tinkerers!
         </h1>
         <p className="mx-auto mt-6 w-3/4 text-white  lg:mt-12 lg:w-full  lg:text-xl">
@@ -30,7 +30,7 @@ export default function Home() {
       <h1 className="mt-16 text-center text-xl text-white underline decoration-sky-200 underline-offset-8  lg:mt-40 lg:text-4xl">
         RECENT POSTS
       </h1>
-      <div className="posts mx-auto mb-16 mt-8 w-[90%] lg:w-2/3">
+      <div className="posts mx-auto mb-16 mt-4 w-[90%]  lg:w-2/3">
         {/* Show top 5 recent posts */}
         {recentPosts.map((post, index: number) => (
           <div
