@@ -31,7 +31,6 @@ export default function RootLayout({
         <link rel="icon" href="/acmshortlogo.png" />
       </head>
       <body className=" mx-auto flex min-h-[100vh] w-full flex-col overflow-x-hidden">
-        {/* Trimming body and placing in the center */}
         <nav className="mx-auto mt-4  flex h-[30%] w-[95%] flex-col lg:flex-row lg:items-center lg:justify-between">
           {/* Nav switches between row and column display for phone and mobile*/}
           <a
@@ -54,16 +53,16 @@ export default function RootLayout({
               About
             </a>
             <a
-              href="/events"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
-            >
-              Events
-            </a>
-            <a
-              href="/blog"
+              href="/posts"
               className=" text-center text-xl  text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
-              Blog
+              Posts
+            </a>
+            <a
+              href="/aiep"
+              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
+            >
+              AIEP
             </a>
             <a
               href="/team"
@@ -73,10 +72,11 @@ export default function RootLayout({
             </a>
           </div>
         </nav>
-        <div className="flex-grow">{children}</div>
-
+        <div className="flex-grow">{children}</div> {/* Content */}
         <footer className=" bottom-0 left-0 w-full">
+          {/* Footer at bottom of wherever content ends*/}
           <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
+            {/*Footer swithces between row and column for laptop and mobile respectively */}
             <div className="mx-auto flex w-full flex-row items-center justify-center space-x-6 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
               <a href="/" className=" lg:3/5 w-2/5">
                 <img src="/acmpesuecc2.png" alt="ACMfooterlogo" />
