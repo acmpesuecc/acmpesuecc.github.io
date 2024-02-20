@@ -16,15 +16,15 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
         <h1 className="mx-auto w-full text-center underline-offset-8 lg:text-6xl">
           {post.frontMatter.title}
         </h1>
-        <span className="lg: mx-auto mt-8 flex w-full flex-row justify-between lg:w-1/2">
-          <p className="w-1/2 text-sky-200">
-            {post.frontMatter.date} |{' '}
+        <span className="mx-auto mt-8 flex w-full flex-row justify-between lg:w-1/2">
+          <p className="w-1/2 text-sky-200">{post.frontMatter.date}</p>
+          <p className="mt-0 inline w-1/3 text-end text-sky-200 lg:w-full">
             {post.frontMatter.tags?.map((tag) => `#${tag} `)}
           </p>
-          <p className="mt-0 inline w-1/3 text-end text-sky-200 lg:w-full">
-            {post.frontMatter.authors}
-          </p>
         </span>
+        <p className="mx-auto w-full text-sky-200 lg:w-1/2">
+          {post.frontMatter.authors}
+        </p>
       </div>
       <div className="mx-auto my-16 w-[90%] lg:w-1/2">
         {post && (
