@@ -74,13 +74,15 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Remove out
-        run: rm -rf .next
+        run: rm -rf out
       - name: Build with Next.js
         run: npm run build
+      - name: Create artifact directory
+        run: mkdir artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: artifact
   # Deployment job
   deploy:
     environment:
