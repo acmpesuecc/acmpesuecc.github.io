@@ -24,7 +24,7 @@ export default function Home() {
           Step into the realm of the ACM Student Chapter at PESU Electronic
           City, where we ignite minds, foster creativity, and empower the next
           generation of tech leaders. Join us on a journey where engineering
-          isn't just a profession, but a gateway to endless possibilities.
+          isn&#39;t just a profession, but a gateway to endless possibilities.
         </p>
       </div>
       <h1 className="mt-16 text-center text-xl text-white underline decoration-sky-200 underline-offset-8  lg:mt-40 lg:text-4xl">

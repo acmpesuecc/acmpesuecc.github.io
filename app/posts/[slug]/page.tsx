@@ -29,7 +29,6 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
       <div className="mx-auto my-16 w-[90%] lg:w-1/2">
         {post && (
           <ReactMarkdown
-            children={post.body}
             remarkPlugins={[remarkGfm]}
             components={{
               code: ({ node, className, children, ...props }) => {
@@ -40,11 +39,12 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
                   return match ? (
                     <>
                       <SyntaxHighlighter
-                        children={String(children).replace(/\n$/, '')}
                         language={match[1]}
                         style={darcula}
                         PreTag="div"
-                      />
+                      >
+                        {String(children).replace(/\n$/, '')}
+                      </SyntaxHighlighter>
                     </>
                   ) : (
                     <span className="flex justify-center whitespace-pre-wrap">
@@ -68,7 +68,9 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
                 }
               }
             }}
-          />
+          >
+            {post.body}
+          </ReactMarkdown>
         )}
       </div>
     </>
