@@ -46,30 +46,30 @@ export default function RootLayout({
           </a>
           {/* Nav routes spaced out */}
           <div className="options mx-auto mt-4 flex max-w-[30%] flex-row justify-center space-x-6 lg:mx-0 lg:mt-0 lg:justify-normal lg:space-x-8">
-            <a
+            {/*  <a
               href="/about"
               className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               About
-            </a>
+            </a> */}
             <a
               href="/posts"
               className=" text-center text-xl  text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               Posts
             </a>
-            <a
+            {/*  <a
               href="/aiep"
               className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               AIEP
-            </a>
-            <a
+            </a> */}
+            {/*  <a
               href="/team"
               className=" text-center  text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               Team
-            </a>
+            </a> */}
           </div>
         </nav>
         <div className="flex-grow">{children}</div> {/* Content */}
