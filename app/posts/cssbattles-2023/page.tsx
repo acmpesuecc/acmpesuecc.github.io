@@ -7,9 +7,9 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import remarkGfm from 'remark-gfm';
 
-const blogPost = ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  const post: Post = getPostBySlug(slug);
+const blogPost = (/*{ params }: { params: { slug: string } } */) => {
+  //const { slug } = params;
+  const post: Post = getPostBySlug('cssbattles-2023');
   return (
     <>
       <div className="mx-auto mt-8 w-[90%] lg:w-full">

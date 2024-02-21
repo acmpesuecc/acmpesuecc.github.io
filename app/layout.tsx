@@ -88,7 +88,7 @@ export default function RootLayout({
                 <img src="/pes_logo_white.png" alt="Pesulogo" />
               </a>
             </div>
-            <div className="mx-auto mt-5 flex w-3/4 flex-row items-end space-x-8 lg:mx-0 lg:mt-0 lg:w-1/3 lg:justify-start lg:space-x-12">
+            <div className="mx-auto mt-5 flex w-3/4 flex-row items-end space-x-8 lg:ml-0 lg:mr-3 lg:mt-0 lg:w-1/3 lg:justify-start lg:space-x-12">
               <a
                 href="https://github.com/acmpesuecc"
                 className="w-1/2 lg:w-[6%]"
