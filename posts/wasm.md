@@ -78,4 +78,26 @@ Then, get raylib:
 1. [Raylib-5-Release](https://github.com/raysan5/raylib/releases/tag/5.0): scroll all the way down and get the 
        raylib-5.0_webassembly.zip or just download the one we sent(its the same thing)
 2. Extract the zip file into your project folder. Rename the extracted folder to raylib.
+3. Create a `main.c` file.
+4. Your project folder should look like this now:
+```
+├── main.c
+└── raylib
+    ├── include
+    │   ├── raylib.h
+    │   ├── raymath.h
+    │   └── rlgl.h
+    ├── lib
+    │   └── libraylib.a
+    ├── LICENSE
+    └── README.md
+```
 
+After populating your `main.c` file, run this command to build:
+`emcc main.c -Lraylib/lib -lraylib -o index.html -s USE_GLFW=3`
+
+You will notice a few files created by `emcc`. You now have to open the `index.html` file in your browser.
+A neat way of doing this is to host a simple web server using python, and making a request to it from your browser.
+Run `python3 -m http.server 8080`, and navigate to your browser and type `localhost:8080`
+
+You should now see your program being run in the browser!
