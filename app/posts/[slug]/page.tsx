@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/utils';
+import { getPostBySlug, fetchAllSlugs } from '@/utils';
 import './post.css';
 import React from 'react';
 import { Post } from '@/types';
@@ -7,9 +7,14 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import remarkGfm from 'remark-gfm';
 
-const blogPost = (/*{ params }: { params: { slug: string } } */) => {
-  //const { slug } = params;
-  const post: Post = getPostBySlug('wasm');
+export async function generateStaticParams() {
+  const slugs = fetchAllSlugs();
+  return slugs.map((slug) => ({ slug: slug }));
+}
+
+const blogPost = ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
+  const post: Post = getPostBySlug(slug);
   return (
     <>
       <div className="mx-auto mt-8 w-[90%] lg:w-full">

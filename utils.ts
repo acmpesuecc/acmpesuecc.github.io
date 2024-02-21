@@ -4,11 +4,11 @@ import React from 'react';
 import { Post, PostFrontMatter } from './types';
 
 export const getAllPosts = (): Post[] => {
-  const files = fs.readdirSync('posts');
+  const files = fs.readdirSync('content/posts');
 
   //@ts-ignore
   return files.reduce((allPosts, postSlug) => {
-    const source = fs.readFileSync(`posts/${postSlug}`);
+    const source = fs.readFileSync(`content/posts/${postSlug}`);
     const { data, content } = matter(source);
 
     return [
@@ -22,8 +22,15 @@ export const getAllPosts = (): Post[] => {
   }, []);
 };
 
+export const fetchAllSlugs = (): string[] => {
+  const posts = fs.readdirSync('content/posts');
+  const slugs = posts.map((fileName) => fileName.replace(/\.md$/, ''));
+
+  return slugs;
+};
+
 export const getPostBySlug = (slug: string): Post => {
-  const file = fs.readFileSync(`posts/${slug}.md`);
+  const file = fs.readFileSync(`content/posts/${slug}.md`);
   const { data, content } = matter(file);
 
   const postData: PostFrontMatter = {
@@ -44,7 +51,7 @@ export const getPostBySlug = (slug: string): Post => {
 };
 
 export const getAIEPBySlug = (week: string, slug: string) => {
-  const file = fs.readFileSync(`aiep/${week}/${slug}.md`);
+  const file = fs.readFileSync(`content/aiep/${week}/${slug}.md`);
   const { data, content } = matter(file);
   return {
     matter: data,
