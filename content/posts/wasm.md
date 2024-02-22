@@ -1,6 +1,6 @@
 ---
 title: 'Wasm and Emscripten'
-authors: ACMPESUECC
+authors: Siddharth Tewari, Abhinav Chennubhotla & Sriprad Potukuchi
 date: '2024-02-21'
 tags: ['workshop', 'wasm']
 description: 'Material from the wasm workshop'
