@@ -14,7 +14,7 @@ export default function Home() {
       <img
         src="/acm_big_logo.png"
         alt="ACM Logo"
-        className="mx-auto mt-32 w-[90%] lg:w-2/3 "
+        className="mx-auto mt-32 w-[90%] lg:w-2/3"
       />
       <div className="intro flex-justify-center mx-auto mt-32 w-[90%] lg:mt-44 lg:w-2/3">
         <h1 className="mx-auto w-full text-center text-xl font-semibold text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
