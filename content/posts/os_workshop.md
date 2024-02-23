@@ -1,8 +1,8 @@
 ---
 title: 'Open Source Workshop'
-description: 'stub'
+description: Exploring the world of Git and Open source
 authors: ACMPESUECC
-tags: [ACM, open-source]
+tags: [ACM, open-source, git]
 date: '2019-10-18'
 ---
 
@@ -19,8 +19,8 @@ about the HacktoberFest event.
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/acm_core.jpg)
 
-
 ---
-- Venue: PES University EC Campus
-- Duration: 2 hours (18th October 2019)
-- Number of Participants: 150
+
+Venue: PES University EC Campus\
+Duration: 2 hours (18th October 2019)\
+Number of Participants: 150

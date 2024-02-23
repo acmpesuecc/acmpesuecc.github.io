@@ -22,12 +22,14 @@ const blogPost = ({ params }: { params: { slug: string } }) => {
           {post.frontMatter.title}
         </h1>
         <span className="mx-auto mt-8 flex w-full flex-row justify-between lg:w-1/2">
-          <p className="w-1/2 text-sky-200">{post.frontMatter.date}</p>
-          <p className="mt-0 inline w-1/3 text-end text-sky-200 lg:w-full">
+          <p className="w-1/2 text-sky-200 lg:text-lg">
+            {post.frontMatter.date}
+          </p>
+          <p className="mt-0 inline w-1/3 text-end text-sky-200 lg:w-full lg:text-lg">
             {post.frontMatter.tags?.map((tag) => `#${tag} `)}
           </p>
         </span>
-        <p className="mx-auto w-full text-sky-200 lg:w-1/2">
+        <p className="mx-auto w-full text-sky-200 lg:w-1/2 lg:text-lg">
           {post.frontMatter.authors}
         </p>
       </div>
