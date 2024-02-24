@@ -9,11 +9,11 @@ export default function AIEP() {
     desc: string;
   }) => {
     return (
-      <div className="flex-justify-center mx-auto my-8 w-[90%] border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pb-8 pt-4 lg:w-2/3 lg:p-8">
-        <h2 className="w-full text-center text-white underline decoration-sky-200 lg:mt-2 lg:text-xl">
+      <div className="flex-justify-center mx-auto my-8 h-36 w-[90%] border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pb-8 pt-4 lg:h-auto lg:w-2/3 lg:p-8">
+        <h2 className="w-full text-center text-white underline decoration-sky-200 lg:mt-2 lg:text-2xl">
           {title}
         </h2>
-        <h2 className="w-full text-center text-sky-200 lg:mt-2">
+        <h2 className="w-full text-center text-sky-200 lg:mt-2 lg:text-lg">
           Team Lead - {lead}
         </h2>
       </div>
@@ -29,13 +29,13 @@ export default function AIEP() {
         alt="ACM Logo"
         className="mx-auto mt-8 w-[90%] lg:mt-16 lg:w-2/3"
       />
-      <p className="mx-auto mt-6 w-3/4 text-white  lg:mt-12 lg:w-full  lg:text-xl">
+      <p className="mx-auto mt-6 w-[90%] text-white  lg:mt-12 lg:w-full  lg:text-xl">
         The ACM Industrial Program is ACM PESU-ECC&#39;s annual mentorship
         program, through which we try to emulate the development pipeline used
         in the industry for a variety projects or learn about new tech with a
         hands on approach.
       </p>
-      <p className="mx-auto mt-6 w-3/4 text-white  lg:mt-12 lg:w-full  lg:text-xl">
+      <p className="mx-auto mt-6 w-[90%] text-white  lg:mt-12 lg:w-full  lg:text-xl">
         After multiple successful iterations, AIEP 2024 promises to be a game
         changer for participants to better understand real world, industrial
         practices and select a high end project to work on and add under their
