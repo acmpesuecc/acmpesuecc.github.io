@@ -6,7 +6,7 @@ const Custom404: React.FC = () => {
       <h2 className=" mx-auto text-center text-2xl font-bold text-white lg:mx-0 lg:text-6xl">
         404: Page Not Found!
       </h2>
-      <p className="mx-auto mb-2 mt-6 text-[0.95rem] text-sky-200 lg:mx-0 lg:text-2xl ">
+      <p className="mx-auto mb-2 mt-6 text-sm text-sky-200 lg:mx-0 lg:text-2xl ">
         Sorry, this bun is missing its samosa&#128542;
       </p>
       <div style={bunContainerStyle}>
