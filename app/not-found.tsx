@@ -3,7 +3,7 @@ import React from 'react';
 const Custom404: React.FC = () => {
   return (
     <div className="flex h-[100vh] flex-col items-center justify-center overflow-hidden">
-      <h2 className=" mx-auto text-3xl font-bold text-white lg:mx-0 lg:text-6xl">
+      <h2 className=" mx-auto text-center text-2xl font-bold text-white lg:mx-0 lg:text-6xl">
         404: Page Not Found!
       </h2>
       <p className="mx-auto mb-2 mt-6 text-[0.95rem] text-sky-200 lg:mx-0 lg:text-2xl ">
