@@ -2,42 +2,22 @@ import React from 'react';
 
 const Custom404: React.FC = () => {
   return (
-    <div style={containerStyle}>
-      <h2 style={titleStyle}>404: Page Not Found!</h2>
-      <p style={paragraphStyle}>Sorry, this bun is missing its samosa</p>
+    <div className="flex h-[100vh] flex-col items-center justify-center overflow-hidden">
+      <h2 className=" mx-auto text-3xl font-bold text-white lg:mx-0 lg:text-6xl">
+        404: Page Not Found!
+      </h2>
+      <p className="mx-auto mb-2 mt-6 text-[0.95rem] text-sky-200 lg:mx-0 lg:text-2xl ">
+        Sorry, this bun is missing its samosa&#128542;
+      </p>
       <div style={bunContainerStyle}>
-        <img className="bun" src="bun.png" alt="Bun" style={bunStyle} />
+        <img className="bun" src="nobgbun.png" alt="Bun" style={bunStyle} />
       </div>
     </div>
   );
 };
-
-const containerStyle: React.CSSProperties = {
-  display: 'flex',
-  marginTop: '20px', // Gap before the top navbar
-  position: 'relative',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '100vh',
-  overflow: 'hidden',
-  backgroundColor: '#86d5ff'
-  
-};
-
-const titleStyle: React.CSSProperties = {
-  fontSize: '2rem',
-  fontWeight: 'bold'
-};
-
-const paragraphStyle: React.CSSProperties = {
-  fontSize: '1rem',
-  marginBottom: '1rem'
-};
-
 const bunContainerStyle: React.CSSProperties = {
-  width: '80px',
-  height: '80px',
+  width: '4rem',
+  height: '4rem',
   animation: 'heartbeat 1s ease infinite, spin 1s linear infinite'
 };
 
