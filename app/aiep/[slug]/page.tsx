@@ -122,12 +122,12 @@ export default function AIEProject({
               <em>Week - 1</em>
             </a>
           </span>
-          <span className="w-1/3 border-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
+          <span className="w-1/3 border-y-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
             <a href={`/${slug}/week-2`}>
               <em>Week - 2</em>
             </a>
           </span>
-          <span className="w-1/3 border-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
+          <span className="w-1/3 border-y-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
             <a href={`/${slug}/week-3`}>
               <em>Week - 3</em>
             </a>
@@ -137,12 +137,12 @@ export default function AIEProject({
               <em>Week - 4</em>
             </a>
           </span>
-          <span className="w-1/3 border-x-2 border-b-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
+          <span className="w-1/3 border-b-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
             <a href={`/${slug}/week-5`}>
               <em>Week - 5</em>
             </a>
           </span>
-          <span className="w-1/3 border-x-2 border-b-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
+          <span className="w-1/3 border-b-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
             <a href={`/${slug}/week-6`}>
               <em>Week - 6</em>
             </a>
