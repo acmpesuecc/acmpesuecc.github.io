@@ -10,7 +10,7 @@ const Custom404: React.FC = () => {
         Sorry, this bun is missing its samosa&#128542;
       </p>
       <div style={bunContainerStyle}>
-        <img className="bun" src="nobgbun.png" alt="Bun" style={bunStyle} />
+        <img className="bun" src="/nobgbun.png" alt="Bun" style={bunStyle} />
       </div>
     </div>
   );
