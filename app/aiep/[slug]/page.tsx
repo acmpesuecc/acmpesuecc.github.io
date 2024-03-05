@@ -152,7 +152,7 @@ export default function AIEProject({
           Meet the Team
         </h2>
         {projects[slug].lead !== '' && (
-          <span className="mx-auto mt-6 flex w-2/3 flex-col items-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pb-2 lg:w-1/2 lg:px-0 lg:pb-4 ">
+          <span className="mx-auto mt-6 flex w-[85%] flex-col items-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pb-2 pt-1 lg:w-1/2 lg:px-0 lg:pb-4 lg:pt-0 ">
             <span className="font-bold text-sky-200 lg:text-xl">👑</span>
             <span className="font-bold text-sky-200 lg:text-xl">Team Lead</span>
             <span className=" mx-auto text-center text-white lg:text-xl">
@@ -163,7 +163,7 @@ export default function AIEProject({
         {projects[slug].members.map((member, index) => (
           <span
             key={index}
-            className="mx-auto mt-4 flex h-12 w-2/3 items-center justify-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 py-2 lg:h-16 lg:w-1/2 lg:px-0"
+            className="mx-auto mt-4 flex h-12 w-[85%] items-center justify-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 py-2 lg:h-16 lg:w-1/2 lg:px-0"
           >
             <span className="text-white lg:text-xl">{member}</span>
           </span>
