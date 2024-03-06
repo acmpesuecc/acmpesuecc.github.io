@@ -1,7 +1,8 @@
 import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import React from 'react';
-import { Post, PostFrontMatter } from './types';
+import { Post, PostFrontMatter, AIEPReport } from './types';
 
 export const getAllPosts = (): Post[] => {
   const files = fs.readdirSync('content/posts');
@@ -51,11 +52,27 @@ export const getPostBySlug = (slug: string): Post => {
 };
 
 export const getAIEPBySlug = (week: string, slug: string) => {
-  const file = fs.readFileSync(`content/aiep/${week}/${slug}.md`);
+  const directory = `content/aiep/${slug}/${week}/.md`;
+  const files = fs.readdirSync(directory);
+  const markdownFile = files.find((file) => file.endsWith('.md'));
+  if (!markdownFile) {
+    throw new Error('No Markdown file found in the directory');
+  }
+  const fullPath = path.join(directory, markdownFile);
+  const file = fs.readFileSync(fullPath);
   const { data, content } = matter(file);
+
+  const reportData: AIEPReport = {
+    title: data.title,
+    summary: data?.summary,
+    lead: data?.lead,
+    date: data.date
+  };
   return {
-    matter: data,
-    body: content
+    matter: reportData,
+    body: content,
+    slug: slug,
+    week: week
   };
 };
 

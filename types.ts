@@ -13,3 +13,10 @@ export type Post = {
   body: string;
   slug: string;
 };
+
+export type AIEPReport = {
+  title: string;
+  summary: string | undefined;
+  lead: string | undefined;
+  date: string;
+};
