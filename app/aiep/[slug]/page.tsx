@@ -92,7 +92,7 @@ const projects = {
         </a>
         , this static site generator aims to take performance to the next level
         with parallel rendering, live reloads and so much more, all in Go. The
-        team comprises of only super talented first years.`
+        team comprises of only super talented first years.
       </>
     )
   }
