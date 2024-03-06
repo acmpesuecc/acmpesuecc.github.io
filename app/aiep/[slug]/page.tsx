@@ -118,32 +118,32 @@ export default function AIEProject({
         </h2>
         <div className="mx-auto mb-8 mt-4 flex flex-wrap justify-between bg-[rgb(0,0,0,0.3)] py-2 lg:mb-12 lg:mt-6 lg:w-2/3">
           <span className="w-1/3 border-2  border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-1`}>
+            <a href={`/aiep/${slug}/week-1`}>
               <em>Week - 1</em>
             </a>
           </span>
           <span className="w-1/3 border-y-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-2`}>
+            <a href={`/aiep/${slug}/week-2`}>
               <em>Week - 2</em>
             </a>
           </span>
           <span className="w-1/3 border-y-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-3`}>
+            <a href={`/aiep/${slug}/week-3`}>
               <em>Week - 3</em>
             </a>
           </span>
           <span className="w-1/3 border-x-2 border-b-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-4`}>
+            <a href={`/aiep/${slug}/week-4`}>
               <em>Week - 4</em>
             </a>
           </span>
           <span className="w-1/3 border-b-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-5`}>
+            <a href={`/aiep/${slug}/week-5`}>
               <em>Week - 5</em>
             </a>
           </span>
           <span className="w-1/3 border-b-2 border-r-2 border-sky-200 py-2 text-center text-sky-200 lg:text-xl">
-            <a href={`/${slug}/week-6`}>
+            <a href={`/aiep/${slug}/week-6`}>
               <em>Week - 6</em>
             </a>
           </span>

@@ -14,9 +14,16 @@ export type Post = {
   slug: string;
 };
 
-export type AIEPReport = {
+export type AIEPReportFrontMatter = {
   title: string;
   summary: string | undefined;
   lead: string | undefined;
   date: string;
+};
+
+export type Report = {
+  matter: AIEPReportFrontMatter;
+  body: string;
+  slug: string;
+  week: string;
 };
