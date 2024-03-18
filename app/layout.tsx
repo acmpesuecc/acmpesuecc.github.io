@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name = "darkreader-lock"/>
         <link rel="icon" href="/acmshortlogo.png" />
       </head>
       <body className=" mx-auto flex min-h-[100vh] w-full flex-col overflow-x-hidden">
