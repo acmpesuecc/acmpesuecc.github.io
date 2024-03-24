@@ -1,5 +1,5 @@
 ---
-title: Learning the toolchain: version control and the build system
+title: Learning the toolchain - version control and the build system
 lead: Sriprad Potukuchi
 date: 24 March 2024
 summary:
