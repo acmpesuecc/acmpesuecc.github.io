@@ -18,7 +18,7 @@ A clean project structure was decided upon. No more source files in the project 
 
 The linker knowledge was put to good use by linking the project against raylib. GUI, here we come!
 
-![An early implementation of the CHIP-8 interpreter](https://imgur.com/a/WJXS9ag)
+![An early implementation of the CHIP-8 interpreter](https://i.imgur.com/IF3YKHW.png)
 *A proof of concept display featuring a 64x32 grid of pixels and a dump of a few registers*
 
 The mentees have very quickly learnt the usage of raylib (thanks in part to its super simple API) and have learnt what goes into building a GUI application like the one shown above. It is now up to them to make it aesthetically pleasing and more functional. Will they succeed? Stay tuned to find out!
