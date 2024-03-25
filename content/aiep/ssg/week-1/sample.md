@@ -1,6 +1,0 @@
----
-title:
-lead:
-date:
-summary:
----
