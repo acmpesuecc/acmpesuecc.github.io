@@ -121,7 +121,7 @@ export default function RootLayout({
             <p
               className={`text-md mt-6 text-center  text-white lg:flex lg:items-end lg:text-lg ${roboto.className} lg:mt-0`}
             >
-              ACM PESUECC &#169; 2024
+              ACM PESUECC &#169; 2025
             </p>
           </div>
         </footer>
