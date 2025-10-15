@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Draft Message Tool</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-width: 100%;
+      padding: 1rem;
+    }
+    .table-container {
+      flex: 1;
+      overflow: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #e5e7eb;
+      white-space: nowrap;
+    }
+    th {
+      background-color: #f3f4f6;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .send-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 0.875rem;
+      transition: background-color 0.2s;
+    }
+    .send-btn:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container bg-white shadow-lg rounded-lg">
+    <h1 class="text-2xl font-bold mb-4 text-center">WhatsApp Draft Message Generator</h1>
+
+    <div class="flex gap-4 items-end mb-4">
+      <div class="flex-1">
+        <label class="block font-semibold mb-1">CSV Endpoint URL:</label>
+        <input type="text" id="csvUrl" class="block w-full border rounded-lg p-2" placeholder="https://example.com/data.csv" />
+      </div>
+      <button id="fetchBtn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Fetch CSV</button>
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="filterPending" checked class="w-5 h-5" />
+        <label for="filterPending" class="font-semibold whitespace-nowrap">Show Pending Only</label>
+      </div>
+    </div>
+
+    <div class="flex gap-4 items-end">
+      <div class="flex-1">
+        <label class="block font-semibold mb-1">Or Upload CSV File:</label>
+        <input type="file" id="csvFile" accept=".csv" class="block w-full border rounded-lg p-2" />
+      </div>
+      <div class="flex-1">
+        <label class="block font-semibold mb-1">Draft Message:</label>
+        <textarea id="message" rows="2" class="w-full border rounded-lg p-2" placeholder="Type your message here...">We invite you to our flagship hackathon, HackNight 7.0!
+Please go ahead and confirm your attendance by paying on PESU Academy, and attaching your receipt in the form attached below.
+
+Payment confirmation form: https://forms.gle/VmHFWiZDxfmUc3D46
+
+The deadline for payments is 15th October. This is a hard deadline, and you will not be able to attend if you miss this window. 
+
+Thank you!
+Regards,
+Team ACM PESUECC</textarea>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="dataTable"></table>
+    </div>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("csvFile");
+    const dataTable = document.getElementById("dataTable");
+    const messageInput = document.getElementById("message");
+    const csvUrlInput = document.getElementById("csvUrl");
+    const fetchBtn = document.getElementById("fetchBtn");
+    const filterPendingCheckbox = document.getElementById("filterPending");
+
+    // Configuration: Set your default CSV endpoint here
+    const DEFAULT_CSV_ENDPOINT = ""; // Add your endpoint URL here
+
+    function cleanPhone(num) {
+      if (!num) return "";
+      // Keep digits only and prefix with +91 if it looks Indian
+      let cleaned = num.toString().replace(/\D/g, "");
+      if (cleaned.length === 10) cleaned = "91" + cleaned;
+      return cleaned;
+    }
+
+    // Fetch CSV from URL
+    async function fetchCSV(url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const csvText = await response.text();
+        
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            const data = results.data;
+            renderTable(data);
+          },
+          error: (error) => {
+            alert(`Error parsing CSV: ${error.message}`);
+          }
+        });
+      } catch (error) {
+        alert(`Error fetching CSV: ${error.message}`);
+        console.error("Fetch error:", error);
+      }
+    }
+
+    // Load CSV on page load if default endpoint is set
+    window.addEventListener("DOMContentLoaded", () => {
+      if (DEFAULT_CSV_ENDPOINT) {
+        csvUrlInput.value = DEFAULT_CSV_ENDPOINT;
+        fetchCSV(DEFAULT_CSV_ENDPOINT);
+      }
+    });
+
+    // Fetch button click handler
+    fetchBtn.addEventListener("click", () => {
+      const url = csvUrlInput.value.trim();
+      if (!url) {
+        alert("Please enter a CSV endpoint URL");
+        return;
+      }
+      fetchCSV(url);
+    });
+
+    // Filter checkbox handler
+    filterPendingCheckbox.addEventListener("change", () => {
+      const currentData = window.currentData;
+      if (currentData && currentData.length) {
+        renderTable(currentData);
+      }
+    });
+
+    // File upload handler
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          const data = results.data;
+          renderTable(data);
+        },
+      });
+    });
+
+    // Re-render table when message changes
+    messageInput.addEventListener("input", () => {
+      const currentData = window.currentData;
+      if (currentData && currentData.length) {
+        renderTable(currentData);
+      }
+    });
+
+    function renderTable(rows) {
+      window.currentData = rows;
+      
+      // Filter by pending status if checkbox is checked
+      let filteredRows = rows;
+      if (filterPendingCheckbox.checked) {
+        filteredRows = rows.filter(row => {
+          const status = (row["Status"] || row["status"] || "").toLowerCase();
+          return status === "pending";
+        });
+      }
+
+      dataTable.innerHTML = "";
+
+      if (!filteredRows.length) {
+        dataTable.innerHTML = '<tbody><tr><td colspan="100" class="text-center p-4 text-gray-500">No pending records found</td></tr></tbody>';
+        return;
+      }
+
+      // Header row
+      const headers = Object.keys(filteredRows[0]);
+      const headerRow = document.createElement("thead");
+      headerRow.innerHTML = `
+        <tr>
+          <th>Action</th>
+          <th>Phone Number</th>
+          ${headers.map(h => `<th>${h}</th>`).join("")}
+        </tr>
+      `;
+      dataTable.appendChild(headerRow);
+
+      // Data rows
+      const body = document.createElement("tbody");
+      filteredRows.forEach((row) => {
+        // Try to find phone number in different possible column names
+        const phoneRaw = row["Phone Number"] || row["phone"] || row["phone_number"] || 
+                        row["Phone"] || row["PHONE"] || row["Mobile"] || row["mobile"] || "";
+        const phone = cleanPhone(phoneRaw);
+        const msg = messageInput.value || "Hello!";
+        const encodedMsg = encodeURIComponent(msg);
+        const waLink = `https://wa.me/${phone}?text=${encodedMsg}`;
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="text-center">
+            ${phone ? `<a href="${waLink}" target="_blank" class="send-btn">📱 Send</a>` : '<span class="text-gray-400">No Phone</span>'}
+          </td>
+          <td>${phone}</td>
+          ${headers.map(h => `<td>${row[h] || ""}</td>`).join("")}
+        `;
+        body.appendChild(tr);
+      });
+
+      dataTable.appendChild(body);
+    }
+  </script>
+</body>
+</html>
