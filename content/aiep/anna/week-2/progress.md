@@ -39,7 +39,6 @@ summary: Goroutines and Parallel rendering
 - Improved parallel rendering and calculation of concurrency factor.
 - Cleaned and refactored code to improvise performance.
 
-
 ## What's next?
 
 - Split Parallel rendering pipelines for tags and content files.

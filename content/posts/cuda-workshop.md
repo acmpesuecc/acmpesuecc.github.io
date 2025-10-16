@@ -12,6 +12,4 @@ This workshop will teach you about:
 
 - How GPUs work
 
-
 GitHub repo: https://github.com/HyprThrd/CUDA-101-Workshop
-

@@ -1,13 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import { isEmailWhitelisted, checkIntegrity, setVerificationStatus } from '../../lib/auth';
+import {
+  isEmailWhitelisted,
+  checkIntegrity,
+  setVerificationStatus
+} from '../../lib/auth';
 
 interface EmailVerificationProps {
   onVerificationSuccess: () => void;
 }
 
-export default function EmailVerification({ onVerificationSuccess }: EmailVerificationProps) {
+export default function EmailVerification({
+  onVerificationSuccess
+}: EmailVerificationProps) {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -15,7 +21,7 @@ export default function EmailVerification({ onVerificationSuccess }: EmailVerifi
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!checkIntegrity()) {
       setError('Security validation failed. Please contact administration.');
       return;
@@ -36,12 +42,12 @@ export default function EmailVerification({ onVerificationSuccess }: EmailVerifi
 
     try {
       const isWhitelisted = await isEmailWhitelisted(email);
-      
+
       if (isWhitelisted) {
         setVerificationStatus(email);
         onVerificationSuccess();
       } else {
-        setAttempts(prev => prev + 1);
+        setAttempts((prev) => prev + 1);
         setError(
           'Your email was not found in our shortlisted candidates. If you believe this is an error, please contact mail@mebin.in'
         );
@@ -67,7 +73,10 @@ export default function EmailVerification({ onVerificationSuccess }: EmailVerifi
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+            <label
+              htmlFor="email"
+              className="mb-2 block text-sm font-medium text-white"
+            >
               Email Address
             </label>
             <input

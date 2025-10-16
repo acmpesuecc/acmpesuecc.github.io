@@ -4,6 +4,7 @@ lead:
 date: 18 March 2024
 summary: Bootstrap our Static Site Generator
 ---
+
 # Anirudh’s Progress
 
 - Built the markdown to HTML renderer using the [Goldmark](https://github.com/yuin/goldmark) library
@@ -19,6 +20,7 @@ summary: Bootstrap our Static Site Generator
 - Implement the post tagging system
 
 ---
+
 # Adhesh’s Progress
 
 - Migrated to [Cobra](https://cobra.dev) for better **CLI integration**.
@@ -37,6 +39,7 @@ summary: Bootstrap our Static Site Generator
 - Try integrating **JavaScript** in templates.
 
 ---
+
 # Hegde’s Progress
 
 - Switched to automatic filename parsing
@@ -51,6 +54,7 @@ summary: Bootstrap our Static Site Generator
 - Chronological Feed for posts
 
 ---
+
 # Nathan’s Progress
 
 - Setup CI using GitHub actions which builds and deploys the SSG to [gh-pages](https://ssg-test-org.github.io)

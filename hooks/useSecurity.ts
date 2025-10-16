@@ -18,7 +18,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
     },
     enableDevToolsDetection = true,
     enableDOMTamperingDetection = true,
-    enableConsoleProtection = true,
+    enableConsoleProtection = true
   } = config;
 
   const originalElements = useRef<Map<string, string>>(new Map());
@@ -26,7 +26,11 @@ export const useSecurity = (config: SecurityConfig = {}) => {
 
   useEffect(() => {
     // If all security features are disabled, don't do anything
-    if (!enableDevToolsDetection && !enableDOMTamperingDetection && !enableConsoleProtection) {
+    if (
+      !enableDevToolsDetection &&
+      !enableDOMTamperingDetection &&
+      !enableConsoleProtection
+    ) {
       return;
     }
     // Store original console methods
@@ -34,7 +38,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
       log: console.log,
       error: console.error,
       warn: console.warn,
-      info: console.info,
+      info: console.info
     };
 
     // Console protection
@@ -53,7 +57,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
       const checkDevTools = () => {
         const heightDiff = window.outerHeight - window.innerHeight;
         const widthDiff = window.outerWidth - window.innerWidth;
-        
+
         if (heightDiff > threshold || widthDiff > threshold) {
           if (!devtools.open) {
             devtools.open = true;
@@ -85,11 +89,11 @@ export const useSecurity = (config: SecurityConfig = {}) => {
       // Store checksums of critical elements
       const criticalSelectors = [
         'script[src*="calendly"]',
-        '.calendly-inline-widget',
+        '.calendly-inline-widget'
       ];
 
       const storeOriginalElements = () => {
-        criticalSelectors.forEach(selector => {
+        criticalSelectors.forEach((selector) => {
           const element = document.querySelector(selector);
           if (element) {
             originalElements.current.set(selector, element.outerHTML);
@@ -98,10 +102,10 @@ export const useSecurity = (config: SecurityConfig = {}) => {
       };
 
       const checkDOMIntegrity = () => {
-        criticalSelectors.forEach(selector => {
+        criticalSelectors.forEach((selector) => {
           const element = document.querySelector(selector);
           const original = originalElements.current.get(selector);
-          
+
           if (original && element && element.outerHTML !== original) {
             onSecurityViolation();
           }
@@ -110,7 +114,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
 
       // Initial storage with delay to allow elements to load
       const storeElementsTimeout = setTimeout(storeOriginalElements, 5000);
-      
+
       // Check integrity less frequently and with delay
       const domCheckInterval = setInterval(checkDOMIntegrity, 5000);
       intervalRefs.current.push(domCheckInterval);
@@ -121,13 +125,15 @@ export const useSecurity = (config: SecurityConfig = {}) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'childList' || mutation.type === 'attributes') {
             const target = mutation.target as Element;
-            if (target.matches && criticalSelectors.some(selector => 
-              target.matches(selector))) {
+            if (
+              target.matches &&
+              criticalSelectors.some((selector) => target.matches(selector))
+            ) {
               shouldCheck = true;
             }
           }
         });
-        
+
         if (shouldCheck) {
           setTimeout(checkDOMIntegrity, 1000); // Add delay before checking
         }
@@ -138,7 +144,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
         observer.observe(document.body, {
           childList: true,
           subtree: true,
-          attributes: false, // Don't monitor attributes to reduce sensitivity
+          attributes: false // Don't monitor attributes to reduce sensitivity
         });
       }, 5000);
 
@@ -179,7 +185,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
       }
 
       // Clear intervals
-      intervalRefs.current.forEach(interval => clearInterval(interval));
+      intervalRefs.current.forEach((interval) => clearInterval(interval));
       intervalRefs.current = [];
 
       // Remove event listeners
@@ -190,7 +196,7 @@ export const useSecurity = (config: SecurityConfig = {}) => {
     onSecurityViolation,
     enableDevToolsDetection,
     enableDOMTamperingDetection,
-    enableConsoleProtection,
+    enableConsoleProtection
   ]);
 };
 

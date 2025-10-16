@@ -19,7 +19,7 @@ summary: A Test Driven Approach
 ## Whats Next (Anirudh and Hegde):
 
 - Improve test coverage for the `engine` package
-- Write unit and integration tests for the `cmd`  and `helper` packages
+- Write unit and integration tests for the `cmd` and `helper` packages
 - Write unit and integration tests for `main.go`
 
 ---
@@ -50,7 +50,7 @@ summary: A Test Driven Approach
   - The intial build wrote the json blob to disk; now it passes it as a POST request to the webserver itself over port `8080` (may conflict)
   - So far it lets you pick a fill metadata, pick a theme and preview your site
   - It auto validates fields using regex as you proceed
-  - Also: an animated progressbar and other easter-eggs (confetti??) 
+  - Also: an animated progressbar and other easter-eggs (confetti??)
 
 ## What's next?
 

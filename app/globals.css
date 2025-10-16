@@ -36,9 +36,15 @@ body {
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
-  100% { transform: rotate(-2deg); }
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
 }
 
 @keyframes heartbeat {
@@ -57,5 +63,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-  
 }

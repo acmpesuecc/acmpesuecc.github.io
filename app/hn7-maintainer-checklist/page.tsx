@@ -44,51 +44,116 @@ export default function HN7MaintainerChecklist() {
           label: 'README.md',
           checked: false,
           children: [
-            { id: 'readme-1', label: 'What the project does and its purpose', checked: false },
-            { id: 'readme-2', label: 'What the project is built on (tech stack)', checked: false },
-            { id: 'readme-3', label: 'How people can build and run the project locally (and test if needed)', checked: false },
-            { id: 'readme-4', label: 'Maintainer(s) in charge (with GitHub link)', checked: false },
-            { id: 'readme-5', label: 'Clear setup and contribution instructions', checked: false },
-            { id: 'readme-6', label: 'Link or mention of CONTRIBUTING.md', checked: false },
-            { id: 'readme-7', label: 'License details (mention the repo is open-source)', checked: false },
-          ],
+            {
+              id: 'readme-1',
+              label: 'What the project does and its purpose',
+              checked: false
+            },
+            {
+              id: 'readme-2',
+              label: 'What the project is built on (tech stack)',
+              checked: false
+            },
+            {
+              id: 'readme-3',
+              label:
+                'How people can build and run the project locally (and test if needed)',
+              checked: false
+            },
+            {
+              id: 'readme-4',
+              label: 'Maintainer(s) in charge (with GitHub link)',
+              checked: false
+            },
+            {
+              id: 'readme-5',
+              label: 'Clear setup and contribution instructions',
+              checked: false
+            },
+            {
+              id: 'readme-6',
+              label: 'Link or mention of CONTRIBUTING.md',
+              checked: false
+            },
+            {
+              id: 'readme-7',
+              label: 'License details (mention the repo is open-source)',
+              checked: false
+            }
+          ]
         },
         {
           id: 'contributing',
           label: 'CONTRIBUTING.md',
           checked: false,
           children: [
-            { id: 'contrib-1', label: 'Basic structure of the project', checked: false },
-            { id: 'contrib-2', label: 'PR guidelines (keep it simple and clear)', checked: false },
-            { id: 'contrib-3', label: 'Issue/Bug guidelines (optional)', checked: false },
-            { id: 'contrib-4', label: 'Any rules specific to your project', checked: false },
-            { id: 'contrib-5', label: 'Coding or formatting conventions (if any)', checked: false },
-          ],
+            {
+              id: 'contrib-1',
+              label: 'Basic structure of the project',
+              checked: false
+            },
+            {
+              id: 'contrib-2',
+              label: 'PR guidelines (keep it simple and clear)',
+              checked: false
+            },
+            {
+              id: 'contrib-3',
+              label: 'Issue/Bug guidelines (optional)',
+              checked: false
+            },
+            {
+              id: 'contrib-4',
+              label: 'Any rules specific to your project',
+              checked: false
+            },
+            {
+              id: 'contrib-5',
+              label: 'Coding or formatting conventions (if any)',
+              checked: false
+            }
+          ]
         },
         {
           id: 'license',
           label: 'LICENSE',
           checked: false,
           children: [
-            { id: 'license-1', label: 'Any basic open-source license will do', checked: false },
-            { id: 'license-2', label: 'If unsure, use MIT License', checked: false },
-          ],
+            {
+              id: 'license-1',
+              label: 'Any basic open-source license will do',
+              checked: false
+            },
+            {
+              id: 'license-2',
+              label: 'If unsure, use MIT License',
+              checked: false
+            }
+          ]
         },
         {
           id: 'coc',
           label: 'CODE_OF_CONDUCT.md (Optional but encouraged)',
-          checked: false,
+          checked: false
         },
         {
           id: 'tags',
           label: 'Repository Tags',
           checked: false,
           children: [
-            { id: 'tags-1', label: 'Must include "hacktoberfest" label', checked: false },
-            { id: 'tags-2', label: 'Must include "hacknight-2025" label', checked: false },
-          ],
-        },
-      ],
+            {
+              id: 'tags-1',
+              label: 'Must include "hacktoberfest" label',
+              checked: false
+            },
+            {
+              id: 'tags-2',
+              label: 'Must include "hacknight-2025" label',
+              checked: false
+            }
+          ]
+        }
+      ]
     },
     {
       id: 'issues',
@@ -99,27 +164,51 @@ export default function HN7MaintainerChecklist() {
         {
           id: 'issue-count',
           label: 'At least 4 initial issues created',
-          checked: false,
+          checked: false
         },
         {
           id: 'issue-quick',
           label: 'At least 2 issues solvable within an hour',
-          checked: false,
+          checked: false
         },
         {
           id: 'issue-requirements',
           label: 'Every issue must include',
           checked: false,
           children: [
-            { id: 'issue-req-1', label: 'Explanation of the issue', checked: false },
-            { id: 'issue-req-2', label: 'Possible fix or approach (optional)', checked: false },
-            { id: 'issue-req-3', label: 'Relevant logs or screenshots (if any)', checked: false },
-            { id: 'issue-req-4', label: "Maintainer's notes or insights", checked: false },
-            { id: 'issue-req-5', label: 'Resources or references related to the issue', checked: false },
-            { id: 'issue-req-6', label: 'Bounty Points assigned to the issue', checked: false },
-          ],
-        },
-      ],
+            {
+              id: 'issue-req-1',
+              label: 'Explanation of the issue',
+              checked: false
+            },
+            {
+              id: 'issue-req-2',
+              label: 'Possible fix or approach (optional)',
+              checked: false
+            },
+            {
+              id: 'issue-req-3',
+              label: 'Relevant logs or screenshots (if any)',
+              checked: false
+            },
+            {
+              id: 'issue-req-4',
+              label: "Maintainer's notes or insights",
+              checked: false
+            },
+            {
+              id: 'issue-req-5',
+              label: 'Resources or references related to the issue',
+              checked: false
+            },
+            {
+              id: 'issue-req-6',
+              label: 'Bounty Points assigned to the issue',
+              checked: false
+            }
+          ]
+        }
+      ]
     },
     {
       id: 'points',
@@ -129,20 +218,22 @@ export default function HN7MaintainerChecklist() {
       items: [
         {
           id: 'bounty-understand',
-          label: 'Understand Bounty Points (0-50: minimal, 250-500: medium, 800-1500: major)',
-          checked: false,
+          label:
+            'Understand Bounty Points (0-50: minimal, 250-500: medium, 800-1500: major)',
+          checked: false
         },
         {
           id: 'brownie-understand',
-          label: 'Understand Brownie Points (10-20 pts for exceptional work, up to 50 pts in rare cases)',
-          checked: false,
+          label:
+            'Understand Brownie Points (10-20 pts for exceptional work, up to 50 pts in rare cases)',
+          checked: false
         },
         {
           id: 'points-assigned',
           label: 'All issues have appropriate bounty points assigned',
-          checked: false,
-        },
-      ],
+          checked: false
+        }
+      ]
     },
     {
       id: 'final',
@@ -152,26 +243,27 @@ export default function HN7MaintainerChecklist() {
       items: [
         {
           id: 'no-delete',
-          label: 'DO NOT delete or intentionally break features before the hack',
-          checked: false,
+          label:
+            'DO NOT delete or intentionally break features before the hack',
+          checked: false
         },
         {
           id: 'practical',
           label: 'Keep issues practical and fair',
-          checked: false,
+          checked: false
         },
         {
           id: 'structured',
           label: 'Well-structured README and CONTRIBUTING files',
-          checked: false,
+          checked: false
         },
         {
           id: 'communication',
           label: 'Clear communication plan with contributors',
-          checked: false,
-        },
-      ],
-    },
+          checked: false
+        }
+      ]
+    }
   ];
 
   // Load state from cookies on mount
@@ -225,13 +317,17 @@ export default function HN7MaintainerChecklist() {
               if (item.id === itemId) {
                 if (childId && item.children) {
                   const updatedChildren = item.children.map((child) =>
-                    child.id === childId ? { ...child, checked: !child.checked } : child
+                    child.id === childId
+                      ? { ...child, checked: !child.checked }
+                      : child
                   );
-                  const allChildrenChecked = updatedChildren.every((c) => c.checked);
+                  const allChildrenChecked = updatedChildren.every(
+                    (c) => c.checked
+                  );
                   return {
                     ...item,
                     children: updatedChildren,
-                    checked: allChildrenChecked,
+                    checked: allChildrenChecked
                   };
                 } else {
                   const newChecked = !item.checked;
@@ -239,14 +335,17 @@ export default function HN7MaintainerChecklist() {
                     return {
                       ...item,
                       checked: newChecked,
-                      children: item.children.map((c) => ({ ...c, checked: newChecked })),
+                      children: item.children.map((c) => ({
+                        ...c,
+                        checked: newChecked
+                      }))
                     };
                   }
                   return { ...item, checked: newChecked };
                 }
               }
               return item;
-            }),
+            })
           };
         }
         return section;
@@ -258,7 +357,9 @@ export default function HN7MaintainerChecklist() {
   const toggleSection = (sectionId: string) => {
     setSections((prevSections) =>
       prevSections.map((section) =>
-        section.id === sectionId ? { ...section, expanded: !section.expanded } : section
+        section.id === sectionId
+          ? { ...section, expanded: !section.expanded }
+          : section
       )
     );
   };
@@ -305,9 +406,10 @@ export default function HN7MaintainerChecklist() {
         const confetti = document.createElement('div');
         confetti.className = 'confetti';
         confetti.style.left = Math.random() * 100 + '%';
-        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
         confetti.style.animationDelay = Math.random() * 3 + 's';
-        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
         document.body.appendChild(confetti);
 
         setTimeout(() => {
@@ -319,7 +421,11 @@ export default function HN7MaintainerChecklist() {
 
   // Reset all checkboxes
   const resetAll = () => {
-    if (confirm('Are you sure you want to reset all checkboxes? This action cannot be undone.')) {
+    if (
+      confirm(
+        'Are you sure you want to reset all checkboxes? This action cannot be undone.'
+      )
+    ) {
       setSections(initializeSections());
     }
   };
@@ -335,13 +441,15 @@ export default function HN7MaintainerChecklist() {
   const progress = calculateProgress();
 
   return (
-    <div className={`${atkinsonRegular.className} hacktoberfest-page relative mx-auto my-12 w-[90%] lg:my-0 lg:w-2/3`}>
+    <div
+      className={`${atkinsonRegular.className} hacktoberfest-page relative mx-auto my-12 w-[90%] lg:my-0 lg:w-2/3`}
+    >
       {/* Hacktoberfest Logo */}
       <div className="mx-auto mb-8 flex items-center justify-center gap-4 lg:mb-12">
         <div className="text-center">
-          <img 
-            src="/hacktoberfest-logo.svg" 
-            alt="Hacktoberfest 2025 Logo" 
+          <img
+            src="/hacktoberfest-logo.svg"
+            alt="Hacktoberfest 2025 Logo"
             className="mx-auto h-16 w-auto lg:h-24"
           />
         </div>
@@ -354,7 +462,8 @@ export default function HN7MaintainerChecklist() {
       <p className="mx-auto mt-6 text-center text-white lg:mt-8 lg:text-lg">
         Responsibility of maintainers starts much before the Night of HackNight.
         <br />
-        Make sure your repositories follow and comply with all of the following points.
+        Make sure your repositories follow and comply with all of the following
+        points.
       </p>
 
       {/* Sticky Progress Bar with Hacktoberfest styling - Compact */}
@@ -362,8 +471,12 @@ export default function HN7MaintainerChecklist() {
         <div className="flex items-center justify-between gap-4">
           <div className="flex-1">
             <div className="mb-1 flex items-center justify-between">
-              <span className="text-sm font-bold text-[#C2C2FF] lg:text-base">Progress</span>
-              <span className="text-sm font-bold text-[#A0A0FF] lg:text-base">{progress}%</span>
+              <span className="text-sm font-bold text-[#C2C2FF] lg:text-base">
+                Progress
+              </span>
+              <span className="text-sm font-bold text-[#A0A0FF] lg:text-base">
+                {progress}%
+              </span>
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-[#403F7D]">
               <div
@@ -372,7 +485,7 @@ export default function HN7MaintainerChecklist() {
               ></div>
             </div>
           </div>
-          
+
           {/* Reset Button inline with progress bar */}
           <button
             onClick={resetAll}
@@ -386,7 +499,10 @@ export default function HN7MaintainerChecklist() {
       {/* Example Link */}
       <div className="mx-auto mt-8 rounded-lg border-2 border-[#5A5AB5] bg-[#1C1C3F] p-4 lg:p-6">
         <p className="text-white lg:text-lg">
-          💡 <strong className="text-[#C2C2FF]">Example implementing all of the above:</strong>{' '}
+          💡{' '}
+          <strong className="text-[#C2C2FF]">
+            Example implementing all of the above:
+          </strong>{' '}
           <a
             href="https://github.com/acmpesuecc/GRDNS"
             className="text-[#A0A0FF] underline hover:text-[#C2C2FF]"
@@ -444,7 +560,9 @@ export default function HN7MaintainerChecklist() {
                           onChange={() => toggleItem(section.id, item.id)}
                           className="hacktoberfest-checkbox mt-1"
                         />
-                        <span className="flex-1 font-bold text-white lg:text-lg">{item.label}</span>
+                        <span className="flex-1 font-bold text-white lg:text-lg">
+                          {item.label}
+                        </span>
                       </label>
 
                       {/* Child Items */}
@@ -458,10 +576,14 @@ export default function HN7MaintainerChecklist() {
                               <input
                                 type="checkbox"
                                 checked={child.checked}
-                                onChange={() => toggleItem(section.id, item.id, child.id)}
+                                onChange={() =>
+                                  toggleItem(section.id, item.id, child.id)
+                                }
                                 className="hacktoberfest-checkbox hacktoberfest-checkbox-small mt-1"
                               />
-                              <span className="flex-1 text-white/90">{child.label}</span>
+                              <span className="flex-1 text-white/90">
+                                {child.label}
+                              </span>
                             </label>
                           ))}
                         </div>
@@ -486,22 +608,35 @@ export default function HN7MaintainerChecklist() {
             <table className="w-full text-white">
               <thead>
                 <tr className="border-b-2 border-[#5A5AB5]">
-                  <th className="p-2 text-left font-bold text-[#C2C2FF]">Points</th>
-                  <th className="p-2 text-left font-bold text-[#C2C2FF]">Description</th>
+                  <th className="p-2 text-left font-bold text-[#C2C2FF]">
+                    Points
+                  </th>
+                  <th className="p-2 text-left font-bold text-[#C2C2FF]">
+                    Description
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-[#5A5AB5]/30">
                   <td className="p-2 font-bold text-[#A0A0FF]">0–50</td>
-                  <td className="p-2">Minimal contribution — documentation fixes, one-liners, small chores</td>
+                  <td className="p-2">
+                    Minimal contribution — documentation fixes, one-liners,
+                    small chores
+                  </td>
                 </tr>
                 <tr className="border-b border-[#5A5AB5]/30">
                   <td className="p-2 font-bold text-[#A0A0FF]">250–500</td>
-                  <td className="p-2">Medium contributions requiring some research or moderate features</td>
+                  <td className="p-2">
+                    Medium contributions requiring some research or moderate
+                    features
+                  </td>
                 </tr>
                 <tr>
                   <td className="p-2 font-bold text-[#A0A0FF]">800–1500</td>
-                  <td className="p-2">Major contributions requiring domain-specific knowledge and dedicated work</td>
+                  <td className="p-2">
+                    Major contributions requiring domain-specific knowledge and
+                    dedicated work
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -514,8 +649,10 @@ export default function HN7MaintainerChecklist() {
             🍫 Brownie Points
           </h3>
           <p className="text-white lg:text-lg">
-            Awarded <strong className="text-[#C2C2FF]">on top of bounty points</strong> for exceptional contributions — neat code, good
-            documentation, or going beyond the issue&apos;s scope.
+            Awarded{' '}
+            <strong className="text-[#C2C2FF]">on top of bounty points</strong>{' '}
+            for exceptional contributions — neat code, good documentation, or
+            going beyond the issue&apos;s scope.
           </p>
           <ul className="mt-3 list-inside list-disc space-y-2 text-white lg:text-lg">
             <li>Typically up to 10-20 pts</li>
@@ -525,11 +662,22 @@ export default function HN7MaintainerChecklist() {
 
         {/* Final Notes */}
         <div className="rounded-lg border-2 border-[#5A5AB5] bg-[#1C1C3F] p-4 lg:p-6">
-          <h3 className="mb-4 text-xl font-bold text-[#A0A0FF] lg:text-2xl">📝 Final Reminders</h3>
+          <h3 className="mb-4 text-xl font-bold text-[#A0A0FF] lg:text-2xl">
+            📝 Final Reminders
+          </h3>
           <ul className="list-inside list-disc space-y-2 text-white lg:text-lg">
-            <li>Keep issues practical and fair — this is a learning experience for all participants!</li>
-            <li>A well-structured README and CONTRIBUTING file make your repo more inviting and manageable.</li>
-            <li>Clear communication with contributors helps everyone have a smooth HackNight.</li>
+            <li>
+              Keep issues practical and fair — this is a learning experience for
+              all participants!
+            </li>
+            <li>
+              A well-structured README and CONTRIBUTING file make your repo more
+              inviting and manageable.
+            </li>
+            <li>
+              Clear communication with contributors helps everyone have a smooth
+              HackNight.
+            </li>
           </ul>
         </div>
       </div>
@@ -539,32 +687,50 @@ export default function HN7MaintainerChecklist() {
         <p className="text-xl font-bold text-[#A0A0FF] lg:text-2xl">
           Have a blast!
         </p>
-        <p className="mt-2 font-bold text-[#C2C2FF] lg:text-lg">— ACM Core 2025</p>
-        
+        <p className="mt-2 font-bold text-[#C2C2FF] lg:text-lg">
+          — ACM Core 2025
+        </p>
+
         {/* Maintainer Leads Note */}
         <div className="mx-auto mt-6 max-w-md rounded-lg border border-[#5A5AB5]/30 bg-[#1C1C3F]/50 p-4 text-sm text-white/80">
-          <p className="mb-2 font-semibold text-[#C2C2FF]">Maintainer leads for this year are:</p>
+          <p className="mb-2 font-semibold text-[#C2C2FF]">
+            Maintainer leads for this year are:
+          </p>
           <p className="mb-1">
-            <a href="mailto:mail@mebin.in" className="text-[#A0A0FF] hover:underline">
+            <a
+              href="mailto:mail@mebin.in"
+              className="text-[#A0A0FF] hover:underline"
+            >
               Mebin J Thattil
             </a>
             {' - '}
-            <a href="mailto:mail@mebin.in" className="text-white/60 hover:text-[#A0A0FF]">
+            <a
+              href="mailto:mail@mebin.in"
+              className="text-white/60 hover:text-[#A0A0FF]"
+            >
               mail@mebin.in
             </a>
           </p>
           <p className="mb-2">
-            <a href="mailto:pro.aditya.r@gmail.com" className="text-[#A0A0FF] hover:underline">
+            <a
+              href="mailto:pro.aditya.r@gmail.com"
+              className="text-[#A0A0FF] hover:underline"
+            >
               Aditya R
             </a>
             {' - '}
-            <a href="mailto:pro.aditya.r@gmail.com" className="text-white/60 hover:text-[#A0A0FF]">
+            <a
+              href="mailto:pro.aditya.r@gmail.com"
+              className="text-white/60 hover:text-[#A0A0FF]"
+            >
               pro.aditya.r@gmail.com
             </a>
           </p>
-          <p className="text-xs text-white/60">Contact any of us for any maintainer related issues.</p>
+          <p className="text-xs text-white/60">
+            Contact any of us for any maintainer related issues.
+          </p>
         </div>
-        
+
         {/* Subtle hint */}
         <p className="mt-8 text-sm text-[#5A5AB5] opacity-60 lg:text-base">
           ✨ Psst... tick off all the boxes for a surprise :)
@@ -574,7 +740,7 @@ export default function HN7MaintainerChecklist() {
       {/* Congratulations Modal */}
       {showCongrats && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative mx-4 max-w-lg rounded-2xl border-4 border-[#A0A0FF] bg-[#1C1C3F] p-8 shadow-2xl animate-bounce-in">
+          <div className="animate-bounce-in relative mx-4 max-w-lg rounded-2xl border-4 border-[#A0A0FF] bg-[#1C1C3F] p-8 shadow-2xl">
             <button
               onClick={() => setShowCongrats(false)}
               className="absolute right-4 top-4 text-2xl font-bold text-[#A0A0FF] hover:text-[#C2C2FF]"
@@ -587,7 +753,8 @@ export default function HN7MaintainerChecklist() {
                 Congrats!
               </h2>
               <p className="mb-6 text-lg text-white">
-                You&apos;re all set for HackNight. Here is a small gift for ticking off all the items
+                You&apos;re all set for HackNight. Here is a small gift for
+                ticking off all the items
               </p>
               <a
                 href="https://youtu.be/j5a0jTc9S10"
