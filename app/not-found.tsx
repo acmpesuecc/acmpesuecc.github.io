@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'; 
+import Image from 'next/image';
 
 const Custom404: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Custom404: React.FC = () => {
           className="bun"
           src="/nobgbun.png"
           alt="Bun"
-          width={64}  
+          width={64}
           height={64}
           style={bunStyle}
         />

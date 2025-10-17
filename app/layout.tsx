@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Roboto_Mono } from 'next/font/google';
-import Image from 'next/image'; 
-import Link from 'next/link';   
+import Image from 'next/image';
+import Link from 'next/link';
 
 const roboto = Roboto_Mono({
   subsets: ['latin'],
@@ -78,46 +78,95 @@ export default function RootLayout({
           <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between ">
             <div className="mx-auto flex w-full flex-row items-center justify-center space-x-5 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
               <Link href="/" className=" lg:3/5 w-2/5">
-                <Image src="/acmpesuecc2.png" alt="ACMfooterlogo" width={200} height={50} />
+                <Image
+                  src="/acmpesuecc2.png"
+                  alt="ACMfooterlogo"
+                  width={200}
+                  height={50}
+                />
               </Link>
               <a
                 href="https://maps.app.goo.gl/xrign5RWHsNNurfb9"
                 className=" w-1/3"
-                target="_blank" rel="noopener noreferrer" // Added for external link
+                target="_blank"
+                rel="noopener noreferrer" // Added for external link
               >
-                <Image src="/pes_logo_white.png" alt="Pesulogo" width={150} height={50} />
+                <Image
+                  src="/pes_logo_white.png"
+                  alt="Pesulogo"
+                  width={150}
+                  height={50}
+                />
               </a>
             </div>
             <div className="mx-auto mt-5 flex w-3/4 flex-row items-end space-x-8 lg:ml-0 lg:mr-3 lg:mt-0 lg:w-1/3 lg:justify-start lg:space-x-12">
               <a
                 href="https://github.com/acmpesuecc"
                 className="w-1/2 lg:w-[6%]"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Image src="/github.png" alt="github" width={48} height={48} className="h-auto" />
+                <Image
+                  src="/github.png"
+                  alt="github"
+                  width={48}
+                  height={48}
+                  className="h-auto"
+                />
               </a>
               <a
                 href="https://www.instagram.com/acmpesuecc"
                 className="w-1/2 lg:w-[6%]"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Image src="/instagram.svg" alt="insta" width={48} height={48} className="h-auto" />
+                <Image
+                  src="/instagram.svg"
+                  alt="insta"
+                  width={48}
+                  height={48}
+                  className="h-auto"
+                />
               </a>
               <a
                 href="https://www.linkedin.com/company/acm-pesu-ecc/"
                 className="w-1/2 lg:w-[6%]"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Image src="/linkedin.png" alt="linkedin" width={48} height={48} className="h-auto" />
+                <Image
+                  src="/linkedin.png"
+                  alt="linkedin"
+                  width={48}
+                  height={48}
+                  className="h-auto"
+                />
               </a>
-              <a href="https://twitter.com/AcmPesu" className="w-1/2 lg:w-[6%]" target="_blank" rel="noopener noreferrer">
-                <Image src="/twitter.png" alt="twitter" width={48} height={48} className="h-auto" />
+              <a
+                href="https://twitter.com/AcmPesu"
+                className="w-1/2 lg:w-[6%]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/twitter.png"
+                  alt="twitter"
+                  width={48}
+                  height={48}
+                  className="h-auto"
+                />
               </a>
               <a
                 href="mailto:acmpesuecc@pes.edu"
                 className="flex w-1/2 items-end lg:w-[6%]"
               >
-                <Image src="/mail-64.png" alt="email" width={48} height={48} className="w-full" />
+                <Image
+                  src="/mail-64.png"
+                  alt="email"
+                  width={48}
+                  height={48}
+                  className="w-full"
+                />
               </a>
             </div>
             <p

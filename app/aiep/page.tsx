@@ -39,7 +39,7 @@ export default function AIEP() {
         src="/aiep2024.jpeg"
         alt="AIEP 2024 Banner"
         width={1200} // 2. Add a base width
-        height={600}  // 3. Add a base height
+        height={600} // 3. Add a base height
         className="mx-auto mt-8 h-auto w-[90%] lg:mt-16 lg:w-2/3" // 4. Add h-auto
       />
 

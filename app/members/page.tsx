@@ -10,6 +10,7 @@ const getMembers = (): Member[] => {
   const filenames = fs.readdirSync(membersDirectory);
 
   const members = filenames
+    .filter((filename) => filename !== 'sample.md')
     .map((filename) => {
       // Create a slug from the filename
       const slug = filename.replace(/\.md$/, '');

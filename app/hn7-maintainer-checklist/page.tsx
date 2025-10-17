@@ -366,7 +366,8 @@ export default function HN7MaintainerChecklist() {
   };
 
   // Calculate progress - Wrapped in useCallback
-  const calculateProgress = useCallback(() => { // <-- Wrapped in useCallback
+  const calculateProgress = useCallback(() => {
+    // <-- Wrapped in useCallback
     let total = 0;
     let checked = 0;
 
