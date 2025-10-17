@@ -60,6 +60,12 @@ export default function RootLayout({
               Posts
             </a>
             <a
+              href="/members"
+              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
+            >
+              Members
+            </a>
+            <a
               href="/aiep"
               className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
