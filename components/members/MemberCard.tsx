@@ -18,7 +18,7 @@ const socialIconMap: { [key: string]: React.ElementType } = {
   Linkedin: FaLinkedin,
   Instagram: FaInstagram,
   X: FaXTwitter,
-  Email: FaEnvelope,
+  Email: FaEnvelope
 };
 
 const MemberCard = ({ member }: { member: Member }) => {
@@ -33,7 +33,7 @@ const MemberCard = ({ member }: { member: Member }) => {
       />
       <h3 className="mt-4 text-2xl font-bold text-white">{member.name}</h3>
       <p className="mt-2 text-sm text-slate-300">{member.description}</p>
-      
+
       {/* Dynamically render social icons */}
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         {Object.entries(member.socials).map(([name, url]) => {

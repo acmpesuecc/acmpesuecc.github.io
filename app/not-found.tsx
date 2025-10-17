@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; 
 
 const Custom404: React.FC = () => {
   return (
@@ -7,14 +8,22 @@ const Custom404: React.FC = () => {
         404: Page Not Found!
       </h2>
       <p className="mx-auto mb-2 mt-6 text-sm text-sky-200 lg:mx-0 lg:text-2xl ">
-        Sorry, this bun is missing its samosa&#128542;
+        Sorry, this bun is missing its samosa &#128542;
       </p>
       <div style={bunContainerStyle}>
-        <img className="bun" src="/nobgbun.png" alt="Bun" style={bunStyle} />
+        <Image
+          className="bun"
+          src="/nobgbun.png"
+          alt="Bun"
+          width={64}  
+          height={64}
+          style={bunStyle}
+        />
       </div>
     </div>
   );
 };
+
 const bunContainerStyle: React.CSSProperties = {
   width: '4rem',
   height: '4rem',

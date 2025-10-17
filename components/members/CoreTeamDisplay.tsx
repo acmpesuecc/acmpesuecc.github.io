@@ -8,10 +8,9 @@ type CoreTeamDisplayProps = {
 };
 
 const CoreTeamDisplay = ({ coreMembers }: CoreTeamDisplayProps) => {
-  // Get a unique, sorted list of years from all core members
-  const availableYears = [
-    ...new Set(coreMembers.flatMap((member) => member.memberYears || [])),
-  ].sort((a, b) => b - a); // Sort descending
+  const availableYears = Array.from(
+    new Set(coreMembers.flatMap((member) => member.memberYears || []))
+  ).sort((a, b) => b - a);
 
   // Initialize with the most recent year if available, otherwise 'all'
   const [selectedYear, setSelectedYear] = useState<number | 'all'>(
@@ -22,7 +21,9 @@ const CoreTeamDisplay = ({ coreMembers }: CoreTeamDisplayProps) => {
   const filteredMembers =
     selectedYear === 'all'
       ? coreMembers
-      : coreMembers.filter((member) => member.memberYears?.includes(selectedYear));
+      : coreMembers.filter((member) =>
+          member.memberYears?.includes(selectedYear)
+        );
 
   return (
     <section>

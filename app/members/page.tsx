@@ -15,7 +15,7 @@ const getMembers = (): Member[] => {
       const slug = filename.replace(/\.md$/, '');
       const filePath = path.join(membersDirectory, filename);
       const fileContents = fs.readFileSync(filePath, 'utf8');
-      
+
       const { data } = matter(fileContents);
 
       // --- PARSE `collections` ---
@@ -26,12 +26,15 @@ const getMembers = (): Member[] => {
         .filter(Boolean); // remove any NaN values
 
       // --- PARSE `customFields` into a simple object ---
-      const socials = (data.customFields || []).reduce((acc: any, field: any) => {
-        const key = Object.keys(field)[0];
-        const value = field[key];
-        acc[key] = value;
-        return acc;
-      }, {});
+      const socials = (data.customFields || []).reduce(
+        (acc: any, field: any) => {
+          const key = Object.keys(field)[0];
+          const value = field[key];
+          acc[key] = value;
+          return acc;
+        },
+        {}
+      );
 
       // --- Return the TRANSFORMED, clean object ---
       return {
@@ -41,7 +44,7 @@ const getMembers = (): Member[] => {
         description: data.description,
         isCore,
         memberYears,
-        socials,
+        socials
       };
     })
     // Sort members alphabetically by name
@@ -49,7 +52,6 @@ const getMembers = (): Member[] => {
 
   return members;
 };
-
 
 // --- THE PAGE COMPONENT ---
 const MembersPage = () => {
