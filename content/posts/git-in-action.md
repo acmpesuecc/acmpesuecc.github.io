@@ -6,7 +6,7 @@ tags: ['git', github, 'open-source', 'hacknight7.0']
 date: '2025-10-17'
 ---
 
-Have you ever broken something in your project and wished you could go back in time? Or wanted to share your code with the world but weren't able to? That’s where Git and Github come in. They make saving changes, sharing and collaborating easy :D
+Have you ever broken something in your project and wished you could go back in time? Or wanted to share your code with the world but weren't able to? That’s where Git and Github come in. They make saving changes, sharing code and collaborating easy :D
 
 ## Why Git? And What Is It Anyway?
 
@@ -14,13 +14,14 @@ If you ever made a project, you would be familiar with something like this:
 
 ![Multiple project folders showing version chaos](https://i.ibb.co/PZ56vGK4/folder-chaos.png)
 
-Git lets you unify all this into a **_SINGLE_** folder!
+
+Git lets you manage all versions of a project inside a **_single repository_** instead of creating multiple folders.
 
 _Now, what is Git exactly?_
 
 Git is a _version control_ tool that keeps track of all the changes you make in your project. It lets you experiment with new features safely and collaborate with others without breaking anything.
 
-Think of it as a time machine for your code where you can go back, explore past versions and undo mistakes. _Maybe even look at Linus Toravlds' past commits for Linux and fix some bugs!_
+Think of it as a time machine for your code where you can go back, explore past versions and undo mistakes. _Maybe even look at Linus Torvalds' past commits for Linux and fix some bugs!_
 
 _Isn't it cool to have the power to jump back to any version of your project, whenever you want?_
 
@@ -30,30 +31,117 @@ And when you power Git with Github, it opens the door to a world of endless poss
 - You can collaborate globally on projects with friends or contributors.
 - You can contribute to open-source projects and learn from code written by others.
 
-_You are no longer restricted to your just friends or your college. The world is your playground! It's like unlocking a whole new superpower_ ;)
+_You are no longer restricted to just your friends or your college. The world is your playground! It's like unlocking a whole new superpower_ ;)
 
 ## Installing Git & Setting up SSH
 
-If you haven't installed Git yet, don't worry! We have some scripts for you that you could run to download Git and also set an SSH key for the same!
+If you haven't installed Git yet, don't worry! Follow the instructions below to install Git and set up your SSH keys based on your OS :)
 
 > [!NOTE]
-> Use the username and email you use for Github, or it would lead to errors!
+> Use the username and email you use for Github, or it would lead to issues!
 
 ### For Windows
 
-Run this in as Admin in Powershell:
+- Download Git from: https://git-scm.com/download/win
+- Run the installer and install using the default options.
+- After installation, open **Git Bash** from the Start Menu.
+
+> Make sure you run the SSH commands inside Git Bash, not Command Prompt or PowerShell.
+
+Generate an SSH key:
 
 ```bash
-Invoke-RestMethod -Uri "https://gist.githubusercontent.com/Prana-vvb/b2602c1aafb692691a88d167a1d9f645/raw/523f2fd69f58a0ecf0c43a251d0320d5fc21775b/setup_windows.ps1" | Out-File -FilePath "setup.ps1"; .\setup.ps1
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+
+- Press Enter to use the default location.
+- Set a passphrase (optional).
+
+Start the SSH agent and add the key:
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+Copy your public key:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the entire output as you’ll need it for GitHub.
+
 
 ### For Linux/MacOS
+#### Install Git (if not installed)
 
-Run the below command:
+Ubuntu/Debian:
 
 ```bash
-bash <(curl -sS https://gist.githubusercontent.com/Prana-vvb/5f48ae8e1173f7b1db105d80c70c2542/raw/10241f14b24427834cebd24128a4fa801fdac148/setup_unix.sh)
+sudo apt update
+sudo apt install git
 ```
+
+Fedora:
+
+```bash
+sudo dnf install git
+```
+
+Arch:
+
+```bash
+sudo pacman -S git
+```
+
+macOS (Homebrew):
+
+```bash
+brew install git
+```
+To install Homebrew (if you don't have it), run:
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+#### Generate an SSH key
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+- Press Enter for defaults.
+- Add a passphrase if desired.
+
+#### Start SSH agent and add key
+
+Linux:
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+macOS:
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+#### Copy public key
+
+Linux:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+macOS:
+
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+### Once you're done setting up SSH
 
 Copy your public key and add it to GitHub by following the below steps:
 
@@ -62,6 +150,12 @@ Go to GitHub > Settings > SSH and GPG keys > New SSH key, and paste it there.
 Then, run the `ssh -T git@github.com` command in your terminal to verify the setup.
 
 You should see `Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.`
+
+Make sure to run the below as well:
+```bash
+git config --global user.name "your username"
+git config --global user.email "your_email@example.com"
+```
 
 > [!NOTE]
 > If all these methods fail, do look at something called GITHUB DESKTOP. It's just a Google Search away ^^
@@ -117,7 +211,7 @@ _and where do you find this URL?_
 
 Hmm.... what if I want to experiment with a feature? Is there any way to do that **_without having to create multiple folders_**?
 
-YES! **_Branches_** let you create multiple parallel versions that you can safely work. Once you are satisfied, you can **_merge_** them to the `main` branch.
+YES! **_Branches_** let you work on separate versions of your project without affecting the main code. Once you are satisfied, you can **_merge_** them to the `main` branch.
 
 _Interesting, isn't it? But how do you make a new branch?_
 
@@ -162,14 +256,14 @@ We recommend using [Commit Conventions](https://www.conventionalcommits.org/) to
 > Pull latest changes before you start work and before you push, to avoid conflicts and keep your branch up to date.
 
 ```bash
-# If you're working directly on main
-git pull origin main
+# Pull latest changes for your current branch
+git pull
 
 # If you're on a feature branch
 git pull origin your-branch-name
 ```
 
-It's important to note that these _latest commits stay on your local system_ until you **_Push_** them:
+It's important to note that these _latest commits stay on your local system_ until you **_Push_** them to Github:
 
 ```bash
 # Push changes to the main branch
@@ -197,7 +291,7 @@ Click on `Compare & pull request`
 
 ![Compare and PR](https://i.ibb.co/rGD3zP3V/compare.png)
 
-Then, write a description of the changes you made, double-check the branches at the top, and click `Create Pull Request`.
+Then, write a description of the changes you made (look out for templates if any), double-check the branches at the top, and click `Create Pull Request`.
 
 ![Image of Pull Request](https://i.ibb.co/SwWy1FKD/PR-img.png)
 
@@ -206,6 +300,11 @@ Then, write a description of the changes you made, double-check the branches at 
 - [Git Cheatsheet](https://git-scm.com/cheat-sheet)
 - [Official Git documentation](https://git-scm.com/doc)
 - [Git up and running - Anirudh Rowjee](https://rowjee.com/blog/git_up_and_running)
+
+A very interesting video to look out for if you have the time:
+
+[![So You Think You Know Git?](https://img.youtube.com/vi/aolI_Rz0ZqY/maxresdefault.jpg)](https://youtu.be/aolI_Rz0ZqY)
+
 
 That brings us to the end of the blog.
 
