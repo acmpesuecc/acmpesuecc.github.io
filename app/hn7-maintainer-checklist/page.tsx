@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react'; // <-- Import useCallback
 import { Atkinson_Hyperlegible } from 'next/font/google';
+import Image from 'next/image';
 import './hacktoberfest.css';
 
 const atkinsonRegular = Atkinson_Hyperlegible({
@@ -364,8 +365,9 @@ export default function HN7MaintainerChecklist() {
     );
   };
 
-  // Calculate progress
-  const calculateProgress = () => {
+  // Calculate progress - Wrapped in useCallback
+  const calculateProgress = useCallback(() => {
+    // <-- Wrapped in useCallback
     let total = 0;
     let checked = 0;
 
@@ -382,7 +384,7 @@ export default function HN7MaintainerChecklist() {
     });
 
     return total > 0 ? Math.round((checked / total) * 100) : 0;
-  };
+  }, [sections]); // <-- sections is the dependency for useCallback
 
   // Check if all items are completed
   useEffect(() => {
@@ -394,7 +396,7 @@ export default function HN7MaintainerChecklist() {
         createConfetti();
       }
     }
-  }, [sections, mounted, hasShownCongrats]);
+  }, [sections, mounted, hasShownCongrats, calculateProgress]);
 
   // Create confetti effect
   const createConfetti = () => {
@@ -447,9 +449,11 @@ export default function HN7MaintainerChecklist() {
       {/* Hacktoberfest Logo */}
       <div className="mx-auto mb-8 flex items-center justify-center gap-4 lg:mb-12">
         <div className="text-center">
-          <img
+          <Image
             src="/hacktoberfest-logo.svg"
             alt="Hacktoberfest 2025 Logo"
+            width={100} // Assuming a reasonable base width
+            height={100} // Assuming a reasonable base height
             className="mx-auto h-16 w-auto lg:h-24"
           />
         </div>

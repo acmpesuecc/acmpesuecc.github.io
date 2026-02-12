@@ -1,3 +1,5 @@
+import Image from 'next/image'; // 1. Import the Image component
+
 export default function AIEP() {
   const ProjectCard = ({
     title,
@@ -32,13 +34,17 @@ export default function AIEP() {
       <h1 className="mt-8 text-center text-2xl text-white underline decoration-sky-200 underline-offset-8 lg:mt-4 lg:text-5xl">
         Explore AIEP 2024
       </h1>
-      <img
+
+      <Image
         src="/aiep2024.jpeg"
-        alt="ACM Logo"
-        className="mx-auto mt-8 w-[90%] lg:mt-16 lg:w-2/3"
+        alt="AIEP 2024 Banner"
+        width={1200} // 2. Add a base width
+        height={600} // 3. Add a base height
+        className="mx-auto mt-8 h-auto w-[90%] lg:mt-16 lg:w-2/3" // 4. Add h-auto
       />
+
       <p className="mx-auto mt-6 w-[90%] text-white  lg:mt-12 lg:w-full  lg:text-xl">
-        The ACM Industrial Program is ACM PESU-ECC&#39;s annual mentorship
+        The ACM Industrial Program is ACM PESU-ECC`&apos;`s annual mentorship
         program, through which we try to emulate the development pipeline used
         in the industry for a variety projects or learn about new tech with a
         hands on approach.
