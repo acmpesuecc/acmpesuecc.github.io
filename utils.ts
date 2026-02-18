@@ -83,8 +83,14 @@ const extractPlainText = (elements: React.ReactNode): string => {
     if (typeof el === 'string') {
       return acc + el;
     }
-    if (React.isValidElement(el) && el.props.children) {
-      return acc + extractPlainText(el.props.children);
+    if (
+      React.isValidElement(el) &&
+      (el.props as { children?: React.ReactNode }).children
+    ) {
+      return (
+        acc +
+        extractPlainText((el.props as { children?: React.ReactNode }).children)
+      );
     }
     return acc;
   }, '');

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import { Roboto_Mono } from 'next/font/google';
 const roboto = Roboto_Mono({
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body className=" mx-auto flex min-h-[100vh] w-full flex-col overflow-x-hidden">
         <nav className="mx-auto mt-4  flex h-[30%] w-[95%] flex-col lg:flex-row lg:items-center lg:justify-between">
           {/* Nav switches between row and column display for phone and mobile*/}
-          <a
+          <Link
             href="/"
             className="mx-auto w-1/4 hover:cursor-pointer lg:mx-0 lg:w-[6%]"
           >
@@ -44,7 +45,7 @@ export default function RootLayout({
               alt="acmshortlogo"
               className="h-full w-full"
             />
-          </a>
+          </Link>
           {/* Nav routes spaced out */}
           <div className="options mx-auto mt-4 flex max-w-[30%] flex-row justify-center space-x-6 lg:mx-0 lg:mt-0 lg:justify-normal lg:space-x-8">
             <a
@@ -53,18 +54,18 @@ export default function RootLayout({
             >
               About
             </a>
-            <a
+            <Link
               href="/posts"
               className=" text-center text-xl  text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               Posts
-            </a>
-            <a
+            </Link>
+            <Link
               href="/aiep"
               className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               AIEP
-            </a>
+            </Link>
             {/*  <a
               href="/team"
               className=" text-center  text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
@@ -79,9 +80,9 @@ export default function RootLayout({
           <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between ">
             {/*Footer switches between row and column for laptop and mobile respectively */}
             <div className="mx-auto flex w-full flex-row items-center justify-center space-x-5 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
-              <a href="/" className=" lg:3/5 w-2/5">
+              <Link href="/" className=" lg:3/5 w-2/5">
                 <img src="/acmpesuecc2.png" alt="ACMfooterlogo" />
-              </a>
+              </Link>
               <a
                 href="https://maps.app.goo.gl/xrign5RWHsNNurfb9"
                 className=" w-1/3"

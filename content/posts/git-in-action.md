@@ -14,7 +14,6 @@ If you ever made a project, you would be familiar with something like this:
 
 ![Multiple project folders showing version chaos](https://i.ibb.co/PZ56vGK4/folder-chaos.png)
 
-
 Git lets you manage all versions of a project inside a **_single repository_** instead of creating multiple folders.
 
 _Now, what is Git exactly?_
@@ -72,8 +71,8 @@ cat ~/.ssh/id_ed25519.pub
 
 Copy the entire output as you’ll need it for GitHub.
 
-
 ### For Linux/MacOS
+
 #### Install Git (if not installed)
 
 Ubuntu/Debian:
@@ -100,8 +99,10 @@ macOS (Homebrew):
 ```bash
 brew install git
 ```
+
 To install Homebrew (if you don't have it), run:
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
 #### Generate an SSH key
 
 ```bash
@@ -152,6 +153,7 @@ Then, run the `ssh -T git@github.com` command in your terminal to verify the set
 You should see `Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.`
 
 Make sure to run the below as well:
+
 ```bash
 git config --global user.name "your username"
 git config --global user.email "your_email@example.com"
@@ -304,7 +306,6 @@ Then, write a description of the changes you made (look out for templates if any
 A very interesting video to look out for if you have the time:
 
 [![So You Think You Know Git?](https://img.youtube.com/vi/aolI_Rz0ZqY/maxresdefault.jpg)](https://youtu.be/aolI_Rz0ZqY)
-
 
 That brings us to the end of the blog.
 

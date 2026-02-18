@@ -13,11 +13,13 @@ git clone https://github.com/acmpesuecc/acmpesuecc.github.io.git
 cd acmpesuecc.github.io
 npm install
 ```
+
 ### Run the development server
 
 ```bash
 npm run dev
 ```
+
 Then, visit [http://localhost:3000](http://localhost:3000) on your browser
 
 ### Verify code quality
@@ -48,4 +50,3 @@ See the [LICENSE](LICENSE) file for more details.
 ## Maintainers(s)
 
 [**Achyuth Yogesh Sosale**](https://github.com/achyuthcodes30) - achyuthyogesh0@gmail.com
-

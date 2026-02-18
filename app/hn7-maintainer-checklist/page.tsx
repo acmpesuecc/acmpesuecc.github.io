@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Atkinson_Hyperlegible } from 'next/font/google';
 import './hacktoberfest.css';
 
@@ -25,11 +25,39 @@ interface Section {
   expanded: boolean;
 }
 
+// Cookie getter at module level (only runs on client)
+const getCookie = (name: string): string | null => {
+  if (typeof window === 'undefined') return null;
+  const nameEQ = name + '=';
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+};
+
 export default function HN7MaintainerChecklist() {
-  const [sections, setSections] = useState<Section[]>([]);
+  // Use lazy initialization to load from cookies on first render
+  const [sections, setSections] = useState<Section[]>(() => {
+    const saved = getCookie('hn7-checklist-state');
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  });
+
+  // Use ref to track if we're on client (for logic)
+  const isMountedRef = useRef(false);
+  // Use state to trigger re-render after mount
   const [mounted, setMounted] = useState(false);
   const [showCongrats, setShowCongrats] = useState(false);
-  const [hasShownCongrats, setHasShownCongrats] = useState(false);
+  const hasShownCongratsRef = useRef(false);
 
   // Initialize checklist data
   const initializeSections = (): Section[] => [
@@ -266,45 +294,30 @@ export default function HN7MaintainerChecklist() {
     }
   ];
 
-  // Load state from cookies on mount
-  useEffect(() => {
-    const savedState = getCookie('hn7-checklist-state');
-    if (savedState) {
-      try {
-        setSections(JSON.parse(savedState));
-      } catch (e) {
-        setSections(initializeSections());
-      }
-    } else {
-      setSections(initializeSections());
-    }
-    setMounted(true);
-  }, []);
-
-  // Save state to cookies whenever it changes
-  useEffect(() => {
-    if (mounted && sections.length > 0) {
-      setCookie('hn7-checklist-state', JSON.stringify(sections), 365);
-    }
-  }, [sections, mounted]);
-
-  // Cookie utilities
+  // Cookie setter
   const setCookie = (name: string, value: string, days: number) => {
     const expires = new Date();
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
     document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
   };
 
-  const getCookie = (name: string): string | null => {
-    const nameEQ = name + '=';
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  // Initialize sections if not loaded from cookie
+  useEffect(() => {
+    if (sections.length === 0) {
+      setSections(initializeSections());
     }
-    return null;
-  };
+    // Mark as mounted
+    isMountedRef.current = true;
+    setMounted(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Save state to cookies whenever it changes
+  useEffect(() => {
+    if (isMountedRef.current && sections.length > 0) {
+      setCookie('hn7-checklist-state', JSON.stringify(sections), 365);
+    }
+  }, [sections]);
 
   // Toggle item checked state
   const toggleItem = (sectionId: string, itemId: string, childId?: string) => {
@@ -384,19 +397,7 @@ export default function HN7MaintainerChecklist() {
     return total > 0 ? Math.round((checked / total) * 100) : 0;
   };
 
-  // Check if all items are completed
-  useEffect(() => {
-    if (mounted && sections.length > 0 && !hasShownCongrats) {
-      const progress = calculateProgress();
-      if (progress === 100) {
-        setShowCongrats(true);
-        setHasShownCongrats(true);
-        createConfetti();
-      }
-    }
-  }, [sections, mounted, hasShownCongrats]);
-
-  // Create confetti effect
+  // Create confetti effect - must be declared before useEffect that uses it
   const createConfetti = () => {
     const colors = ['#A0A0FF', '#C2C2FF', '#5A5AB5', '#403F7D'];
     const confettiCount = 50;
@@ -419,6 +420,19 @@ export default function HN7MaintainerChecklist() {
     }
   };
 
+  // Check if all items are completed - use refs to avoid setState in effect
+  const progress = sections.length > 0 ? calculateProgress() : 0;
+  const shouldShowCongrats =
+    progress === 100 && !hasShownCongratsRef.current && isMountedRef.current;
+
+  useEffect(() => {
+    if (shouldShowCongrats) {
+      hasShownCongratsRef.current = true;
+      setShowCongrats(true);
+      createConfetti();
+    }
+  }, [shouldShowCongrats]);
+
   // Reset all checkboxes
   const resetAll = () => {
     if (
@@ -430,6 +444,7 @@ export default function HN7MaintainerChecklist() {
     }
   };
 
+  // Show loading until mounted
   if (!mounted) {
     return (
       <div className="flex min-h-screen items-center justify-center">
@@ -437,8 +452,6 @@ export default function HN7MaintainerChecklist() {
       </div>
     );
   }
-
-  const progress = calculateProgress();
 
   return (
     <div

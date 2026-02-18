@@ -102,7 +102,10 @@ export async function generateStaticParams() {
   return [...slugs, ...years.map(String)].map((slug) => ({ slug }));
 }
 
-export default function AIEPpage({ params }: { params: { slug: string } }) {
+export default async function AIEPpage(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
   const { slug } = params;
 
   // Check if slug is a year (4 digits)

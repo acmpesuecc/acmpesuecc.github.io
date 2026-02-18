@@ -27,7 +27,10 @@ export async function generateStaticParams() {
   return staticPaths;
 }
 
-const blogPost = ({ params }: { params: { slug: string; week: string } }) => {
+const blogPost = async (props0: {
+  params: Promise<{ slug: string; week: string }>;
+}) => {
+  const params = await props0.params;
   const { slug, week } = params;
   const report: Report = getAIEPBySlug(week, slug);
   return (
