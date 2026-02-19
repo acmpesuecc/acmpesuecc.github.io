@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "npx serve@latest out",
-    "lint": "eslint .",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write --list-different .",
-    "prepare": "husky"
+    "dev": "bun --bun next dev",
+    "build": "bun --bun next build",
+    "start": "bunx --bun serve@latest out",
+    "lint": "bun --bun eslint .",
+    "format": "bun --bun prettier --check .",
+    "format:fix": "bun --bun prettier --write --list-different .",
+    "prepare": "bun --bun husky"
   },
   "dependencies": {
     "cross-spawn": "^7.0.6",
