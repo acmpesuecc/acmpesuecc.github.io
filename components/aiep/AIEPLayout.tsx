@@ -48,7 +48,7 @@ export function AIEPLayout({
               <Link
                 key={archiveYear}
                 href={`/aiep/${archiveYear}`}
-                className="rounded bg-sky-200 px-6 py-3 text-lg font-semibold text-black transition-colors hover:bg-sky-300"
+                className="rounded-sm bg-sky-200 px-6 py-3 text-lg font-semibold text-black transition-colors hover:bg-sky-300"
               >
                 AIEP {archiveYear}
               </Link>
@@ -62,7 +62,7 @@ export function AIEPLayout({
         <div className="mx-auto mt-12 flex justify-center lg:mt-16">
           <Link
             href="/aiep"
-            className="rounded bg-sky-200 px-6 py-3 text-lg font-semibold text-black transition-colors hover:bg-sky-300"
+            className="rounded-sm bg-sky-200 px-6 py-3 text-lg font-semibold text-black transition-colors hover:bg-sky-300"
           >
             View Current Projects (AIEP {latestYear})
           </Link>

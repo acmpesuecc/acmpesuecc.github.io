@@ -5,7 +5,7 @@ export default function HN7FAQ() {
         HackNight 7 - FAQ
       </h1>
 
-      <div className="mx-auto mb-16 mt-12 w-full space-y-8 text-white lg:mb-24 lg:mt-16">
+      <div className="mx-auto mt-12 mb-16 w-full space-y-8 text-white lg:mt-16 lg:mb-24">
         <div className="faq-item border-b border-sky-200 pb-6">
           <h3 className="text-lg font-medium text-sky-200 lg:text-xl">
             Q. What does submit a repo mean?

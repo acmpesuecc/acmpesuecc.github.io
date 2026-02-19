@@ -480,7 +480,7 @@ export default function HN7MaintainerChecklist() {
       </p>
 
       {/* Sticky Progress Bar with Hacktoberfest styling - Compact */}
-      <div className="sticky top-2 z-50 mx-auto mt-8 rounded-lg border-2 border-[#A0A0FF] bg-[#1C1C3F] p-3 shadow-2xl backdrop-blur-sm lg:mt-12 lg:p-4">
+      <div className="sticky top-2 z-50 mx-auto mt-8 rounded-lg border-2 border-[#A0A0FF] bg-[#1C1C3F] p-3 shadow-2xl backdrop-blur-xs lg:mt-12 lg:p-4">
         <div className="flex items-center justify-between gap-4">
           <div className="flex-1">
             <div className="mb-1 flex items-center justify-between">
@@ -493,7 +493,7 @@ export default function HN7MaintainerChecklist() {
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-[#403F7D]">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-[#5A5AB5] via-[#A0A0FF] to-[#C2C2FF] transition-all duration-500 ease-out"
+                className="h-full rounded-full bg-linear-to-r from-[#5A5AB5] via-[#A0A0FF] to-[#C2C2FF] transition-all duration-500 ease-out"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
@@ -528,7 +528,7 @@ export default function HN7MaintainerChecklist() {
       </div>
 
       {/* Checklist Sections */}
-      <div className="mb-16 mt-8 space-y-6 lg:mb-24 lg:mt-12">
+      <div className="mt-8 mb-16 space-y-6 lg:mt-12 lg:mb-24">
         {sections.map((section) => (
           <div
             key={section.id}
@@ -566,7 +566,7 @@ export default function HN7MaintainerChecklist() {
                   {section.items.map((item) => (
                     <div key={item.id} className="space-y-2">
                       {/* Parent Item */}
-                      <label className="flex cursor-pointer items-start space-x-3 rounded p-2 transition-colors hover:bg-[#403F7D]">
+                      <label className="flex cursor-pointer items-start space-x-3 rounded-sm p-2 transition-colors hover:bg-[#403F7D]">
                         <input
                           type="checkbox"
                           checked={item.checked}
@@ -584,7 +584,7 @@ export default function HN7MaintainerChecklist() {
                           {item.children.map((child) => (
                             <label
                               key={child.id}
-                              className="flex cursor-pointer items-start space-x-3 rounded p-2 transition-colors hover:bg-[#403F7D]"
+                              className="flex cursor-pointer items-start space-x-3 rounded-sm p-2 transition-colors hover:bg-[#403F7D]"
                             >
                               <input
                                 type="checkbox"
@@ -752,11 +752,11 @@ export default function HN7MaintainerChecklist() {
 
       {/* Congratulations Modal */}
       {showCongrats && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/70 backdrop-blur-xs">
           <div className="animate-bounce-in relative mx-4 max-w-lg rounded-2xl border-4 border-[#A0A0FF] bg-[#1C1C3F] p-8 shadow-2xl">
             <button
               onClick={() => setShowCongrats(false)}
-              className="absolute right-4 top-4 text-2xl font-bold text-[#A0A0FF] hover:text-[#C2C2FF]"
+              className="absolute top-4 right-4 text-2xl font-bold text-[#A0A0FF] hover:text-[#C2C2FF]"
             >
               ×
             </button>
@@ -773,7 +773,7 @@ export default function HN7MaintainerChecklist() {
                 href="https://youtu.be/j5a0jTc9S10"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg border-2 border-[#A0A0FF] bg-gradient-to-r from-[#5A5AB5] to-[#A0A0FF] px-6 py-3 font-bold text-white transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-block rounded-lg border-2 border-[#A0A0FF] bg-linear-to-r from-[#5A5AB5] to-[#A0A0FF] px-6 py-3 font-bold text-white transition-all hover:scale-105 hover:shadow-lg"
               >
                 Totally legit link 👀
               </a>

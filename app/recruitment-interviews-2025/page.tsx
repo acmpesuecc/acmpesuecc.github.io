@@ -108,7 +108,7 @@ export default function RecruitmentInterviews2025() {
             clearVerificationStatus();
             setIsVerified(false);
           }}
-          className="absolute right-4 top-4 rounded-md bg-red-500/20 px-3 py-1 text-sm text-red-200 hover:bg-red-500/30"
+          className="absolute top-4 right-4 rounded-md bg-red-500/20 px-3 py-1 text-sm text-red-200 hover:bg-red-500/30"
         >
           Logout
         </button>

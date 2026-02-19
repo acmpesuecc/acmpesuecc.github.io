@@ -81,7 +81,7 @@ const blogPost = async (props0: {
                   ) : (
                     <span className="flex justify-center whitespace-pre-wrap">
                       <code
-                        className={`${className} inline-block bg-[rgb(255,255,255,0.1)] py-2 text-xs text-sky-200 lg:pl-2 lg:pr-16 lg:text-base`}
+                        className={`${className} inline-block bg-[rgb(255,255,255,0.1)] py-2 text-xs text-sky-200 lg:pr-16 lg:pl-2 lg:text-base`}
                         {...props}
                       >
                         {children}

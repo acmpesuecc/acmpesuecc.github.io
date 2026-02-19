@@ -61,7 +61,7 @@ export default function EmailVerification({
 
   return (
     <div className="flex min-h-[80vh] items-center justify-center">
-      <div className="mx-auto w-[90%] max-w-md rounded-lg border border-sky-200/30 bg-black/40 p-8 backdrop-blur-sm lg:w-full">
+      <div className="mx-auto w-[90%] max-w-md rounded-lg border border-sky-200/30 bg-black/40 p-8 backdrop-blur-xs lg:w-full">
         <div className="text-center">
           <h1 className="mb-2 text-2xl font-semibold text-white lg:text-3xl">
             Email Verification
@@ -84,7 +84,7 @@ export default function EmailVerification({
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-md border border-sky-200/50 bg-black/20 px-4 py-3 text-white placeholder-sky-200/60 focus:border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200/20"
+              className="w-full rounded-md border border-sky-200/50 bg-black/20 px-4 py-3 text-white placeholder-sky-200/60 focus:border-sky-200 focus:ring-2 focus:ring-sky-200/20 focus:outline-hidden"
               placeholder="your.email@example.com"
               disabled={isLoading}
               autoComplete="email"
@@ -100,7 +100,7 @@ export default function EmailVerification({
           <button
             type="submit"
             disabled={isLoading || attempts >= 3}
-            className="w-full rounded-md bg-sky-200 px-4 py-3 font-medium text-black transition-colors hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-200/50 disabled:cursor-not-allowed disabled:opacity-50"
+            className="w-full rounded-md bg-sky-200 px-4 py-3 font-medium text-black transition-colors hover:bg-sky-100 focus:ring-2 focus:ring-sky-200/50 focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
           >
             {isLoading ? 'Verifying...' : 'Verify Email'}
           </button>

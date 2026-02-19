@@ -2,11 +2,11 @@ import React from 'react';
 
 const Custom404: React.FC = () => {
   return (
-    <div className="flex h-[100vh] flex-col items-center justify-center overflow-hidden">
-      <h2 className=" mx-auto text-center text-2xl font-bold text-white lg:mx-0 lg:text-6xl">
+    <div className="flex h-screen flex-col items-center justify-center overflow-hidden">
+      <h2 className="mx-auto text-center text-2xl font-bold text-white lg:mx-0 lg:text-6xl">
         404: Page Not Found!
       </h2>
-      <p className="mx-auto mb-2 mt-6 text-sm text-sky-200 lg:mx-0 lg:text-2xl ">
+      <p className="mx-auto mt-6 mb-2 text-sm text-sky-200 lg:mx-0 lg:text-2xl">
         Sorry, this bun is missing its samosa&#128542;
       </p>
       <div style={bunContainerStyle}>

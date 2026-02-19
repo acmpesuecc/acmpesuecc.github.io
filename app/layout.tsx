@@ -32,8 +32,8 @@ export default function RootLayout({
         <meta name="darkreader-lock" />
         <link rel="icon" href="/acmshortlogo.png" />
       </head>
-      <body className=" mx-auto flex min-h-[100vh] w-full flex-col overflow-x-hidden">
-        <nav className="mx-auto mt-4  flex h-[30%] w-[95%] flex-col lg:flex-row lg:items-center lg:justify-between">
+      <body className="mx-auto flex min-h-screen w-full flex-col overflow-x-hidden">
+        <nav className="mx-auto mt-4 flex h-[30%] w-[95%] flex-col lg:flex-row lg:items-center lg:justify-between">
           {/* Nav switches between row and column display for phone and mobile*/}
           <Link
             href="/"
@@ -50,19 +50,19 @@ export default function RootLayout({
           <div className="options mx-auto mt-4 flex max-w-[30%] flex-row justify-center space-x-6 lg:mx-0 lg:mt-0 lg:justify-normal lg:space-x-8">
             <a
               href="/about"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
+              className="text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               About
             </a>
             <Link
               href="/posts"
-              className=" text-center text-xl  text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
+              className="text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               Posts
             </Link>
             <Link
               href="/aiep"
-              className=" text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
+              className="text-center text-xl text-white decoration-sky-200 hover:cursor-pointer hover:underline hover:underline-offset-8 lg:text-2xl"
             >
               AIEP
             </Link>
@@ -74,23 +74,23 @@ export default function RootLayout({
             </a> */}
           </div>
         </nav>
-        <div className="flex-grow">{children}</div> {/* Content */}
-        <footer className=" bottom-0 left-0 w-full">
+        <div className="grow">{children}</div> {/* Content */}
+        <footer className="bottom-0 left-0 w-full">
           {/* Footer at bottom of wherever content ends*/}
-          <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between ">
+          <div className="footer-div mx-auto mt-0 flex w-full flex-col justify-center border-t-2 border-t-white bg-[rgb(0,0,0,0.3)] px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
             {/*Footer switches between row and column for laptop and mobile respectively */}
             <div className="mx-auto flex w-full flex-row items-center justify-center space-x-5 lg:mx-0 lg:w-1/4 lg:justify-normal lg:space-x-12">
-              <Link href="/" className=" lg:3/5 w-2/5">
+              <Link href="/" className="lg:3/5 w-2/5">
                 <img src="/acmpesuecc2.png" alt="ACMfooterlogo" />
               </Link>
               <a
                 href="https://maps.app.goo.gl/xrign5RWHsNNurfb9"
-                className=" w-1/3"
+                className="w-1/3"
               >
                 <img src="/pes_logo_white.png" alt="Pesulogo" />
               </a>
             </div>
-            <div className="mx-auto mt-5 flex w-3/4 flex-row items-end space-x-8 lg:ml-0 lg:mr-3 lg:mt-0 lg:w-1/3 lg:justify-start lg:space-x-12">
+            <div className="mx-auto mt-5 flex w-3/4 flex-row items-end space-x-8 lg:mt-0 lg:mr-3 lg:ml-0 lg:w-1/3 lg:justify-start lg:space-x-12">
               <a
                 href="https://github.com/acmpesuecc"
                 className="w-1/2 lg:w-[6%]"
@@ -120,7 +120,7 @@ export default function RootLayout({
               </a>
             </div>
             <p
-              className={`text-md mt-6 text-center  text-white lg:flex lg:items-end lg:text-lg ${roboto.className} lg:mt-0`}
+              className={`text-md mt-6 text-center text-white lg:flex lg:items-end lg:text-lg ${roboto.className} lg:mt-0`}
             >
               ACM PESUECC &#169; 2025
             </p>

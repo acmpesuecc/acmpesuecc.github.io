@@ -15,12 +15,12 @@ export default function Posts() {
           ALL POSTS
         </h1>
       </div>
-      <div className="posts mx-auto mb-16 mt-4 w-[90%] lg:w-2/3">
+      <div className="posts mx-auto mt-4 mb-16 w-[90%] lg:w-2/3">
         {/* Show posts */}
         {recentPosts.map((post, index: number) => (
           <div
             key={index}
-            className="mx-auto border-b-2 border-b-sky-200 py-4 lg:pb-4 lg:pt-8"
+            className="mx-auto border-b-2 border-b-sky-200 py-4 lg:pt-8 lg:pb-4"
           >
             <h1 className="text-lg font-medium text-white underline decoration-sky-200 lg:text-2xl">
               <a href={`/posts/${post.slug}`}>{post.frontMatter.title}</a>
@@ -33,11 +33,11 @@ export default function Posts() {
                 {post.frontMatter.description}
               </p>
             </span>
-            <span className="mt-6 w-1/2 break-words text-white lg:text-lg">
+            <span className="mt-6 w-1/2 wrap-break-word text-white lg:text-lg">
               <a href={`/posts/${post.slug}`}>{postPreview(post.body)}</a>
               {/* Show plaintext content preview*/}
             </span>
-            <p className=" mt-2 flex flex-row justify-end text-sky-200 lg:text-lg">
+            <p className="mt-2 flex flex-row justify-end text-sky-200 lg:text-lg">
               {post.frontMatter.tags?.map((tag) => `#${tag} `)}
             </p>
           </div>

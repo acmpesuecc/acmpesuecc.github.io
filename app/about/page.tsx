@@ -4,14 +4,14 @@ export default function About() {
       <h1 className="mx-auto w-full text-center text-2xl font-semibold text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
         About us
       </h1>
-      <p className="mx-auto mt-6 w-3/4 text-white  lg:mt-12 lg:w-full  lg:text-xl">
+      <p className="mx-auto mt-6 w-3/4 text-white lg:mt-12 lg:w-full lg:text-xl">
         The ACM Student Chapter here at PES University Electronic City Campus
         brings you a world of opportunities, events and contains a wide range of
         activities to keep ACM moving including organizing conferences,
         improving technical skills and networking.
       </p>
 
-      <p className="mx-auto mt-6 w-3/4 text-white  lg:mt-12 lg:w-full  lg:text-xl">
+      <p className="mx-auto mt-6 w-3/4 text-white lg:mt-12 lg:w-full lg:text-xl">
         {' '}
         We organize a plethora of workshops, hackathons and mentorship events
         for all students on campus to help them gain rich knowledge in their

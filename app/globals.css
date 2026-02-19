@@ -1,28 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-color: currentColor;
-  margin: 0;
-  padding: 0;
+@layer base {
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-color: currentColor;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* JetBrains Mono for the whole site*/
-
 * {
   font-family: 'JetBrains Mono', monospace;
 }
+
 /* Background svg */
 body {
   background-color: #000610;

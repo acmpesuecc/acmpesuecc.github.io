@@ -11,7 +11,7 @@ import { AIEPLayout } from '@/components/aiep/AIEPLayout';
 
 function ProjectDetail({ project }: { project: Project }) {
   return (
-    <div className="mx-auto mb-12 mt-4 flex w-[90%] flex-col justify-center lg:mt-2 lg:w-3/4">
+    <div className="mx-auto mt-4 mb-12 flex w-[90%] flex-col justify-center lg:mt-2 lg:w-3/4">
       <h1 className="mt-4 text-center text-2xl text-white underline decoration-sky-200 underline-offset-8 lg:text-5xl">
         {project.title}
       </h1>
@@ -23,7 +23,7 @@ function ProjectDetail({ project }: { project: Project }) {
         <h2 className="text-center text-xl text-white underline decoration-sky-200 underline-offset-8 lg:text-3xl">
           Weekly Reports
         </h2>
-        <div className="mx-auto mb-8 mt-4 flex flex-wrap justify-between bg-[rgb(0,0,0,0.3)] py-2 lg:mb-12 lg:mt-6 lg:w-2/3">
+        <div className="mx-auto mt-4 mb-8 flex flex-wrap justify-between bg-[rgb(0,0,0,0.3)] py-2 lg:mt-6 lg:mb-12 lg:w-2/3">
           {[1, 2, 3, 4, 5, 6].map((week) => (
             <span
               key={week}
@@ -35,10 +35,10 @@ function ProjectDetail({ project }: { project: Project }) {
                     : week === 3
                       ? 'border-y-2 lg:border-y-2'
                       : week === 4
-                        ? 'border-x-2 border-b-2 border-r-0 lg:border-x-2 lg:border-b-2'
+                        ? 'border-x-2 border-r-0 border-b-2 lg:border-x-2 lg:border-b-2'
                         : week === 5
-                          ? 'border-b-2 border-r-2'
-                          : 'border-b-2 border-r-2'
+                          ? 'border-r-2 border-b-2'
+                          : 'border-r-2 border-b-2'
               }`}
             >
               <a href={`/aiep/${project.slug}/week-${week}`}>
@@ -54,7 +54,7 @@ function ProjectDetail({ project }: { project: Project }) {
         {project.leads.map((lead) => (
           <span
             key={lead}
-            className="mx-auto mt-6 flex w-[85%] flex-col items-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pb-2 pt-1 lg:w-1/2 lg:px-0 lg:pb-4 lg:pt-0"
+            className="mx-auto mt-6 flex w-[85%] flex-col items-center border-2 border-sky-200 bg-[rgb(0,0,0,0.3)] px-4 pt-1 pb-2 lg:w-1/2 lg:px-0 lg:pt-0 lg:pb-4"
           >
             <span className="font-bold text-sky-200 lg:text-xl">👑</span>
             <span className="font-bold text-sky-200 lg:text-xl">Team Lead</span>
