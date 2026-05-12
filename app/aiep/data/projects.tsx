@@ -92,7 +92,7 @@ export const projects: Project[] = [
     year: 2026,
     slug: 'radfs',
     title: 'radFS: In-memory FUSE filesystem built using adaptive radix trees',
-    leads: ['Pranav V Bhat', 'Saijyoti P', 'Vinaayak G Dasika'],
+    leads: ['Pranav V Bhat', 'Saijyoti Panda', 'Vinaayak G Dasika'],
     members: [
       'Angelo Arakal',
       'Bhuvigna Reddy A T',
