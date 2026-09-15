@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Inauguration'
 description: 'Inauguration ceremony on campus'
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, open-source]
 date: '2019-09-11'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/inaug_cover.JPG)

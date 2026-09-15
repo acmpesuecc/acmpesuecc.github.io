@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'ACM Recruitment Challenge 2025'
 description: 'Crack the code!'
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, challenge]
 date: '2025-09-07'
+layout: post
 ---
 
 # Storyline

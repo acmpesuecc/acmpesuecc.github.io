@@ -1,0 +1,37 @@
+{{ define "all-posts"}}
+{{$PageData := index .DeepDataMerge.Collections .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        <section class="posts-list">
+            <h1>ALL POSTS</h1>
+
+            {{range $Post := index .DeepDataMerge.CollectionsMap .PageURL}}
+            <article class="post-preview">
+                <h2>
+                    <a href="/{{$Post.CompleteURL}}">{{$Post.Frontmatter.Title}}</a>
+                </h2>
+                <div class="post-preview-meta">
+                    <p class="post-authors">{{join $Post.Frontmatter.Authors ", "}}</p>
+                    <p class="post-description">{{$Post.Frontmatter.Description}}</p>
+                </div>
+                <a class="post-excerpt" href="/{{$Post.CompleteURL}}">
+                    {{truncate (plainText $Post.Body) 200}}
+                </a>
+                <p class="post-tags">
+                    {{range $Post.Frontmatter.Tags}}#{{.}} {{end}}
+                </p>
+            </article>
+            {{end}}
+        </section>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

@@ -1,0 +1,19 @@
+{{define "header"}}
+<!-- If the template for a particular url does not exist(posts.html), setting it to the specific page template data -->
+{{ $PageData := index .DeepDataMerge.Templates .PageURL }} {{if eq $PageData nil
+}} {{ $PageData = .TemplateData }} {{end}}
+
+<header>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/" class="site-nav-logo">
+            <img src="/acmshortlogo.png" alt="acmshortlogo" />
+        </a>
+        <div class="site-nav-links">
+            {{range $index_no, $map := .DeepDataMerge.LayoutConfig.Navbar}} {{range
+            $key, $value := $map }}
+            <a class="navitem" href="{{ $value }}">{{ $key }}</a>
+            {{ end }} {{end}}
+        </div>
+    </nav>
+</header>
+{{end}}

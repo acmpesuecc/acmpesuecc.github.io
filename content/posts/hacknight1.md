@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: Hacktoberfest '19
 description: 'stub'
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, open-source, hacknight]
 date: '2019-10-19'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/Hacktoberfest1.png)

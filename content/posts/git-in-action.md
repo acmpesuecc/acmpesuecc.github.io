@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Git in Action!'
 description: 'Unlock the Power of Version Control'
-authors: Saijyoti Panda, Pranav V Bhat
+authors: ["Saijyoti Panda, Pranav V Bhat"]
 tags: ['git', github, 'open-source', 'hacknight7.0']
 date: '2025-10-17'
+layout: post
 ---
 
 Have you ever broken something in your project and wished you could go back in time? Or wanted to share your code with the world but weren't able to? That’s where Git and Github come in. They make saving changes, sharing code and collaborating easy :D

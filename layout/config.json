@@ -1,0 +1,29 @@
+{
+  "navbar": [
+    {
+      "About": "/about.html"
+    },
+    {
+      "Posts": "/collections/posts.html"
+    },
+    {
+      "AIEP": "/aiep.html"
+    }
+  ],
+  "baseURL": "https://pesuecc.acm.org",
+  "siteTitle": "ACM | PESUECC",
+  "siteScripts": null,
+  "author": "ACM PESUECC",
+  "themeURL": "/static/style.css",
+  "copyright": "ACM PESUECC \u00a9 2025",
+  "socials": {
+    "github": "https://github.com/acmpesuecc",
+    "instagram": "https://www.instagram.com/acmpesuecc",
+    "linkedin": "https://www.linkedin.com/company/acm-pesu-ecc/",
+    "twitter": "https://twitter.com/AcmPesu",
+    "email": "mailto:acmpesuecc@pes.edu"
+  },
+  "collectionLayouts": {
+    "collections/posts.html": "all-posts"
+  }
+}

@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Hour of Code'
 description: Introducing the world of tech to students
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, open-source, school]
 date: '2019-12-13'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/headpic.jpg)

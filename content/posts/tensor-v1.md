@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Tensor v1.0'
 description: 'Our annual Datathon'
-authors: ACMPESUECC & TECHWARTS
+authors: ["ACMPESUECC & TECHWARTS"]
 tags: [ACM, hackathon, tensor]
 date: '2021-03-07'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/tensor.png)

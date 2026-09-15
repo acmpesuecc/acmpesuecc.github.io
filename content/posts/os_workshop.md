@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Open Source Workshop'
 description: Exploring the world of Git and Open source
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, open-source, git]
 date: '2019-10-18'
+layout: post
 ---
 
 We, the members of ACM PESUECC Student Chapter conducted an Open source

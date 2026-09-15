@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Pre-SIGMOD 2026 Talks @ BMSCE'
 description: 'Notes from a day of talks conducted at BMSCE!'
-authors: Anshul Paruchuri
+authors: ["Anshul Paruchuri"]
 tags: ['databases', 'genai', 'research']
 date: '2026-05-30'
+layout: post
 ---
 
 _Editors Note:\

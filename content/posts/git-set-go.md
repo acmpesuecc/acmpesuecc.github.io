@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'GIT,SET,GO!'
 description: 'Get started with Git'
-authors: Anurag Rao, Sriprad Potukuchi & Kiran J Rajpurohit
+authors: ["Anurag Rao, Sriprad Potukuchi & Kiran J Rajpurohit"]
 tags: ['git', github, 'open-source']
 date: '2023-10-12'
+layout: post
 ---
 
 # Introduction

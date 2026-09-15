@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Research Talk'
 description: Insights on how to approach research
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, open-source, talk, research]
 date: '2020-03-12'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/res_card.png)

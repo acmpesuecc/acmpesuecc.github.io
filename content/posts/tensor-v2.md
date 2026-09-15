@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Tensor v2.0'
 description: 'Our annual Datathon'
-authors: ACMPESUECC
+authors: ["ACMPESUECC"]
 tags: [ACM, hackathon, tensor]
 date: '2022-11-04'
+layout: post
 ---
 
 ![](https://raw.githubusercontent.com/acmpesuecc/acmpesuecc.github.io/master/img/tensor2.png)

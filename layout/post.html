@@ -1,0 +1,30 @@
+{{ define "post"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        <article class="post-page">
+            <header class="post-header">
+                <h1>{{$PageData.Frontmatter.Title}}</h1>
+                <div class="post-header-meta">
+                    <p>{{$PageData.Frontmatter.Date}}</p>
+                    <p>{{range $PageData.Frontmatter.Tags}}#{{.}} {{end}}</p>
+                </div>
+                <p class="post-authors">{{join $PageData.Frontmatter.Authors ", "}}</p>
+            </header>
+
+            <div class="post-body">
+                {{$PageData.Body}}
+            </div>
+        </article>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

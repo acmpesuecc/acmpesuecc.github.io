@@ -15,6 +15,7 @@
 # production
 /build
 /out
+**/rendered/
 
 # misc
 .DS_Store

@@ -1,9 +1,11 @@
 ---
+collections: [posts]
 title: 'Wasm and Emscripten'
-authors: Siddharth Tewari, Abhinav Chennubhotla & Sriprad Potukuchi
+authors: ["Siddharth Tewari, Abhinav Chennubhotla & Sriprad Potukuchi"]
 date: '2024-02-21'
 tags: ['workshop', 'wasm']
 description: 'Material from the wasm workshop'
+layout: post
 ---
 
 # A brief history of cloud computing and virtualisation

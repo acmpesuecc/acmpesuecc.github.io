@@ -1,0 +1,55 @@
+{{ define "page"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        {{if eq (printf "%s" .PageURL) "index.html"}}
+        <section class="home-hero">
+            <img src="/acm_big_logo.png" alt="ACM Logo" />
+        </section>
+
+        <section class="intro">
+            {{$PageData.Body}}
+        </section>
+
+        <section class="recent-posts">
+            <h1>RECENT POSTS</h1>
+
+            {{range $collection, $PostSet := .DeepDataMerge.CollectionsMap}}
+            {{if eq (printf "%s" $collection) "collections/posts.html"}}
+                {{range first $PostSet 5}}
+                <article class="post-preview">
+                    <h2>
+                        <a href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
+                    </h2>
+                    <div class="post-preview-meta">
+                        <p class="post-authors">{{join .Frontmatter.Authors ", "}}</p>
+                        <p class="post-description">{{.Frontmatter.Description}}</p>
+                    </div>
+                    <a class="post-excerpt" href="/{{.CompleteURL}}">
+                        {{truncate (plainText .Body) 200}}
+                    </a>
+                    <p class="post-tags">
+                        {{range .Frontmatter.Tags}}#{{.}} {{end}}
+                    </p>
+                </article>
+                {{end}}
+            {{end}}
+            {{end}}
+        </section>
+        {{else}}
+        <article class="content-page">
+            {{$PageData.Body}}
+        </article>
+        {{end}}
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}
