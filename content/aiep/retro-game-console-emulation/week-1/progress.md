@@ -3,6 +3,7 @@ title: Learning the toolchain
 lead: Sriprad Potukuchi
 date: 24 March 2024
 summary: The mentees learnt git and make!
+layout: aiep-week
 ---
 
 Seeing as how the project is hosted on GitHub, The mentees have spent the first few days familiarizing themselves with Git and GitHub.

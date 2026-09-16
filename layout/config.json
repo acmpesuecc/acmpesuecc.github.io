@@ -15,7 +15,7 @@
   "siteScripts": null,
   "author": "ACM PESUECC",
   "themeURL": "/static/style.css",
-  "copyright": "ACM PESUECC \u00a9 2025",
+  "copyright": "ACM PESUECC © 2025",
   "socials": {
     "github": "https://github.com/acmpesuecc",
     "instagram": "https://www.instagram.com/acmpesuecc",
@@ -24,6 +24,8 @@
     "email": "mailto:acmpesuecc@pes.edu"
   },
   "collectionLayouts": {
-    "collections/posts.html": "all-posts"
+    "collections/posts.html": "all-posts",
+    "collections/aiep-2026.html": "aiep-grid",
+    "collections/aiep-2024.html": "aiep-grid"
   }
 }

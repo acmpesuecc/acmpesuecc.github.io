@@ -1,0 +1,46 @@
+{{ define "aiep"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        <section class="aiep-hero">
+            <h1 class="aiep-heading">Explore AIEP 2026</h1>
+            <img src="/aiep2024.jpeg" alt="AIEP" class="aiep-hero-img" />
+
+            <div class="aiep-intro">
+                {{$PageData.Body}}
+            </div>
+
+            <div class="aiep-archive">
+                <span class="aiep-archive-label">View Past Projects:</span>
+                <div class="aiep-archive-links">
+                    <a class="aiep-archive-button" href="/collections/aiep-2024.html">AIEP 2024</a>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="aiep-section-heading">PROBLEM STATEMENTS</h1>
+
+        <section class="aiep-grid">
+            {{range $Project := index .DeepDataMerge.CollectionsMap "collections/aiep-2026.html"}}
+            <div class="project-card">
+                <a href="/{{$Project.CompleteURL}}">
+                    <h2 class="project-card-title">{{$Project.Frontmatter.Title}}</h2>
+                    {{if $Project.Frontmatter.Leads}}
+                    <h2 class="project-card-leads">Team Lead{{if gt (len $Project.Frontmatter.Leads) 1}}s{{end}} - {{join $Project.Frontmatter.Leads ", "}}</h2>
+                    {{end}}
+                </a>
+            </div>
+            {{end}}
+        </section>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

@@ -1,10 +1,9 @@
 ---
 title: AIEP
-description: "ACM Industry Experience Program"
+description: "Build industry grade projects with our experts"
+layout: aiep
 ---
 
-# AIEP
+The ACM Industrial Program is ACM PESU-ECC's annual mentorship program, through which we try to emulate the development pipeline used in the industry for a variety of projects or learn about new tech with a hands on approach.
 
-The ACM Industry Experience Program brings students together around mentored technical projects, weekly progress, and practical engineering experience.
-
-Explore ACM PESU ECC posts and updates for the latest AIEP announcements, reports, and project activity.
+After multiple successful iterations, AIEP 2026 promises to be a game changer for participants to better understand real world, industrial practices and select a high end project to work on and add under their belt from a plethora of unique options.

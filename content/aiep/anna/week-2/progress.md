@@ -3,6 +3,7 @@ title: Week-2 Progress
 lead:
 date: 25 March 2024
 summary: Goroutines and Parallel rendering
+layout: aiep-week
 ---
 
 # Anirudh’s Progress

@@ -1,0 +1,46 @@
+{{ define "aiep-grid"}}
+{{$PageData := index .DeepDataMerge.Collections .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        {{$Year := trimSuffix (trimPrefix (printf "%s" .PageURL) "collections/aiep-") ".html"}}
+        <section class="aiep-hero">
+            {{if eq $Year "2026"}}
+            <h1 class="aiep-heading">Explore AIEP {{$Year}}</h1>
+            {{else}}
+            <h1 class="aiep-heading">AIEP {{$Year}} - Archive</h1>
+            {{end}}
+            <img src="/aiep2024.jpeg" alt="AIEP" class="aiep-hero-img" />
+
+            {{if ne $Year "2026"}}
+            <div class="aiep-archive">
+                <a class="aiep-archive-button" href="/aiep.html">View Current Projects (AIEP 2026)</a>
+            </div>
+            {{end}}
+        </section>
+
+        <h1 class="aiep-section-heading">PROBLEM STATEMENTS</h1>
+
+        <section class="aiep-grid">
+            {{range $Project := index .DeepDataMerge.CollectionsMap .PageURL}}
+            <div class="project-card">
+                <a href="/{{$Project.CompleteURL}}">
+                    <h2 class="project-card-title">{{$Project.Frontmatter.Title}}</h2>
+                    {{if $Project.Frontmatter.Leads}}
+                    <h2 class="project-card-leads">Team Lead{{if gt (len $Project.Frontmatter.Leads) 1}}s{{end}} - {{join $Project.Frontmatter.Leads ", "}}</h2>
+                    {{end}}
+                </a>
+            </div>
+            {{end}}
+        </section>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

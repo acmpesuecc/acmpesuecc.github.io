@@ -16,4 +16,4 @@ AIEP is the ACM Industrial Experience Program 💻. Every year we take on a few 
 
 This year, we have quite a diverse mix of projects and tech and we look forward to you participating!
 
-Checkout the [_aiep_](/aiep) page to find out more!
+Checkout the [_aiep_](/aiep.html) page to find out more!

@@ -1,0 +1,48 @@
+{{ define "aiep-project"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        <article class="project-detail">
+            <h1 class="project-detail-title">{{$PageData.Frontmatter.Title}}</h1>
+            <div class="project-detail-desc">
+                {{$PageData.Body}}
+            </div>
+
+            <h2 class="aiep-section-heading">Weekly Reports</h2>
+            {{if $PageData.Frontmatter.Weeks}}
+            <div class="week-grid">
+                {{range $i, $WeekURL := $PageData.Frontmatter.Weeks}}
+                <a class="week-box" href="/{{$WeekURL}}"><em>Week - {{add1 $i}}</em></a>
+                {{end}}
+            </div>
+            {{else}}
+            <p class="aiep-empty-note">Weekly reports will appear here once published.</p>
+            {{end}}
+
+            <h2 class="aiep-section-heading">Meet the Team</h2>
+            <div class="team-grid">
+                {{range $PageData.Frontmatter.Leads}}
+                <div class="team-member team-lead">
+                    <span class="team-role">Team Lead</span>
+                    <span class="team-name">{{.}}</span>
+                </div>
+                {{end}}
+                {{range $PageData.Frontmatter.Members}}
+                <div class="team-member">
+                    <span class="team-name">{{.}}</span>
+                </div>
+                {{end}}
+            </div>
+        </article>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

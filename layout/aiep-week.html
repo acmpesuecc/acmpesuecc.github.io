@@ -1,0 +1,38 @@
+{{ define "aiep-week"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <main class="page-shell">
+        <article class="week-report">
+            <h1 class="week-report-title">{{$PageData.Frontmatter.Title}}</h1>
+            <div class="week-report-meta">
+                {{if $PageData.Frontmatter.Date}}
+                <p class="week-report-date">{{$PageData.Frontmatter.Date}}</p>
+                {{end}}
+                {{if $PageData.Frontmatter.Lead}}
+                <p class="week-report-lead">{{$PageData.Frontmatter.Lead}} &amp; team</p>
+                {{end}}
+            </div>
+
+            {{if $PageData.Frontmatter.Summary}}
+            <div class="week-report-tldr">
+                <h2>TL;DR</h2>
+                <p>{{$PageData.Frontmatter.Summary}}</p>
+            </div>
+            {{end}}
+
+            <div class="week-report-body post-body">
+                {{$PageData.Body}}
+            </div>
+        </article>
+    </main>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

@@ -3,6 +3,7 @@ title: Display CHIP-8 screen on a window
 lead: Sriprad Potukuchi
 date: 24 March 2024
 summary: The linker has been conquered, raylib flawlessly integrated with the project and made some good use of!
+layout: aiep-week
 ---
 
 ## Mentees vs. The Linker
