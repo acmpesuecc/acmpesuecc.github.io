@@ -29,24 +29,25 @@ Trace the operational chain of events back to the root cause and uncover four sp
 
 ### How `qlang` Works
 
-* **Command Syntax**: All commands use standard Lisp style S expressions:
+- **Command Syntax**: All commands use standard Lisp style S expressions:
   `(command [argument] [:option value] ...)`
 
-* **Timeline Reference**: All timestamps (`:t`, `:opened`, `:since`, `:at`) are relative to right now ($t = 0$). Negative numbers mean minutes in the past (for example, `-45` means 45 minutes ago).
+- **Timeline Reference**: All timestamps (`:t`, `:opened`, `:since`, `:at`) are relative to right now ($t = 0$). Negative numbers mean minutes in the past (for example, `-45` means 45 minutes ago).
 
-* **Getting Unstuck**:
-  * Click **Manual** or hit `/` to open the local man page (`docs/qlang.1`). It is missing a few blocks, but the essential syntax is still there.
-  * Run interactive help commands inside the shell:
-    * `(help)` : Shows basic navigation and available data categories.
-    * `(help "<topic>")` : Pulls up live syntax docs for any specific command.
+- **Getting Unstuck**:
 
-* **Searchable Domains**: Query across `hosts`, `services`, `deploys`, `logs`, `incidents`, and `oncall` schedules.
+  - Click **Manual** or hit `/` to open the local man page (`docs/qlang.1`). It is missing a few blocks, but the essential syntax is still there.
+  - Run interactive help commands inside the shell:
+    - `(help)` : Shows basic navigation and available data categories.
+    - `(help "<topic>")` : Pulls up live syntax docs for any specific command.
+
+- **Searchable Domains**: Query across `hosts`, `services`, `deploys`, `logs`, `incidents`, and `oncall` schedules.
 
 ---
 
 ### Ground Rules
 
-* **Grading**: Submissions are graded automatically on the server with a quick pass/fail confirmation.
-* **Optional Writeup**: If you want, you can attach a short Markdown report summarizing your investigation and root cause hypothesis.
+- **Grading**: Submissions are graded automatically on the server with a quick pass/fail confirmation.
+- **Optional Writeup**: If you want, you can attach a short Markdown report summarizing your investigation and root cause hypothesis.
 
 The environment is up and running. Jump into the terminal, run a few queries, and see what you can find!
