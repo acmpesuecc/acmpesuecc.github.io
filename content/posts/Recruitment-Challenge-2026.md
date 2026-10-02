@@ -6,48 +6,80 @@ tags: [ACM, challenge, recruitment]
 date: '2026-10-02'
 ---
 
-### Incident Response Challenge: Operation QLang Postmortem
+> **🚨 SYSTEM ALERT // ACTIVE FLEET OUTAGE**  
+> **Challenge Portal:** [https://rec.pesuecc.acm.org/](https://rec.pesuecc.acm.org/)
 
-**Welcome, Operator**
+---
 
-Our production servers took a hit, causing a major outage across the fleet. To make things a little more chaotic, the incident corrupted parts of our primary runbook, so standard instructions are partially missing. We need you to jump into the system, dig through the logs, and figure out what actually happened.
+### Incident Briefing
 
-You have been given temporary root access to **`qlang`**, a browser based shell wired directly into a live snapshot of our environment spanning hundreds of hosts, thousands of microservices, and over 100,000 log entries. Do not worry if the setup looks new, it is built for tinkering and live experimentation.
+**Welcome, Operator.**
+
+Our production servers took a critical hit, causing a major outage across the fleet. To make matters more chaotic, the incident corrupted parts of our primary runbook, leaving standard operational recovery instructions partially missing.
+
+We need you to jump into the environment, inspect the telemetry, trace the timeline of events, and uncover the root cause.
+
+You have been granted temporary root access to **`qlang`** — an interactive in-browser shell wired directly into a live snapshot of our infrastructure spanning hundreds of hosts, thousands of microservices, and over 100,000 log entries.
 
 ---
 
 ### The Mission
 
-Trace the operational chain of events back to the root cause and uncover four specific facts:
+Trace the operational chain of events back to the failure origin and report four key artifacts:
 
-1. **Target Incident ID**: The active SEV2 incident code (for example, `INC-XXX`).
-2. **Responsible Deployment ID**: The bad deployment that triggered the issue (for example, `dep-XXXXX`).
+1. **Target Incident ID**: The active SEV2 incident code (e.g., `INC-XXX`).
+2. **Responsible Deployment ID**: The faulty deployment artifact that triggered the issue (e.g., `dep-XXXXX`).
 3. **Configuration Digest**: The exact config digest inside that deployment artifact.
-4. **On-Call Engineer**: The engineer on shift for the owning team the minute the outage started.
+4. **On-Call Engineer**: The engineer on shift for the owning team the minute the outage began.
 
 ---
 
 ### How `qlang` Works
 
-- **Command Syntax**: All commands use standard Lisp style S expressions:
-  `(command [argument] [:option value] ...)`
+#### 1. Command Syntax
 
-- **Timeline Reference**: All timestamps (`:t`, `:opened`, `:since`, `:at`) are relative to right now ($t = 0$). Negative numbers mean minutes in the past (for example, `-45` means 45 minutes ago).
+All commands in `qlang` follow standard Lisp-style S-expressions:
 
-- **Getting Unstuck**:
+```lisp
+(command [argument] [:option value] ...)
+```
 
-  - Click **Manual** or hit `/` to open the local man page (`docs/qlang.1`). It is missing a few blocks, but the essential syntax is still there.
-  - Run interactive help commands inside the shell:
-    - `(help)` : Shows basic navigation and available data categories.
-    - `(help "<topic>")` : Pulls up live syntax docs for any specific command.
+#### 2. Relative Timeline Reference
 
-- **Searchable Domains**: Query across `hosts`, `services`, `deploys`, `logs`, `incidents`, and `oncall` schedules.
+All timestamps (`:t`, `:opened`, `:since`, `:at`) are relative to right now ($t = 0$). Negative numbers represent minutes in the past (for example, `-45` means 45 minutes ago).
+
+#### 3. Searchable Domains
+
+| Domain      | Description                                         | Example Query                       |
+| :---------- | :-------------------------------------------------- | :---------------------------------- |
+| `hosts`     | Machine instances, CPU/memory telemetry, and health | `(hosts :status "unhealthy")`       |
+| `services`  | Microservice catalog and dependency mappings        | `(services :tier "critical")`       |
+| `deploys`   | Deployment rollouts, revisions, and config digests  | `(deploys :status "failed")`        |
+| `logs`      | Fleet-wide stdout/stderr service log streams        | `(logs :service "auth" :since -30)` |
+| `incidents` | Escalated outage tickets and timeline logs          | `(incidents :status "open")`        |
+| `oncall`    | Rotation schedules, shift times, and team rosters   | `(oncall :team "infra" :at -45)`    |
+
+#### 4. Getting Unstuck
+
+- Hit `/` or click **Manual** in the UI to open the local man page (`docs/qlang.1`). It is missing a few corrupted blocks, but the essential syntax guide is intact.
+- Run interactive help commands directly in the shell:
+
+```lisp
+(help)            ;; Displays navigation and available domains
+(help "<topic>")  ;; Pulls up live syntax docs for any specific command
+```
 
 ---
 
-### Ground Rules
+### Ground Rules & Submission
 
-- **Grading**: Submissions are graded automatically on the server with a quick pass/fail confirmation.
-- **Optional Writeup**: If you want, you can attach a short Markdown report summarizing your investigation and root cause hypothesis.
+- **Grading**: Submissions are graded automatically on the server with instant confirmation.
+- **Optional Writeup**: You may attach a short Markdown report summarizing your investigative findings and root cause hypothesis.
 
-The environment is up and running. Jump into the terminal, run a few queries, and see what you can find!
+---
+
+### Ready to Investigate?
+
+Enter the terminal environment, query the cluster, and find the root cause:
+
+👉 **[Launch Challenge Terminal: https://rec.pesuecc.acm.org/](https://rec.pesuecc.acm.org/)**

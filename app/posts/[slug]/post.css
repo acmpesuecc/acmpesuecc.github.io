@@ -1,215 +1,218 @@
-* {
+.post-container,
+.post-container * {
   color: white;
 }
 
-pre {
+.post-container p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.post-container pre {
   overflow: auto;
   scrollbar-width: thin;
 }
 
-pre::-webkit-scrollbar {
+.post-container pre::-webkit-scrollbar {
   width: 6px;
   height: 8px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.post-container h1,
+.post-container h2 {
   line-height: 1.3;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: underline;
   text-decoration-color: rgb(186 230 253);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
-h1 {
+.post-container h1 {
   font-size: 2rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
 }
 
-h2 {
+.post-container h2 {
   font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-}
-
-body > p {
-  font-size: 1rem;
-}
-
-* + h1,
-* + h2 {
-  margin-top: 5rem;
-}
-
-* + h3,
-* + h4,
-* + h5 {
   margin-top: 3rem;
-}
-
-* + p {
-  margin-top: 2rem;
-}
-
-h2 + p,
-h3 + p,
-h4 + p {
-  margin-top: 1rem;
-}
-
-pre,
-code {
-  font-family: 'Iosveka', monospace;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  font-family: 'Iosevka Web', monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-iframe,
-audio,
-video,
-body > img {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 1rem;
-}
-
-blockquote {
-  margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid rgb(186 230 253);
-  font-style: italic;
 }
 
-a,
-em {
+.post-container h3 {
+  font-size: 1.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+  color: rgb(224 242 254);
+}
+
+.post-container h4 {
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
   color: rgb(186 230 253);
 }
 
-ol {
-  list-style-position: inside;
+.post-container h5,
+.post-container h6 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: rgb(186 230 253);
 }
 
-ol ol {
+.post-container h1 code,
+.post-container h2 code,
+.post-container h3 code,
+.post-container h4 code {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.post-container pre,
+.post-container code {
+  font-family: 'JetBrains Mono', 'Iosevka Web', monospace;
+}
+
+.post-container iframe,
+.post-container audio,
+.post-container video,
+.post-container img {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
+}
+
+.post-container blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid rgb(186 230 253);
+  background: rgba(186, 230, 253, 0.05);
+  border-radius: 0 0.375rem 0.375rem 0;
+  font-style: normal;
+}
+
+.post-container blockquote p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-container a {
+  color: rgb(186 230 253);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease-in-out;
+}
+
+.post-container a:hover {
+  color: #ffffff;
+}
+
+.post-container ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-container ol ol {
   list-style-type: lower-alpha;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-ul {
+.post-container ul {
   list-style-type: square;
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-body > img,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
+.post-container li {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  padding-left: 0.25rem;
 }
 
-body > img,
-video {
-  max-width: 100%;
-  height: auto;
+.post-container li > p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
-body > img {
-  display: block;
-  max-width: 100%;
-}
-
-hr {
+.post-container hr {
   width: 100%;
   border: none;
-  background: rgb(186 230 253);
+  background: rgba(186, 230, 253, 0.25);
   height: 1px;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-b,
-strong {
-  font-weight: 500;
+.post-container b,
+.post-container strong {
+  font-weight: 600;
+  color: rgb(224 242 254);
 }
 
-table {
+.post-container table {
   border-collapse: collapse;
   caption-side: bottom;
   overflow-x: auto;
   min-width: 100%;
-  border: 1px solid color-mod(rgb(186 230 253) alpha(30%));
-  margin-top: 1rem;
+  border: 1px solid rgba(186, 230, 253, 0.25);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
 }
 
-table caption {
-  margin-top: 1rem;
+.post-container table caption {
+  margin-top: 0.75rem;
+  color: rgb(186 230 253);
 }
 
-td,
-th {
-  border: 1px solid color-mod(rgb(186 230 253) alpha(30%));
-  padding: 0.5rem;
+.post-container td,
+.post-container th {
+  border: 1px solid rgba(186, 230, 253, 0.2);
+  padding: 0.65rem 1rem;
   text-align: left;
 }
 
-th {
-  font-weight: 500;
-}
-
-td:only-child {
-  text-align: center;
+.post-container th {
+  font-weight: 600;
+  background: rgba(186, 230, 253, 0.08);
+  color: rgb(186 230 253);
 }
 
 @media only screen and (min-width: 900px) {
-  h1 {
+  .post-container h1 {
     font-size: 2.5rem;
   }
 
-  h2 {
+  .post-container h2 {
     font-size: 2rem;
   }
 
-  h3 {
-    font-size: 1.75rem;
+  .post-container h3 {
+    font-size: 1.6rem;
   }
 
-  h4 {
-    font-size: 1.5rem;
+  .post-container h4 {
+    font-size: 1.35rem;
   }
 
-  h4 {
-    font-size: 1.25rem;
-  }
-  p {
+  .post-container p {
     font-size: 1.1rem;
   }
 }
