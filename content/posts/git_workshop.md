@@ -15,6 +15,12 @@ If you have been anywhere near software developers and stayed long enough to lis
 
 In this post, we will explore these two things, by first going through why they're needed, and then what they actually are, and finally how to use them.
 
+If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command:
+```bash
+url -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
+```
+Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran).
+
 ## What Git is
 
 Git is a free, open-source, distributed version control system. Now most of these words should be pretty easy to understand, save "version control system".
