@@ -1,3 +1,6 @@
+Here’s the complete Markdown file, keeping the original writing style and structure as much as possible. You can copy this directly into your `.md` file.
+
+```markdown
 ---
 title: 'Git Workshop Intro!'
 description: 'Introduction to Git and the Hub'
@@ -7,7 +10,9 @@ date: '2026-10-13'
 ---
 
 # Introduction
+
 If you have been anywhere near software developers and stayed long enough to listen to their conversations (either with or without their knowledge), you would ultimately find yourself listening to something called as `Git` and/or `GitHub`.
+
 In this post, we will explore these two things, by first going through why they're needed, and then what they actually are, and finally how to use them.
 
 If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command:
@@ -17,29 +22,34 @@ url -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ss
 Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran).
 
 ## What Git is
+
 Git is a free, open-source, distributed version control system. Now most of these words should be pretty easy to understand, save "version control system".
 
-What even is a "version control system"?
+What exactly is a version control system?
 
 Well, imagine you are working on a very big website. You now want to add the feature to let the users customize how the website looks to them.
 
-This is a big change ofcourse, and you do not want the effort you have put so far into the website go to waste, by accidently changing something that is hard to revert.
+This is a big change of course, and you do not want the effort you have put so far into the website go to waste, by accidentally changing something that is hard to revert.
 
 Naturally you might do something like this, if you are not aware of Git:
 
 ```
+
 |
 |__ my_website
 |
 |__ my_website_with_customizations
+
 ```
 
 So far so good!
 
 Now you want to add another feature: Uploading a profile picture.
 
-But then again, you do not want to breaking anything and not have a save file. So your file structure now becomes:
+But then again, you do not want to break anything without having a safe version to return to. So your file structure now becomes:
+
 ```
+
 |
 |__ my_website
 |
@@ -48,64 +58,38 @@ But then again, you do not want to breaking anything and not have a save file. S
 |__ my_website_with_pfp
 |
 |__ my_website_with_customizations_and_pfp
-```
+
+````
 
 Phew, it's getting too hard to manage as it is. Imagine this with hundreds of different features, with hundreds of different contributors!
 
-That is where version control systems (VSC) come in. They do all the book-keeping of different versions of your code for you. 
+That is where version control systems (VCS) come in. They do all the book-keeping of different versions of your code for you.
 
-Although there are many version control systems out there, Git is the most popular and almost synonymous with the concept of VSC's.
+Although there are many version control systems out there, Git is the most popular and almost synonymous with the concept of VCS's.
 
-What is GitHub then? GitHub is simply a server, where you can upload your Git book-keeping. Think of it as a cloud storage with builtin Git!
+What is GitHub then? GitHub is simply a server, where you can upload your Git book-keeping. Think of it as a cloud storage with built-in Git!
 
-As with Git, there are many other alternatives to GitHub (self hosting a Git server being a popular choice aswell).
+As with Git, there are many other alternatives to GitHub (self hosting a Git server being a popular choice as well).
 
-## Installing Git & Setting up SSH
-You may skip this section if you have correctly installed Git.
-To check, simply run this command in the terminal:
+## Installing Git and Setting It Up
+
+You may skip the installation steps if Git is already installed.
+
+To check whether Git is installed, open a terminal and run:
+
 ```bash
 git --version
-```
-And if it prints out a version number, you are probably good to go.
+````
 
-> [!NOTE]
-> Use the username and email you use for Github, or it would lead to issues!
+If Git prints a version number, it is installed.
 
 ### For Windows
 
-- Download Git from: https://git-scm.com/download/win
-- Run the installer and install using the default options.
-- After installation, open **Git Bash** from the Start Menu.
+* Download Git from: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+* Run the installer using the default options.
+* Open **Git Bash** from the Start Menu.
 
-> Make sure you run the SSH commands inside Git Bash, not Command Prompt or PowerShell.
-
-Generate an SSH key:
-
-```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-- Press Enter to use the default location.
-- Set a passphrase (optional).
-
-Start the SSH agent and add the key:
-
-```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
-
-Copy your public key:
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-Copy the entire output as you’ll need it for GitHub.
-
-### For Linux/MacOS
-
-#### Install Git (if not installed)
+### For Linux
 
 Ubuntu/Debian:
 
@@ -120,87 +104,44 @@ Fedora:
 sudo dnf install git
 ```
 
-Arch:
+Arch Linux:
 
 ```bash
 sudo pacman -S git
 ```
 
-macOS (Homebrew):
+### For macOS
+
+If you use Homebrew, run:
 
 ```bash
 brew install git
 ```
 
-To install Homebrew (if you don't have it), run:
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+### Configure your Git identity
 
-#### Generate an SSH key
-
-```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-- Press Enter for defaults.
-- Add a passphrase if desired.
-
-#### Start SSH agent and add key
-
-Linux:
+Set the name and email that you want associated with your commits. Use the same details you use for GitHub so your contributions are attributed correctly.
 
 ```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
-
-macOS:
-
-```bash
-eval "$(ssh-agent -s)"
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
-
-#### Copy public key
-
-Linux:
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-macOS:
-
-```bash
-pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-### Once you're done setting up SSH
-
-Copy your public key and add it to GitHub by following the below steps:
-
-Go to GitHub > Settings > SSH and GPG keys > New SSH key, and paste it there.
-
-Then, run the `ssh -T git@github.com` command in your terminal to verify the setup.
-
-You should see `Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.`
-
-Make sure to run the below as well:
-
-```bash
-git config --global user.name "your username"
+git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 ```
 
-> [!NOTE]
-> If all these methods fail, do look at something called GITHUB DESKTOP. It's just a Google Search away ^^
+To check your configuration:
+
+```bash
+git config --global --list
+```
+
+If you prefer a graphical interface, you can also use GitHub Desktop.
 
 ## Making your own Repository
 
 Creating your own repository on Git is extremely simple.
 
-Go to the Repositories tab seen on your profile, and click on the `NEW` button
+Go to the Repositories tab seen on your profile, and click on the `NEW` button.
 
-Name your repository, add a description if required and then click `Create Repository`
+Name your repository, add a description if required and then click `Create Repository`.
 
 **Congrats on creating your very own repo!**
 
@@ -230,11 +171,12 @@ For now you just need to know that these three commands turn your project folder
 ## Forking and Cloning Repositories
 
 You saw a cool repository on your friend's profile or an open source project you want to contribute to.
+
 That’s where **Forking** comes in. Think of it as making your own personal copy of someone else’s repository. You can experiment, break things and try out as many changes as you like, and the original project stays untouched.
 
 ### How to fork a repository
 
-It’s pretty simple. Just click on **Fork**
+It’s pretty simple. Just click on **Fork**.
 
 Then click on **Create Fork** and that’s it!
 
@@ -249,17 +191,16 @@ All you need to do is run:
 ```bash
 git clone <insert-the-repo-link>
 ```
+
 You can find this link by clicking on the green **Code** button seen in the repo.
 
-[!NOTE]
-If you already have SSH set up, click on SSH and copy that link instead!
-
+Use the HTTPS link shown under the repository's **Code** button.
 
 ## Git Commits
 
 Remember we used this term when creating a repo out of our local directory? Well, let's wrap our head around it now.
 
-**Commits** are essentially *snapshots* of your project at any particular point of time. 
+**Commits** are essentially *snapshots* of your project at any particular point of time.
 
 Before committing, make sure you’ve added all the files you want to track:
 
@@ -272,6 +213,7 @@ git add .
 ```
 
 To check the status of your files you can use:
+
 ```bash
 git status
 ```
@@ -283,9 +225,9 @@ Use `git status` often, especially when you're learning. It tells you which file
 Then, commit your changes with a message:
 
 ```bash
-git commit -m "Describe your changes" 
+git commit -m "Describe your changes"
 ```
- 
+
 You can go through the recommended way of creating commit messages [Commit Conventions](https://www.conventionalcommits.org/) to keep your messages clear.
 
 > [!Tip]
@@ -299,7 +241,7 @@ git pull
 git pull origin your-branch-name
 ```
 
-An important point to note at this point is that these commited changes stay on your local machine, till you **push** them onto GitHub.
+An important point to note at this point is that these committed changes stay on your local machine, till you **push** them onto GitHub.
 
 ```bash
 # Push changes to the main branch
@@ -309,10 +251,10 @@ git push origin main
 git push origin your-branch-name
 ```
 
-
 ## Working with Branches
 
 A branch is a separate line of development. It lets you work on a feature or fix without making changes directly on the main branch.
+
 This is especially useful when you want to test out features or experiments without taking the risk of breaking something in the main branch.
 
 ```bash
@@ -451,23 +393,22 @@ On GitHub, you can often select **Compare & pull request** after pushing a branc
 
 ## Contribute Smart
 
-- Understand what the project does before jumping into the code.
-- Read the README, contribution guidelines, and existing issues.
-- Choose a task that matches your current skill level.
-- Start small, ask questions, and explain your changes clearly.
-- You can start with the ACM practice repository to get comfortable with the workflow, then explore other open-source projects that interest you.
+* Understand what the project does before jumping into the code.
+* Read the README, contribution guidelines, and existing issues.
+* Choose a task that matches your current skill level.
+* Start small, ask questions, and explain your changes clearly.
+* You can start with the ACM practice repository to get comfortable with the workflow, then explore other open-source projects that interest you.
 
 ## More Places to Learn from
 
-- Git cheat sheet: https://git-scm.com/cheat-sheet
-- Official Git documentation: https://git-scm.com/doc
-- GitHub documentation: https://docs.github.com/
-- Conventional Commits: https://www.conventionalcommits.org/
-- Git up and running — Anirudh Rowjee: https://rowjee.com/blog/git_up_and_running
-- Video: So You Think You Know Git? https://youtu.be/aolI_Rz0ZqY
+* Git cheat sheet: [https://git-scm.com/cheat-sheet](https://git-scm.com/cheat-sheet)
+* Official Git documentation: [https://git-scm.com/doc](https://git-scm.com/doc)
+* GitHub documentation: [https://docs.github.com/](https://docs.github.com/)
+* Conventional Commits: [https://www.conventionalcommits.org/](https://www.conventionalcommits.org/)
+* Git up and running — Anirudh Rowjee: [https://rowjee.com/blog/git_up_and_running](https://rowjee.com/blog/git_up_and_running)
+* Video: So You Think You Know Git? [https://youtu.be/aolI_Rz0ZqY](https://youtu.be/aolI_Rz0ZqY)
 
 This guide covers the essentials, but Git has more to explore, including rebasing and advanced collaboration workflows. The best way to learn is to practise on a small repository, explore projects you care about, and gradually contribute to them.
 
-
-
-
+```
+```
