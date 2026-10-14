@@ -1,6 +1,3 @@
-Here’s the complete Markdown file, keeping the original writing style and structure as much as possible. You can copy this directly into your `.md` file.
-
-```markdown
 ---
 title: 'Git Workshop Intro!'
 description: 'Introduction to Git and the Hub'
@@ -17,7 +14,7 @@ In this post, we will explore these two things, by first going through why they'
 
 If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command:
 ```bash
-url -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
+curl -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
 ```
 Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran).
 
@@ -409,6 +406,3 @@ On GitHub, you can often select **Compare & pull request** after pushing a branc
 * Video: So You Think You Know Git? [https://youtu.be/aolI_Rz0ZqY](https://youtu.be/aolI_Rz0ZqY)
 
 This guide covers the essentials, but Git has more to explore, including rebasing and advanced collaboration workflows. The best way to learn is to practise on a small repository, explore projects you care about, and gradually contribute to them.
-
-```
-```
