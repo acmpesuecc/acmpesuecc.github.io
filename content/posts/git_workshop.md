@@ -12,7 +12,7 @@ In this post, we will explore these two things, by first going through why they'
 
 If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command:
 ```bash
-curl -L http://hacknight.navinshrinivas.com/static/ssh-gen.sh | sh
+url -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
 ```
 Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran).
 
