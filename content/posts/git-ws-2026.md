@@ -108,17 +108,25 @@ If you prefer a graphical interface, you can also use GitHub Desktop.
 
 ### SSH setup
 
-If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command:
+If you haven't done the SSH configuration already we have written a quick script to do it automatically for you. Run this command if you are on Windows:
 
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.ps1" -OutFile setup-ssh.ps1 -UseBasicParsing
+powershell -ExecutionPolicy Bypass -File setup-ssh.ps1
+```
+and if you are on any other OS:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
 ```
+
+> Note:  If the above script does not work, read the [official GitHub docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran):
 ![GitHub going to settings](https://i.imgur.com/3vB9wSQ.png)
 ![Finding option to add SSH keys](https://i.imgur.com/8KhYyPR.png)
 ![New SSH key](https://i.imgur.com/Ga5XI0f.png)
 ![Add key](https://i.imgur.com/LqzZYCR.png)
+
 
 ## Making your own Repository
 
