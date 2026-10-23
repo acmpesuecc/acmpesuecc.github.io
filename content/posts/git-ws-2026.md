@@ -1,6 +1,6 @@
 ---
 title: 'Git Workshop Intro!'
-description: 'Introduction to Git and the GitHub'
+description: 'Introduction to Git and GitHub'
 authors: Aston Venol DSouza, Saankhya Srikanth, Mayur G M
 tags: ['git', github, 'open-source', 'hacknight8.0']
 date: '2026-10-13'
@@ -114,19 +114,20 @@ If you haven't done the SSH configuration already we have written a quick script
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.ps1" -OutFile setup-ssh.ps1 -UseBasicParsing
 powershell -ExecutionPolicy Bypass -File setup-ssh.ps1
 ```
+
 and if you are on any other OS:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Quan1umMango/ssh_setup/main/setup-ssh.sh -o setup-ssh.sh && bash setup-ssh.sh
 ```
 
-> Note:  If the above script does not work, read the [official GitHub docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+> Note: If the above script does not work, read the [official GitHub docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Now go to GitHub > Settings and find the option to add the SSH keys to your account. Make a new key and paste the key (which was automatically copied by the command you just ran):
 ![GitHub going to settings](https://i.imgur.com/3vB9wSQ.png)
 ![Finding option to add SSH keys](https://i.imgur.com/8KhYyPR.png)
 ![New SSH key](https://i.imgur.com/Ga5XI0f.png)
 ![Add key](https://i.imgur.com/LqzZYCR.png)
-
 
 ## Making your own Repository
 
@@ -357,6 +358,59 @@ Git combines the changes when it can. If the branches changed the same part of a
 ## Merge Conflicts
 
 A merge conflict means Git cannot automatically decide how to combine particular changes. It does not mean the repository is broken, it is a means for Git to let the user decide what remains and what gets removed.
+
+As an example, say that you are going out shopping. But you decide to be a nice roommate and let your roommates add to the shopping list whatever they like, and you will go out and fetch them whatever they need.
+
+Initially, your shopping list (which as of now just contains what you want) looks like this:
+```
+Shopping List!
+- Eggs
+- Cookies
+- Cake
+- Maggi
+```
+
+Say one of your roommate Vinaayak wants cheese. You first make him create a copy of this list somewhere else, otherwise he might try to ruin yours!
+
+So he makes another copy, and then adds whatever he wants (in this case, cheese):
+```
+Shopping List! (Vinaayak's Copy)
+- Eggs
+- Cookies
+- Cake
+- Maggi
+- Cheese
+```
+
+Now he will ask you to merge his change to your shopping list. You review the changes and then accept them, making *your* copy of the list to look like this:
+```
+Shopping List!
+- Eggs
+- Cookies
+- Cake
+- Maggi
+- Cheese
+```
+(At this point, both yours and Vinaayak's list are the same)
+
+Now suppose another roommate of yours **hates** cheese, and even before Vinaayak's copy is merged to yours he adds this to his own copy:
+```
+Shopping List! (CheeseHater's Copy)
+- Eggs
+- Cookies
+- Cake
+- Maggi
+- NO CHEESE UNDER ANY CIRCUMSTANCES
+```
+And he now asks you to review and merge.
+
+Well...now you have a *conflict* of interest. Vinaayak wants cheese, but your other roommate doesn't. Whom do you listen to?
+
+There may or may not be a right answer in this particular scenario (that is left up to the armchair philosophers to worry about). In this case, you can accept either of the changes.
+
+Say you like Vinaayak more and therefore refuse to accept CheeseHater's changes, your fianl list will include cheese. But say you hate cheese more than you like him, your list will include the "NO CHEESE" sentence.
+
+In programs, however, there usually is a right answer (example: fixing a bug in a feature v/s removing that feature entirely!) and it's up to you, the maintainer of the project who will be merging the changes to decide which one to keep.
 
 To resolve one:
 
